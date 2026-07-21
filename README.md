@@ -2,9 +2,7 @@
 
 A framework for studying when adaptive systems transition from improving within a fixed space of possibilities to modifying the mechanisms that determine which possibilities are reachable.
 
-The central hypothesis is:
-
-> Major capability transitions are preceded by changes in the processes that generate future capability.
+> **Central hypothesis:** Major capability transitions are preceded by changes in the processes that generate future capability.
 
 ---
 
@@ -16,17 +14,11 @@ $$
 \Delta C > 0
 $$
 
-where
+where $C$ denotes the system's current capability.
 
-$$
-C = \text{current capability}
-$$
+Some systems appear to undergo a deeper transition: they begin modifying the mechanisms responsible for producing future improvements.
 
-However, some systems appear to undergo a deeper transition: they begin modifying the mechanisms responsible for producing future improvements.
-
-This framework studies that transition.
-
-The key distinction:
+The key distinction is
 
 $$
 \boxed{
@@ -40,33 +32,17 @@ A system can become more capable without becoming better at becoming more capabl
 
 ---
 
-# Core hypothesis
+# Core Hypothesis
 
-The framework proposes that adaptive systems can be analyzed through three related quantities.
+The framework centers on three quantities.
 
-### Current capability
+| Symbol | Meaning |
+|---------|---------|
+| $C$ | Current capability |
+| $G_m$ | Generator modification capacity |
+| $\Omega$ | Evolutionary velocity |
 
-$$
-C
-$$
-
-### Generator modification capacity
-
-$$
-G_m
-$$
-
-The ability of a system to improve the mechanisms that produce solutions.
-
-### Evolutionary velocity
-
-$$
-\Omega
-$$
-
-The rate at which the system improves its own capability-generation dynamics.
-
-The central prediction:
+The central prediction is
 
 $$
 \boxed{
@@ -86,11 +62,11 @@ Meaning:
 
 ---
 
-# Mathematical framework
+# Mathematical Framework
 
 ## Adaptive system state
 
-A system is represented as
+An adaptive system is represented as
 
 $$
 \boxed{
@@ -101,25 +77,12 @@ $$
 
 where
 
-$$
-S_t=\text{scale}
-$$
-
-Where adaptation occurs.
-
-$$
-D_t=\text{adaptive depth}
-$$
-
-What the adaptive process modifies.
-
-$$
-X_t=\text{system configuration}
-$$
-
-$$
-\Theta_t=\text{trajectory dynamics}
-$$
+| Variable | Meaning |
+|----------|---------|
+| $S_t$ | Scale where adaptation occurs |
+| $D_t$ | Adaptive depth |
+| $X_t$ | System configuration |
+| $\Theta_t$ | Trajectory dynamics |
 
 ---
 
@@ -141,14 +104,12 @@ R_t
 }
 $$
 
-where
-
 | Variable | Meaning |
-| --- | --- |
+|----------|---------|
 | $Z_t$ | Current system state |
 | $M_t$ | Internal representation/model |
 | $\pi_t$ | Policy/controller |
-| $V_t$ | Objective/value function |
+| $V_t$ | Objective or value function |
 | $C_t$ | Current capability |
 | $G_s$ | Search mechanism |
 | $G_m$ | Generator modification mechanism |
@@ -156,9 +117,25 @@ where
 
 ---
 
-# Adaptive dynamics
+# Adaptive Dynamics
 
-The basic adaptive loop:
+The adaptive loop is
+
+```text
+Environment
+      ↓
+Observation
+      ↓
+Representation
+      ↓
+Policy
+      ↓
+Action
+      ↓
+Environment
+```
+
+or equivalently
 
 $$
 E_t
@@ -174,31 +151,33 @@ u_t
 E_{t+1}
 $$
 
-Observation:
+The component updates are
+
+Observation
 
 $$
 O_t=H(E_t)
 $$
 
-Representation update:
+Representation update
 
 $$
 M_{t+1}=U(M_t,O_t)
 $$
 
-Action selection:
+Action selection
 
 $$
 u_t=\pi_t(M_t,V_t)
 $$
 
-Environment transition:
+Environment transition
 
 $$
 E_{t+1}=F(E_t,u_t)
 $$
 
-Full system evolution:
+Complete system evolution
 
 $$
 \boxed{
@@ -208,9 +187,9 @@ $$
 
 ---
 
-# Adaptive depth
+# Adaptive Depth
 
-Depth is defined by the target of feedback:
+Adaptive depth is defined by the target of feedback.
 
 $$
 \boxed{
@@ -218,41 +197,37 @@ D=\operatorname{Target}(Feedback)
 }
 $$
 
-The question:
+The key question is:
 
-> What does the system update when it receives information?
+> **What does the system update when it receives information?**
 
 ## D0 — State adaptation
 
-Feedback changes the configuration.
+Updates system configuration.
 
 $$
 Z_{t+1}=f(Z_t,O_t)
 $$
 
-Example:
-
-Learning a fact.
+**Example:** learning a fact.
 
 ---
 
 ## D1 — Search adaptation
 
-Feedback changes exploration strategy.
+Updates the search strategy.
 
 $$
 G_{s,t+1}=f(G_{s,t},O_t)
 $$
 
-Example:
-
-Improving problem-solving strategy.
+**Example:** improving problem-solving strategy.
 
 ---
 
 ## D2 — Generator adaptation
 
-Feedback changes the mechanism producing solutions.
+Updates the mechanism that produces solutions.
 
 $$
 G_{m,t+1}
@@ -260,15 +235,13 @@ G_{m,t+1}
 f(G_{m,t},G_{s,t},M_t,O_t)
 $$
 
-Example:
-
-Scientific methods, compilers, automated discovery systems.
+**Example:** scientific methods, compilers, automated discovery systems.
 
 ---
 
 ## D3 — Generator-dynamics adaptation
 
-Feedback changes the rate at which generators improve.
+Updates the rate at which generators improve.
 
 $$
 \Omega_{t+1}
@@ -280,11 +253,9 @@ The system modifies the dynamics of its own improvement process.
 
 ---
 
-# Reachable future space
+# Reachable Future Space
 
-The framework does not measure all imaginable futures.
-
-It measures reachable futures:
+The framework measures **reachable** futures rather than all imaginable futures.
 
 $$
 \boxed{
@@ -300,7 +271,7 @@ E_t\rightarrow E_{t+k}
 }
 $$
 
-The distinction:
+This distinguishes
 
 $$
 \boxed{
@@ -310,7 +281,7 @@ $$
 }
 $$
 
-A system's future is constrained by
+Reachability is constrained by
 
 - representations
 - tools
@@ -322,7 +293,7 @@ A system's future is constrained by
 
 # Capability
 
-Current capability:
+Current capability is defined as
 
 $$
 \boxed{
@@ -335,9 +306,9 @@ Capability describes the current reachable frontier.
 
 ---
 
-# Search and generator mechanisms
+# Search and Generator Mechanisms
 
-Search:
+Search maps reachable possibilities into explored possibilities.
 
 $$
 \boxed{
@@ -348,11 +319,7 @@ G_s:
 }
 $$
 
-The process of discovering possibilities.
-
----
-
-Generator modification:
+Generator modification improves search itself.
 
 $$
 \boxed{
@@ -363,13 +330,11 @@ G_s(t+1)
 }
 $$
 
-The process that improves search itself.
-
 ---
 
-# Evolutionary velocity
+# Evolutionary Velocity
 
-The raw expansion rate of reachable space:
+The raw expansion rate of reachable space is
 
 $$
 \Lambda(t)
@@ -379,7 +344,7 @@ $$
 |\mathcal{P}^{reach}(t)|
 $$
 
-However, this contains multiple causes:
+This expansion contains multiple causes.
 
 $$
 \boxed{
@@ -389,7 +354,9 @@ $$
 }
 $$
 
-Resource contribution:
+where
+
+Resource contribution
 
 $$
 \Delta_R
@@ -398,7 +365,7 @@ $$
 \dot R
 $$
 
-Capability contribution:
+Capability contribution
 
 $$
 \Delta_C
@@ -407,7 +374,7 @@ $$
 \dot C
 $$
 
-Generator contribution:
+Generator contribution
 
 $$
 \Delta_G
@@ -416,7 +383,7 @@ $$
 \dot G_m
 $$
 
-The target quantity:
+The quantity of interest is
 
 $$
 \boxed{
@@ -428,35 +395,18 @@ $$
 
 # Interpretation
 
-$$
-\boxed{
-C=\text{what the system can do}
-}
-$$
-
-$$
-\boxed{
-G_s=\text{how the system finds things it can do}
-}
-$$
-
-$$
-\boxed{
-G_m=\text{how the system improves how it finds things it can do}
-}
-$$
-
-$$
-\boxed{
-\Omega=\text{how quickly the system improves its own improvement machinery}
-}
-$$
+| Quantity | Interpretation |
+|----------|----------------|
+| $C$ | What the system can do |
+| $G_s$ | How the system finds new capabilities |
+| $G_m$ | How the system improves its search mechanism |
+| $\Omega$ | How quickly the system improves its own improvement machinery |
 
 ---
 
-# Dynamic causal mass
+# Dynamic Causal Mass
 
-Traditional causal influence:
+Traditional causal influence
 
 $$
 \boxed{
@@ -466,7 +416,7 @@ $$
 }
 $$
 
-Dynamic causal influence:
+Dynamic causal influence
 
 $$
 \boxed{
@@ -476,44 +426,36 @@ $$
 }
 $$
 
-The difference:
-
 A normal intervention changes outcomes.
 
 An evolutionary intervention changes the mechanism producing future outcomes.
 
 ---
 
-# Evolutionary primitives
+# Evolutionary Primitives
 
-An artifact stores a result:
+An artifact stores a result.
 
 $$
-\boxed{
 A=x
-}
 $$
 
-A primitive stores a transformation:
+A primitive stores a transformation.
 
 $$
-\boxed{
 P:x\rightarrow y
-}
 $$
 
-An evolutionary primitive stores a transformation that modifies future transformations:
+An evolutionary primitive stores a transformation that modifies future transformations.
 
 $$
-\boxed{
 P_e:f\rightarrow f'
-}
 $$
 
-Examples:
+Examples
 
 | System | Primitive |
-| --- | --- |
+|----------|-----------|
 | Hammer | Force → impact |
 | Factory | Inputs → products |
 | Programming language | Problems → programs |
@@ -522,11 +464,11 @@ Examples:
 
 ---
 
-# Anti-recursion principle
+# Anti-Recursion Principle
 
 The framework rejects unnecessary ontological layers.
 
-Rule:
+**Rule**
 
 $$
 \boxed{
@@ -536,7 +478,7 @@ Do not add a new entity when a trajectory variable explains the phenomenon.
 }
 $$
 
-Higher-order behavior is represented through dynamics:
+Higher-order behavior is represented through dynamics
 
 $$
 X
@@ -546,7 +488,7 @@ X
 \ddot X
 $$
 
-not
+rather than
 
 $$
 X
@@ -556,13 +498,15 @@ X_{meta}
 X_{meta^2}
 $$
 
-Therefore:
+Therefore,
 
 $$
 \boxed{
 \text{Meta is not a location.}
 }
 $$
+
+and
 
 $$
 \boxed{
@@ -572,15 +516,15 @@ $$
 
 ---
 
-# Empirical program
+# Empirical Program
 
-The framework is not complete until the latent variables become measurable.
+The framework is not complete until its latent variables become measurable.
 
 ## Measuring $G_m$
 
 Can we identify when a system begins modifying its own improvement mechanisms?
 
-Possible proxies:
+Possible proxies
 
 - reduced iteration cost
 - reusable improvement infrastructure
@@ -590,9 +534,9 @@ Possible proxies:
 
 ---
 
-## Measuring reachable space
+## Measuring Reachable Space
 
-Possible proxies:
+Possible proxies
 
 - number of reachable solution classes
 - search efficiency
@@ -604,7 +548,7 @@ Possible proxies:
 
 ## Testing $\Omega$
 
-The central prediction:
+The central prediction is
 
 $$
 \boxed{
@@ -624,9 +568,9 @@ while controlling for
 
 ---
 
-# Historical case studies
+# Historical Case Studies
 
-Potential test cases:
+Potential test cases
 
 - Scientific method
 - Printing press
@@ -636,7 +580,7 @@ Potential test cases:
 - Machine learning
 - Automated scientific discovery
 
-Each case asks:
+For each case ask
 
 1. Did $G_m$ change?
 2. Did $\Omega$ increase?
@@ -648,7 +592,7 @@ Each case asks:
 
 Early research framework.
 
-Current goals:
+Current goals
 
 - formalize definitions
 - develop measurable proxies
@@ -658,7 +602,7 @@ Current goals:
 
 ---
 
-# Core invariant
+# Core Invariant
 
 $$
 \boxed{
