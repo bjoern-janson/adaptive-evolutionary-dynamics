@@ -21,9 +21,7 @@ The framework proposes that adaptive systems can be characterized by:
 The key principle:
 
 $$
-\boxed{
 \text{Higher-order adaptive behavior is a property of dynamics, not a new object.}
-}
 $$
 
 ---
@@ -33,9 +31,7 @@ $$
 An adaptive system is represented as:
 
 $$
-\boxed{
 \mathcal{A}_t=(S_t,D_t,X_t,\Theta_t)
-}
 $$
 
 where:
@@ -63,7 +59,6 @@ $$
 The system state is:
 
 $$
-\boxed{
 X_t=
 (
 Z_t,
@@ -75,7 +70,6 @@ G_{s,t},
 G_{m,t},
 R_t
 )
-}
 $$
 
 where:
@@ -100,9 +94,7 @@ The system evolves through interaction with an environment.
 ## Observation
 
 $$
-\boxed{
 O_t=H(E_t)
-}
 $$
 
 The system extracts information from the environment.
@@ -112,9 +104,7 @@ The system extracts information from the environment.
 ## Representation Update
 
 $$
-\boxed{
 M_{t+1}=U(M_t,O_t)
-}
 $$
 
 Observations modify internal representations.
@@ -124,9 +114,7 @@ Observations modify internal representations.
 ## Action Selection
 
 $$
-\boxed{
 u_t=\pi_t(M_t,V_t)
-}
 $$
 
 The controller selects an intervention.
@@ -136,9 +124,7 @@ The controller selects an intervention.
 ## Environment Transition
 
 $$
-\boxed{
 E_{t+1}=F(E_t,u_t)
-}
 $$
 
 Actions modify external conditions.
@@ -148,19 +134,15 @@ Actions modify external conditions.
 ## Internal State Transition
 
 $$
-\boxed{
 Z_{t+1}
 =
 \Phi(Z_t,M_t,\pi_t,V_t,E_t)
-}
 $$
 
 The complete adaptive process:
 
 $$
-\boxed{
 X_{t+1}=F_X(X_t,E_t,u_t)
-}
 $$
 
 ---
@@ -174,7 +156,6 @@ It models reachable futures.
 Define:
 
 $$
-\boxed{
 \mathcal{P}^{reach}_{evo}(t)
 =
 \{
@@ -184,7 +165,6 @@ E_t\rightarrow E_{t+k}
 \tau
 \text{ reachable under }X_t,R_t
 \}
-}
 $$
 
 where:
@@ -196,11 +176,9 @@ where:
 The distinction:
 
 $$
-\boxed{
 \text{Possible futures}
 \neq
 \text{Reachable futures}
-}
 $$
 
 ---
@@ -210,10 +188,8 @@ $$
 Current capability is defined as the size of the current reachable space:
 
 $$
-\boxed{
 C_t=
 |\mathcal{P}^{reach}_{current}(t)|
-}
 $$
 
 Capability describes:
@@ -229,12 +205,10 @@ It does not describe how quickly capability itself can expand.
 A system explores reachable possibilities through a search mechanism.
 
 $$
-\boxed{
 G_s:
 \mathcal{P}^{reach}_{current}
 \rightarrow
 \mathcal{P}^{explored}
-}
 $$
 
 $G_s$ determines:
@@ -258,10 +232,8 @@ Examples:
 A deeper adaptive process modifies the search mechanism itself.
 
 $$
-\boxed{
 G_m:
 G_s(t)\rightarrow G_s(t+1)
-}
 $$
 
 $G_m$ represents mechanisms that improve:
@@ -285,9 +257,7 @@ Examples:
 Adaptive depth describes the target of feedback.
 
 $$
-\boxed{
 D=\operatorname{Target}(Feedback)
-}
 $$
 
 The question:
@@ -301,9 +271,7 @@ The question:
 Feedback changes the current state.
 
 $$
-\boxed{
 Z_{t+1}=f(Z_t,O_t)
-}
 $$
 
 Example:
@@ -317,9 +285,7 @@ Learning a fact.
 Feedback changes exploration.
 
 $$
-\boxed{
 G_{s,t+1}=f(G_{s,t},O_t)
-}
 $$
 
 Example:
@@ -333,11 +299,9 @@ Improving problem-solving strategy.
 Feedback changes capability-generation mechanisms.
 
 $$
-\boxed{
 G_{m,t+1}
 =
 f(G_{m,t},G_{s,t},M_t,O_t)
-}
 $$
 
 Example:
@@ -351,19 +315,15 @@ Developing better scientific methods.
 Feedback changes the rate at which generators improve.
 
 $$
-\boxed{
 \Omega_{t+1}
 =
 f(\Omega_t,G_m,G_s,M,O)
-}
 $$
 
 This is the transition where:
 
 $$
-\boxed{
 G_m\rightarrow\dot G_m
-}
 $$
 
 The system modifies its own improvement dynamics.
@@ -375,23 +335,21 @@ The system modifies its own improvement dynamics.
 The total expansion rate:
 
 $$
-\boxed{
 \Lambda(t)
 =
 \frac{d}{dt}
 \log
 |\mathcal{P}^{reach}(t)|
-}
 $$
 
-Expansion has multiple causes:
+This measures how quickly the reachable frontier expands.
+
+However, expansion has multiple causes:
 
 $$
-\boxed{
 \Lambda
 =
 \Delta_R+\Delta_C+\Delta_G
-}
 $$
 
 ---
@@ -399,12 +357,11 @@ $$
 ## Resource Contribution
 
 $$
-\boxed{
 \Delta_R
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}{\partial R}
+\frac{\partial\log|\mathcal{P}^{reach}|}
+{\partial R}
 \dot R
-}
 $$
 
 Expansion caused by additional resources.
@@ -422,12 +379,11 @@ Examples:
 ## Capability Contribution
 
 $$
-\boxed{
 \Delta_C
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}{\partial C}
+\frac{\partial\log|\mathcal{P}^{reach}|}
+{\partial C}
 \dot C
-}
 $$
 
 Expansion from existing capability improvement.
@@ -437,12 +393,11 @@ Expansion from existing capability improvement.
 ## Generator Contribution
 
 $$
-\boxed{
 \Delta_G
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}{\partial G_m}
+\frac{\partial\log|\mathcal{P}^{reach}|}
+{\partial G_m}
 \dot G_m
-}
 $$
 
 Expansion caused by improving the machinery that generates future improvements.
@@ -454,35 +409,33 @@ Expansion caused by improving the machinery that generates future improvements.
 The central variable:
 
 $$
-\boxed{
-\Omega\equiv\Delta_G
-}
+\Omega=\Delta_G
 $$
 
 Expanded:
 
 $$
-\boxed{
 \Omega(t)
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}{\partial G_m}
+\frac{\partial\log|\mathcal{P}^{reach}|}
+{\partial G_m}
 \dot G_m
-}
 $$
 
 Definition:
 
 $$
-\boxed{
 \Omega=
 \text{rate at which a system improves its own capability-generation dynamics}
-}
 $$
 
 Omega is not:
 
 - capability
 - growth
+- complexity
+- intelligence
+- resource quantity
 
 It is the component of growth caused by improving the process that creates growth.
 
@@ -493,21 +446,17 @@ It is the component of growth caused by improving the process that creates growt
 The framework predicts:
 
 $$
-\boxed{
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-}
 $$
 
 with temporal ordering:
 
 $$
-\boxed{
 t_{G_m}<t_{\Omega}<t_C
-}
 $$
 
 Meaning:
@@ -523,31 +472,29 @@ Meaning:
 Traditional causal effect:
 
 $$
-\boxed{
 \Phi(I)
 =
 \frac{\partial Z_{future}}
 {\partial I}
-}
 $$
+
+measures direct downstream impact.
 
 Dynamic causal effect:
 
 $$
-\boxed{
 \Phi_D(I)
 =
 \frac{\partial G_{future}}
 {\partial I}
-}
 $$
+
+measures how interventions alter future capability-generation.
 
 The distinction:
 
 $$
-\boxed{
 \Phi_D(I)\neq\Phi(I)
-}
 $$
 
 A tool changes outcomes.
@@ -560,34 +507,34 @@ An evolutionary primitive changes how future generators are produced.
 
 # 12. Evolutionary Primitives
 
+AEA distinguishes between stored results and stored transformations.
+
 ## Artifact
 
 A stored result:
 
 $$
-\boxed{
 A=x
-}
 $$
+
+---
 
 ## Primitive
 
 A stored transformation:
 
 $$
-\boxed{
 P:f:x\rightarrow y
-}
 $$
+
+---
 
 ## Evolutionary Primitive
 
 A stored transformation that modifies future transformations:
 
 $$
-\boxed{
 P_e:f\rightarrow f'
-}
 $$
 
 Examples:
@@ -611,29 +558,31 @@ $$
 use trajectory variables:
 
 $$
-\boxed{
 X,\dot X,\ddot X
-}
 $$
 
-Higher-order behavior is represented through dynamics:
+Higher-order behavior is represented through dynamics.
 
 $$
-\boxed{
 \text{Meta}
 =
 \frac{d}{dt}
 (\text{adaptive transformation})
-}
 $$
 
 not:
 
 $$
-\boxed{
 \text{Meta}\in X
-}
 $$
+
+The governing principle:
+
+$$
+\text{Never add a higher layer when a trajectory variable explains the same phenomenon.}
+$$
+
+This acts as a model-selection constraint.
 
 ---
 
@@ -641,57 +590,52 @@ $$
 
 The governing principle:
 
-$$
-\boxed{
-\textbf{
-Never add a higher layer when a trajectory variable explains the same phenomenon.
-}
-}
-$$
+> Higher-order adaptive behavior is not a higher object. It is the dynamics of lower-order adaptive processes.
 
-This acts as a model-selection constraint.
+The framework avoids unnecessary ontological layers by representing higher-order behavior through transformations of existing variables.
 
 ---
 
 # 15. Final Compression
 
+The adaptive system:
+
 $$
-\boxed{
 \mathcal{A}_t
 =
 (
-\underbrace{S_t}_{where},
-\underbrace{D_t}_{what\ changes},
-\underbrace{Z_t}_{current\ state},
-\underbrace{\Theta_t}_{trajectory}
+S_t,
+D_t,
+Z_t,
+\Theta_t
 )
-}
 $$
+
+where:
+
+- $S_t$ represents where adaptation occurs.
+- $D_t$ represents what changes.
+- $Z_t$ represents the current state.
+- $\Theta_t$ represents the trajectory.
 
 The framework studies:
 
 $$
-\boxed{
 \text{systems whose transformations can themselves become targets of transformation}
-}
 $$
 
 The central measurable quantity:
 
 $$
-\boxed{
 \Omega
 =
 \frac{\partial\log|\mathcal{P}^{reach}|}
 {\partial G_m}
 \dot G_m
-}
 $$
 
 The central hypothesis:
 
 $$
-\boxed{
 \text{Improvement of improvement mechanisms precedes major capability acceleration.}
-}
 $$
