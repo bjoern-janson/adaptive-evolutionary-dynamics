@@ -4,15 +4,15 @@
 
 Adaptive Depth describes **where a system's adaptation process terminates**.
 
-The central definition:
+The central claim is:
 
-\[
+$$
 \boxed{
 D=\text{target of adaptation}
 }
-\]
+$$
 
-Depth does not measure:
+Depth is not a measure of:
 
 - intelligence
 - complexity
@@ -22,7 +22,7 @@ Depth does not measure:
 
 Instead, it identifies the **causal object modified by feedback**.
 
-A system becomes deeper not when it becomes larger, but when feedback reaches further into the machinery responsible for producing future states.
+A system becomes deeper not when it becomes larger, but when feedback penetrates further into the machinery responsible for producing future states.
 
 ---
 
@@ -31,10 +31,10 @@ A system becomes deeper not when it becomes larger, but when feedback reaches fu
 Every adaptive system contains:
 
 1. A state
-2. A mechanism that changes the state
-3. A mechanism that changes the mechanism
+2. A mechanism for changing the state
+3. A mechanism for changing the mechanism
 
-The defining question is:
+The key question is:
 
 > What does feedback modify?
 
@@ -44,15 +44,15 @@ The answer determines adaptive depth.
 
 # Adaptive Depth Hierarchy
 
-The framework defines four primary adaptive targets:
+The framework defines four primary depths:
 
-\[
+$$
 \boxed{
 D_0,D_1,D_2,D_3
 }
-\]
+$$
 
-Each level represents feedback reaching a deeper causal layer.
+Each represents a deeper target of modification.
 
 ---
 
@@ -62,13 +62,13 @@ Each level represents feedback reaching a deeper causal layer.
 
 Feedback modifies the current configuration.
 
-\[
+$$
 \boxed{
 Z_{t+1}=f(Z_t,O_t)
 }
-\]
+$$
 
-The system changes itself without changing the mechanism responsible for change.
+The system changes itself without changing how it changes.
 
 ---
 
@@ -76,39 +76,39 @@ The system changes itself without changing the mechanism responsible for change.
 
 Learning a fact:
 
-\[
+$$
 \text{information}
 \rightarrow
 \text{memory update}
-\]
+$$
 
 Physical adaptation:
 
-\[
+$$
 \text{environment}
 \rightarrow
 \text{state adjustment}
-\]
+$$
 
-Thermostat:
+A thermostat:
 
-\[
+$$
 \text{temperature error}
 \rightarrow
 \text{heater adjustment}
-\]
+$$
 
 ---
 
 ## Characteristics
 
-The transformation rule remains fixed:
+The transformation rule remains fixed.
 
-\[
+$$
 f_t=f_{t+1}
-\]
+$$
 
-The system adapts within a predefined space.
+The system improves within a predefined space.
 
 ---
 
@@ -116,15 +116,15 @@ The system adapts within a predefined space.
 
 ## Definition
 
-Feedback modifies the exploration strategy.
+Feedback modifies exploration strategy.
 
-\[
+$$
 \boxed{
 G_{s,t+1}
 =
 f(G_{s,t},O_t)
 }
-\]
+$$
 
 The system changes how it searches for solutions.
 
@@ -132,20 +132,11 @@ The system changes how it searches for solutions.
 
 ## Examples
 
-Human:
+A researcher changes experimental strategy.
 
-- changing study strategies
-- improving experimental design
-- adopting better reasoning methods
+A chess player improves opening selection.
 
-AI:
-
-- updating exploration policies
-- improving optimization strategies
-
-Science:
-
-- changing research methodology
+A machine-learning system changes its exploration policy.
 
 ---
 
@@ -155,31 +146,23 @@ The system no longer only changes answers.
 
 It changes the process used to find answers.
 
-The adaptive target becomes:
-
-\[
-\boxed{
-\text{search process}
-}
-\]
-
 ---
 
 # D₂ — Generator Adaptation
 
 ## Definition
 
-Feedback modifies the mechanisms that produce search and solution-generation processes.
+Feedback modifies the mechanisms that produce search processes.
 
-\[
+$$
 \boxed{
 G_{m,t+1}
 =
 f(G_{m,t},G_{s,t},M_t,O_t)
 }
-\]
+$$
 
-The system improves the machinery responsible for producing better methods.
+The system improves the machinery that generates methods.
 
 ---
 
@@ -187,73 +170,49 @@ The system improves the machinery responsible for producing better methods.
 
 Scientific methodology:
 
-Before:
-
-\[
+$$
 \text{observation}
 \rightarrow
-\text{knowledge}
-\]
-
-After:
-
-\[
-\text{experimental method}
+\text{experiment}
 \rightarrow
-\text{reliable knowledge production}
-\]
+\text{improved experimental method}
+$$
 
----
+Programming languages:
 
-Programming:
-
-Before:
-
-\[
+$$
 \text{manual computation}
-\]
-
-After:
-
-\[
+\rightarrow
 \text{compiler}
 \rightarrow
-\text{automatic program generation}
-\]
-
----
+\text{better programming tools}
+$$
 
 Organizations:
 
-Before:
-
-\[
-\text{fixed workflow}
-\]
-
-After:
-
-\[
-\text{process optimization}
+$$
+\text{workflow}
 \rightarrow
-\text{improved workflows}
-\]
+\text{process optimization}
+$$
 
 ---
 
 ## Characteristics
 
-The system modifies the mechanisms responsible for producing improvements.
+The system can modify the mechanisms responsible for producing improvements.
 
-The transition:
+This is the transition from:
 
-\[
-\boxed{
+$$
 \text{adaptation}
-\rightarrow
+$$
+
+to:
+
+$$
 \text{adaptive adaptation}
-}
-\]
+$$
 
 ---
 
@@ -261,67 +220,53 @@ The transition:
 
 ## Definition
 
-Feedback modifies the dynamics governing generator improvement.
+Feedback modifies the rate at which generators improve.
 
-\[
+$$
 \boxed{
 \Omega_{t+1}
 =
 f(\Omega_t,G_m,G_s,M,O)
 }
-\]
+$$
 
-The system changes the rate at which its own improvement mechanisms evolve.
+The system changes its own improvement dynamics.
 
 ---
 
-## Key Transition
+## The Key Transition
 
 D₂:
 
-\[
-\boxed{
+$$
 G_m\uparrow
-}
-\]
+$$
 
 The system improves its generators.
 
----
-
 D₃:
 
-\[
-\boxed{
+$$
 \frac{dG_m}{dt}\uparrow
-}
-\]
+$$
 
 The system improves the rate at which it improves generators.
 
 ---
 
-## Interpretation
-
-D₂ creates better improvement mechanisms.
-
-D₃ creates mechanisms that improve improvement mechanisms faster.
-
----
-
 # Meta Without Infinite Regression
 
-A major constraint:
+A major constraint of the framework:
 
-\[
+$$
 \boxed{
 \text{Higher-order behavior should be represented by dynamics, not new entities.}
 }
-\]
+$$
 
 A naive hierarchy:
 
-\[
+$$
 X
 \rightarrow
 X_{meta}
@@ -329,21 +274,21 @@ X_{meta}
 X_{meta^2}
 \rightarrow
 ...
-\]
+$$
 
 creates infinite regress.
 
-The framework instead uses:
+The adaptive depth model instead uses:
 
-\[
+$$
 X
 \rightarrow
 \dot X
 \rightarrow
 \ddot X
-\]
+$$
 
-Higher-order adaptation is represented as changing trajectories.
+Higher-order behavior is a property of trajectories.
 
 ---
 
@@ -351,35 +296,33 @@ Higher-order adaptation is represented as changing trajectories.
 
 The framework separates:
 
-\[
-\boxed{
+$$
 S=\text{scale}
-}
-\]
+$$
 
 from:
 
-\[
-\boxed{
+$$
 D=\text{adaptive depth}
-}
-\]
+$$
 
-A single person may operate at high depth:
+A single person can operate at high depth:
 
-\[
-(S,D)=
+$$
+(S,D)
+=
 (\text{micro},D_2)
-\]
+$$
 
-by developing systems for improving their own learning.
+by developing systems for self-improvement.
 
-A large institution may operate at low depth:
+A large institution can operate at low depth:
 
-\[
-(S,D)=
+$$
+(S,D)
+=
 (\text{macro},D_0)
-\]
+$$
 
 if it only maintains inherited processes.
 
@@ -389,35 +332,32 @@ if it only maintains inherited processes.
 
 The adaptive system:
 
-\[
+$$
 \boxed{
 \mathcal{A}_t
 =
 (S_t,D_t,X_t,\Theta_t)
 }
-\]
+$$
 
 where:
 
-\[
-\boxed{
+$$
 D_t=
 \operatorname{Target}(Feedback_t)
-}
-\]
+$$
 
-The depth variable identifies the causal target modified by adaptation.
+The depth variable identifies the destination of adaptive modification.
 
 ---
 
 # Relationship to Evolutionary Velocity
 
-Adaptive depth determines whether evolutionary velocity can emerge.
+Adaptive depth determines whether evolutionary velocity is possible.
 
-The progression:
+The causal progression:
 
-\[
-\boxed{
+$$
 D_0
 \rightarrow
 D_1
@@ -425,18 +365,17 @@ D_1
 D_2
 \rightarrow
 D_3
-}
-\]
+$$
 
-represents increasing penetration of feedback into the machinery of transformation.
+corresponds to increasing penetration of feedback into the system's transformation machinery.
 
 The critical transition:
 
-\[
+$$
 \boxed{
 D_2\rightarrow D_3
 }
-\]
+$$
 
 because the system begins modifying the dynamics of capability generation itself.
 
@@ -444,9 +383,9 @@ because the system begins modifying the dynamics of capability generation itself
 
 # Empirical Prediction
 
-Higher adaptive depth should produce:
+Systems exhibiting higher adaptive depth should show:
 
-\[
+$$
 \boxed{
 D_2
 \rightarrow
@@ -454,21 +393,17 @@ D_2
 \rightarrow
 C\uparrow\uparrow
 }
-\]
+$$
 
 The expected ordering:
 
-\[
+$$
 \boxed{
 t_{G_m}<t_{\Omega}<t_C
 }
-\]
+$$
 
-Meaning:
-
-1. Generator mechanisms change.
-2. Evolutionary velocity increases.
-3. Capability growth becomes visible.
+Generator modification precedes measurable acceleration, which precedes visible capability growth.
 
 ---
 
@@ -476,54 +411,50 @@ Meaning:
 
 Adaptive Depth measures:
 
-\[
+$$
 \boxed{
 \text{where feedback lands}
 }
-\]
+$$
 
 not:
 
-\[
-\text{how impressive the system appears}
-\]
+$$
+\text{how complex the system appears}
+$$
 
 The hierarchy:
 
-\[
+$$
 \boxed{
-D_0:
-\text{change state}
+D_0:\text{change state}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
-D_1:
-\text{change search}
+D_1:\text{change search}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
-D_2:
-\text{change generators}
+D_2:\text{change generators}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
-D_3:
-\text{change generator dynamics}
+D_3:\text{change generator dynamics}
 }
-\]
+$$
 
 The central invariant:
 
-\[
+$$
 \boxed{
 \textbf{
-A system becomes more deeply adaptive when feedback modifies deeper causal mechanisms responsible for producing future change.
+A system becomes more adaptive when feedback modifies deeper parts of the process that produces future change.
 }
 }
-\]
+$$
