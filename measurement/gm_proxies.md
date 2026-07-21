@@ -210,8 +210,11 @@ Observable:
 \boxed{
 I_r
 =
-\frac{\text{future improvements enabled}}
-{\text{initial construction cost}}
+\frac{
+\text{future improvements enabled}
+}{
+\text{initial construction cost}
+}
 }
 \]
 
@@ -257,8 +260,11 @@ Observable:
 \boxed{
 A_m
 =
-\frac{\text{improvement steps automated}}
-{\text{total improvement steps}}
+\frac{
+\text{improvement steps automated}
+}{
+\text{total improvement steps}
+}
 }
 \]
 
@@ -269,29 +275,29 @@ Examples:
 Low \(G_m\):
 
 \[
-human
+\text{human}
 \rightarrow
-solution
+\text{solution}
 \]
 
 Higher \(G_m\):
 
 \[
-human
+\text{human}
 \rightarrow
-tool
+\text{tool}
 \rightarrow
-solutions
+\text{solutions}
 \]
 
 Very high \(G_m\):
 
 \[
-system
+\text{system}
 \rightarrow
-better tool
+\text{better tool}
 \rightarrow
-better system
+\text{better system}
 \]
 
 ---
@@ -368,8 +374,11 @@ Observable:
 \boxed{
 \eta_s
 =
-\frac{\Delta \text{useful discoveries}}
-{\Delta \text{search resources}}
+\frac{
+\Delta\text{useful discoveries}
+}{
+\Delta\text{search resources}
+}
 }
 \]
 
@@ -487,9 +496,7 @@ Therefore:
 
 \[
 \boxed{
-G_m
-\neq
-R
+G_m\neq R
 }
 \]
 
@@ -498,11 +505,11 @@ Control variables:
 \[
 R=
 (
-compute,
-energy,
-capital,
-labor,
-data
+\text{compute},
+\text{energy},
+\text{capital},
+\text{labor},
+\text{data}
 )
 \]
 
@@ -632,7 +639,7 @@ A_m>0
 
 The \(G_m\) concept fails if:
 
-1. Capability increases without measurable generator changes.
+## 1. Capability increases without measurable generator changes
 
 \[
 \Delta C>0
@@ -646,7 +653,7 @@ while:
 
 ---
 
-2. Resource increases fully explain observed transitions.
+## 2. Resource increases fully explain observed transitions
 
 \[
 \Delta_R
@@ -656,7 +663,7 @@ while:
 
 ---
 
-3. Proposed \(G_m\) proxies do not predict future capability growth.
+## 3. Proposed \(G_m\) proxies do not predict future capability growth
 
 \[
 \hat G_m
