@@ -10,16 +10,16 @@ The framework models adaptive systems as evolving over a finite state space.
 
 Rather than viewing capability as the primary state variable, capability is treated as the downstream consequence of changes in generator dynamics, execution, and reachable space.
 
-The complete system state is
+The complete system state is:
 
-\[
+$$
 \boxed{
 S_t=
 (G_t,A_t,X_t,P_t,C_t,R_t)
 }
-\]
+$$
 
-where
+where:
 
 - \(G_t\) — Generator quality
 - \(A_t\) — Adoption state
@@ -36,9 +36,9 @@ where
 
 Generator quality represents the system's ability to create future improvements.
 
-\[
+$$
 G_t\ge0
-\]
+$$
 
 Examples:
 
@@ -57,9 +57,9 @@ It does not directly produce capability.
 
 Adoption measures how much of the generator has been incorporated into the active system.
 
-\[
+$$
 0\le A_t\le G_t
-\]
+$$
 
 Examples:
 
@@ -76,9 +76,9 @@ A generator may exist without widespread adoption.
 
 Execution capacity measures whether the adopted generator can actually be used.
 
-\[
+$$
 0\le X_t\le1
-\]
+$$
 
 Examples:
 
@@ -97,9 +97,9 @@ A system may possess a generator and adopt it while remaining unable to operatio
 
 The reachable frontier measures the volume of accessible future states.
 
-\[
+$$
 P_t\ge0
-\]
+$$
 
 It represents the effective search space available to the adaptive system.
 
@@ -111,9 +111,9 @@ Unlike raw state space, the reachable frontier depends on the current adaptive m
 
 Capability is the realized performance of the system.
 
-\[
+$$
 C_t
-\]
+$$
 
 Examples:
 
@@ -130,9 +130,9 @@ Capability follows the reachable frontier rather than directly following the gen
 
 Resources include external inputs that support capability growth.
 
-\[
+$$
 R_t
-\]
+$$
 
 Examples:
 
@@ -148,9 +148,9 @@ Resources increase capacity but do not necessarily improve the adaptive process.
 
 # State Transitions
 
-The framework proposes the following dependency graph.
+The framework proposes the following dependency graph:
 
-\[
+$$
 \boxed{
 G
 \rightarrow
@@ -162,27 +162,27 @@ P
 \rightarrow
 C
 }
-\]
+$$
 
-with resources acting as an external modifier.
+with resources acting as an external modifier:
 
-\[
+$$
 R
 \rightarrow
 C
-\]
+$$
 
 ---
 
 # Generator Dynamics
 
-Generator evolution is modeled as
+Generator evolution is modeled as:
 
-\[
+$$
 G_{t+1}=f_G(G_t)
-\]
+$$
 
-Possible implementations include
+Possible implementations include:
 
 - logistic growth
 - innovation processes
@@ -195,23 +195,25 @@ Possible implementations include
 
 Adoption depends on generator quality and current adoption.
 
-\[
+$$
 A_{t+1}=f_A(G_t,A_t)
-\]
+$$
 
 Example:
 
-\[
+$$
 A_{t+1}
 =
 A_t
 +
 \rho(G_t-A_t)
-\]
+$$
 
-where
+where:
 
-\(\rho\)
+$$
+\rho
+$$
 
 is the adoption rate.
 
@@ -221,15 +223,17 @@ is the adoption rate.
 
 Execution capacity depends on adoption and external constraints.
 
-\[
+$$
 X_{t+1}
 =
 f_X(A_t,X_t,\Theta)
-\]
+$$
 
-where
+where:
 
-\(\Theta\)
+$$
+\Theta
+$$
 
 represents environmental constraints.
 
@@ -244,17 +248,17 @@ Examples:
 
 # Reachable Frontier Dynamics
 
-The reachable frontier expands according to
+The reachable frontier expands according to:
 
-\[
+$$
 P_{t+1}
 =
 f_P(P_t,A_t,X_t)
-\]
+$$
 
-One possible implementation is
+One possible implementation:
 
-\[
+$$
 P_{t+1}
 =
 P_t
@@ -266,27 +270,29 @@ P_t
 \left(
 1-\frac{P_t}{K}
 \right)
-\]
+$$
 
-where
+where:
 
-\(K\)
+$$
+K
+$$
 
 is the maximum reachable frontier.
 
 Execution therefore gates frontier expansion.
 
-If
+If:
 
-\[
+$$
 X=0
-\]
+$$
 
-then
+then:
 
-\[
-P_{t+1}=P_t.
-\]
+$$
+P_{t+1}=P_t
+$$
 
 Generator improvement alone is insufficient.
 
@@ -296,15 +302,15 @@ Generator improvement alone is insufficient.
 
 Capability follows the reachable frontier.
 
-\[
+$$
 C_{t+1}
 =
 f_C(C_t,P_t,R_t)
-\]
+$$
 
-A simple implementation is
+A simple implementation:
 
-\[
+$$
 C_{t+1}
 =
 C_t
@@ -312,11 +318,13 @@ C_t
 \alpha(P_t-C_t)
 +
 g(R_t)
-\]
+$$
 
-where
+where:
 
-\(g(R_t)\)
+$$
+g(R_t)
+$$
 
 captures direct resource effects.
 
@@ -326,27 +334,27 @@ captures direct resource effects.
 
 Evolutionary velocity measures the rate at which adaptive capacity changes.
 
-\[
+$$
 \boxed{
 \Omega
 =
 \frac{dG_m}{dt}
 }
-\]
+$$
 
-Operational proxies may instead estimate
+Operational proxies may instead estimate:
 
-\[
-\hat\Omega
+$$
+\hat{\Omega}
 =
 \frac{d\Lambda}{dt}
-\]
+$$
 
-where
+where:
 
-\[
+$$
 \Lambda
-\]
+$$
 
 is frontier velocity.
 
@@ -356,7 +364,7 @@ is frontier velocity.
 
 A phase boundary occurs when generator improvement propagates through the full state transition chain.
 
-\[
+$$
 \boxed{
 \Delta G
 \rightarrow
@@ -368,7 +376,7 @@ A phase boundary occurs when generator improvement propagates through the full s
 \rightarrow
 \Delta C
 }
-\]
+$$
 
 Missing any intermediate transition weakens or prevents capability acceleration.
 
@@ -380,9 +388,9 @@ The framework predicts several distinct failure modes.
 
 ## Generator Failure
 
-\[
+$$
 \Delta G\approx0
-\]
+$$
 
 No adaptive transition occurs.
 
@@ -390,15 +398,15 @@ No adaptive transition occurs.
 
 ## Adoption Failure
 
-\[
+$$
 \Delta G>0
-\]
+$$
 
-but
+but:
 
-\[
+$$
 \Delta A\approx0
-\]
+$$
 
 The generator exists but is not deployed.
 
@@ -406,15 +414,15 @@ The generator exists but is not deployed.
 
 ## Execution Failure
 
-\[
+$$
 \Delta A>0
-\]
+$$
 
-but
+but:
 
-\[
+$$
 X\approx0
-\]
+$$
 
 The system cannot operationalize the adopted generator.
 
@@ -424,11 +432,15 @@ The system cannot operationalize the adopted generator.
 
 Execution succeeds but frontier expansion remains constrained.
 
-\[
+$$
 \Delta P\approx0
-\]
+$$
 
-Examples include hard physical limits or saturated search spaces.
+Examples:
+
+- hard physical limits
+- saturated search spaces
+- insufficient representation quality
 
 ---
 
@@ -436,7 +448,7 @@ Examples include hard physical limits or saturated search spaces.
 
 The frontier expands but realized capability does not.
 
-Examples include:
+Examples:
 
 - insufficient resources
 - delayed exploitation
@@ -448,7 +460,7 @@ Examples include:
 
 The framework predicts that sustained adaptive acceleration requires successful propagation through every state transition.
 
-\[
+$$
 \boxed{
 G
 \rightarrow
@@ -460,6 +472,6 @@ P
 \rightarrow
 C
 }
-\]
+$$
 
 Capability is therefore interpreted as the endpoint of a causal chain rather than the primary object of optimization.
