@@ -1,24 +1,24 @@
 # Adaptive Evolutionary Architecture
 
-## Abstract
+## 01. Core Framework
 
-Adaptive Evolutionary Architecture (AEA) is a mathematical framework for modeling systems that do not merely adapt within a fixed possibility space, but modify the mechanisms that determine which futures are reachable.
+### Abstract
+
+Adaptive Evolutionary Architecture (AEA) is a mathematical framework for modeling systems that do not merely adapt within a fixed possibility space, but progressively modify the mechanisms that determine which futures are reachable.
 
 The central question is:
 
 > **How does a system become better at becoming better?**
 
-The framework characterizes adaptive systems through five fundamental components:
+The framework characterizes adaptive systems through five interacting components:
 
-| Component | Description |
-|-----------|-------------|
-| **State** | What the system currently is |
-| **Dynamics** | How the system changes |
-| **Reachability Geometry** | Which future transformations are accessible |
-| **Adaptive Depth** | What the feedback process modifies |
-| **Evolutionary Velocity** | The rate at which the system improves its own capability-generation machinery |
+1. **State** — what the system currently is.
+2. **Dynamics** — how the system changes.
+3. **Reachability geometry** — which future transformations are accessible.
+4. **Adaptive depth** — what feedback modifies.
+5. **Evolutionary velocity** — the rate at which the system improves its own capability-generation machinery.
 
-The governing principle is
+The guiding principle is
 
 $$
 \boxed{
@@ -28,14 +28,13 @@ $$
 
 ---
 
-# System Representation
+# 1. System Representation
 
-An adaptive system is represented as
+An adaptive system is represented by
 
 $$
 \boxed{
-\mathcal{A}_t=
-(S_t,D_t,X_t,\Theta_t)
+\mathcal{A}_t=(S_t,D_t,X_t,\Theta_t)
 }
 $$
 
@@ -48,9 +47,11 @@ where
 | $X_t$ | Internal system configuration |
 | $\Theta_t$ | Trajectory dynamics |
 
-## Internal Configuration
+---
 
-The internal configuration is
+## 1.1 Internal Configuration
+
+The system configuration is
 
 $$
 \boxed{
@@ -73,7 +74,7 @@ $$
 | $Z_t$ | Current operational state |
 | $M_t$ | Internal representation |
 | $\pi_t$ | Policy or controller |
-| $V_t$ | Objective or value structure |
+| $V_t$ | Objective or value function |
 | $C_t$ | Current capability |
 | $G_s$ | Search mechanism |
 | $G_m$ | Generator-modification mechanism |
@@ -81,7 +82,7 @@ $$
 
 ---
 
-# Adaptive Dynamics
+# 2. Adaptive Dynamics
 
 The system evolves through interaction with its environment.
 
@@ -115,7 +116,7 @@ $$
 E_{t+1}=F(E_t,u_t)
 $$
 
-Actions modify the environment.
+Actions modify external conditions.
 
 ### Internal State Transition
 
@@ -125,7 +126,7 @@ Z_{t+1}
 \Phi(Z_t,M_t,\pi_t,V_t,E_t)
 $$
 
-The complete adaptive transition is
+The complete adaptive evolution is
 
 $$
 X_{t+1}=F_X(X_t,E_t,u_t)
@@ -133,9 +134,9 @@ $$
 
 ---
 
-# Reachable Transformation Space
+# 3. Reachable Transformation Space
 
-AEA models **reachable** futures rather than all imaginable futures.
+AEA models **reachable** rather than merely imaginable futures.
 
 Define
 
@@ -144,11 +145,11 @@ $$
 \mathcal{P}^{reach}_{evo}(t)
 =
 \left\{
-\tau :
-E_t \rightarrow E_{t+k}
+\tau:
+E_t\rightarrow E_{t+k}
 \mid
 \tau
-\text{ is reachable under }X_t,R_t
+\text{ reachable under }X_t,R_t
 \right\}
 }
 $$
@@ -156,8 +157,8 @@ $$
 where
 
 - $E_t$ is the current environment.
-- $\tau$ is a possible transformation.
-- Reachability is constrained by representations, resources, search mechanisms, and generator mechanisms.
+- $\tau$ is a candidate transformation.
+- Reachability depends on representations, resources, search mechanisms, and generator mechanisms.
 
 The key distinction is
 
@@ -171,28 +172,27 @@ $$
 
 ---
 
-# Capability
+# 4. Capability
 
 Current capability is defined as
 
 $$
 \boxed{
-C_t=
+C_t
+=
 |\mathcal{P}^{reach}_{current}(t)|
 }
 $$
 
-Capability answers one question:
+Capability measures what the system can currently achieve.
 
-> **What can the system currently achieve?**
-
-It does **not** describe how quickly capability itself can expand.
+It does **not** measure how quickly that capability expands.
 
 ---
 
-# Search Dynamics
+# 5. Search Dynamics
 
-The search mechanism explores reachable possibilities.
+The search mechanism maps reachable possibilities into explored possibilities.
 
 $$
 \boxed{
@@ -203,25 +203,25 @@ G_s:
 }
 $$
 
-It determines
+It governs
 
 - exploration strategy
 - candidate generation
 - search efficiency
-- discovery processes
+- discovery
 
 Examples include
 
 - scientific experimentation
 - algorithm search
-- optimization procedures
-- problem-solving strategies
+- optimization
+- problem-solving
 
 ---
 
-# Generator Modification
+# 6. Generator Modification
 
-Generator modification changes the search mechanism itself.
+Generator modification improves the search mechanism itself.
 
 $$
 \boxed{
@@ -241,19 +241,15 @@ Examples include
 
 ---
 
-# Adaptive Depth
+# 7. Adaptive Depth
 
-Adaptive depth is defined as
+Adaptive depth specifies **what feedback modifies**.
 
 $$
 \boxed{
 D=\operatorname{Target}(Feedback)
 }
 $$
-
-The guiding question is
-
-> **What does the system update when it receives information?**
 
 ## D₀ — State Adaptation
 
@@ -271,7 +267,7 @@ $$
 G_{s,t+1}=f(G_{s,t},O_t)
 $$
 
-Example: improving problem-solving strategy.
+Example: improving a search strategy.
 
 ---
 
@@ -295,21 +291,13 @@ $$
 f(\Omega_t,G_m,G_s,M_t,O_t)
 $$
 
-Equivalently,
-
-$$
-G_m
-\rightarrow
-\dot G_m
-$$
-
-The system modifies its own improvement dynamics.
+The adaptive target becomes the dynamics of generator improvement.
 
 ---
 
-# Reachable-Space Expansion
+# 8. Reachable-Space Expansion
 
-The total expansion rate is
+The expansion rate of reachable space is
 
 $$
 \Lambda(t)
@@ -319,7 +307,7 @@ $$
 |\mathcal{P}^{reach}(t)|
 $$
 
-This expansion has three components.
+This decomposes into
 
 $$
 \boxed{
@@ -328,6 +316,14 @@ $$
 \Delta_R+\Delta_C+\Delta_G
 }
 $$
+
+where
+
+| Component | Source |
+|-----------|--------|
+| $\Delta_R$ | Resource expansion |
+| $\Delta_C$ | Capability improvement |
+| $\Delta_G$ | Generator improvement |
 
 ### Resource Contribution
 
@@ -338,8 +334,6 @@ $$
 \dot R
 $$
 
-Examples include compute, energy, capital, labor, and data.
-
 ### Capability Contribution
 
 $$
@@ -348,8 +342,6 @@ $$
 \frac{\partial\log|\mathcal{P}^{reach}|}{\partial C}
 \dot C
 $$
-
-Expansion produced by improving existing capabilities.
 
 ### Generator Contribution
 
@@ -360,44 +352,44 @@ $$
 \dot G_m
 $$
 
-Expansion produced by improving capability-generation mechanisms.
-
 ---
 
-# Evolutionary Velocity
+# 9. Evolutionary Velocity
 
 The central quantity is
 
 $$
 \boxed{
-\Omega\equiv\Delta_G
+\Omega
+\equiv
+\Delta_G
 }
 $$
 
-or
+Equivalently,
 
 $$
 \boxed{
 \Omega
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}{\partial G_m}
+\frac{\partial\log|\mathcal{P}^{reach}|}
+{\partial G_m}
 \dot G_m
 }
 $$
 
-Omega is the **rate at which a system improves its own capability-generation dynamics**.
+Omega measures the rate at which a system improves its own capability-generation dynamics.
 
 It is **not**
 
 - capability
 - growth
-- intelligence
 - complexity
-- resource quantity
+- intelligence
 
 ---
 
-# Phase Transition Prediction
+# 10. Phase Transition Prediction
 
 AEA predicts the causal ordering
 
@@ -414,35 +406,31 @@ with temporal ordering
 $$
 t_{G_m}
 <
-t_\Omega
+t_{\Omega}
 <
 t_C
 $$
 
-Meaning
-
-1. Generator mechanisms change.
-2. Evolutionary velocity increases.
-3. Capability acceleration follows.
-
 ---
 
-# Dynamic Causal Mass
+# 11. Dynamic Causal Mass
 
-Traditional causal influence is
+Traditional causal influence
 
 $$
 \Phi(I)
 =
-\frac{\partial Z_{future}}{\partial I}
+\frac{\partial Z_{future}}
+{\partial I}
 $$
 
-Dynamic causal influence is
+Dynamic causal influence
 
 $$
 \Phi_D(I)
 =
-\frac{\partial G_{future}}{\partial I}
+\frac{\partial G_{future}}
+{\partial I}
 $$
 
 A tool changes outcomes.
@@ -453,25 +441,25 @@ An evolutionary primitive changes how future generators are produced.
 
 ---
 
-# Evolutionary Primitives
+# 12. Evolutionary Primitives
 
-| Object | Definition |
-|---------|------------|
+| Type | Definition |
+|------|------------|
 | Artifact | $A=x$ |
 | Primitive | $P:f:x\rightarrow y$ |
 | Evolutionary Primitive | $P_e:f\rightarrow f'$ |
 
 Examples include
 
-- scientific method
+- scientific methods
 - programming languages
 - automated optimization systems
 
 ---
 
-# Anti-Recursion Principle
+# 13. Anti-Recursion Principle
 
-Rather than introducing meta-layers,
+Instead of constructing infinite meta-hierarchies,
 
 $$
 X
@@ -481,20 +469,11 @@ X_{meta}
 X_{meta^2}
 $$
 
-AEA represents higher-order behavior through trajectory variables
+AEA represents higher-order behavior through trajectory variables,
 
 $$
 X,\dot X,\ddot X
 $$
-
-Meta is therefore treated as
-
-$$
-\frac{d}{dt}
-(\text{adaptive transformation})
-$$
-
-rather than an additional ontological object.
 
 The governing rule is
 
@@ -508,28 +487,37 @@ $$
 
 ---
 
-# Final Compression
+# 14. Core Invariant
+
+Higher-order adaptive behavior is **not** a higher object.
+
+It is a property of system dynamics.
+
+---
+
+# 15. Final Compression
 
 The framework studies
 
 $$
 \boxed{
-\text{Systems whose transformations can themselves become targets of transformation.}
+\text{systems whose transformations can themselves become targets of transformation}
 }
 $$
 
-The central measurable quantity is
+Its central measurable quantity is
 
 $$
 \boxed{
 \Omega
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}{\partial G_m}
+\frac{\partial\log|\mathcal{P}^{reach}|}
+{\partial G_m}
 \dot G_m
 }
 $$
 
-The central hypothesis is
+Its central hypothesis is
 
 $$
 \boxed{
