@@ -4,19 +4,17 @@
 
 The Adaptive Depth Model formalizes **where the adaptive process terminates**.
 
-The central hypothesis is:
+The central hypothesis:
 
 > The defining characteristic of adaptive systems is not their complexity, intelligence, or scale, but the causal target modified by feedback.
 
 A system becomes more deeply adaptive when feedback propagates further into the mechanisms responsible for producing future behavior.
 
-The framework therefore defines depth as:
+The framework defines depth as:
 
-[
-\boxed{
+$$
 D=\operatorname{Target}(Feedback)
-}
-]
+$$
 
 Depth is not a hierarchy of intelligence.
 
@@ -28,21 +26,21 @@ It is a hierarchy of **adaptive reach**.
 
 An adaptive system receives information:
 
-[
+$$
 O_t=H(E_t)
-]
+$$
 
 and updates some component of itself:
 
-[
+$$
 X_{t+1}=F_X(X_t,E_t,u_t)
-]
+$$
 
-The depth of adaptation depends on which component of (X_t) is modified.
+The depth of adaptation depends on which component of $X_t$ is modified.
 
 Let:
 
-[
+$$
 X_t=
 (
 Z_t,
@@ -54,26 +52,26 @@ G_{s,t},
 G_{m,t},
 R_t
 )
-]
+$$
 
 where:
 
-* (Z_t): system state
-* (M_t): representation/model
-* (\pi_t): policy/controller
-* (V_t): objective/value structure
-* (C_t): capability
-* (G_s): search mechanism
-* (G_m): generator modification mechanism
-* (R_t): resources
+| Variable | Meaning |
+|---|---|
+| $Z_t$ | System state |
+| $M_t$ | Representation/model |
+| $\pi_t$ | Policy/controller |
+| $V_t$ | Objective/value structure |
+| $C_t$ | Capability |
+| $G_s$ | Search mechanism |
+| $G_m$ | Generator modification mechanism |
+| $R_t$ | Resources |
 
 Then:
 
-[
-\boxed{
+$$
 D=\text{causal location of the update target}
-}
-]
+$$
 
 ---
 
@@ -85,11 +83,9 @@ D=\text{causal location of the update target}
 
 Feedback modifies the current configuration.
 
-[
-\boxed{
+$$
 Z_{t+1}=f(Z_t,O_t)
-}
-]
+$$
 
 The system changes, but the mechanism producing change remains fixed.
 
@@ -99,18 +95,16 @@ The system changes, but the mechanism producing change remains fixed.
 
 The system:
 
-* corrects errors
-* learns states
-* updates parameters
-* adjusts behavior
+- corrects errors
+- learns states
+- updates parameters
+- adjusts behavior
 
 The adaptive target is:
 
-[
-\boxed{
+$$
 \text{state}
-}
-]
+$$
 
 ---
 
@@ -118,21 +112,21 @@ The adaptive target is:
 
 Biological:
 
-* homeostasis
-* reflex adaptation
-* conditioned responses
+- homeostasis
+- reflex adaptation
+- conditioned responses
 
 Artificial:
 
-* parameter tuning
-* supervised learning updates
-* error correction
+- parameter tuning
+- supervised learning updates
+- error correction
 
 Human:
 
-* memorizing information
-* learning a fact
-* practicing a fixed procedure
+- memorizing information
+- learning a fact
+- practicing a fixed procedure
 
 ---
 
@@ -142,11 +136,9 @@ Human:
 
 Feedback modifies the exploration strategy.
 
-[
-\boxed{
+$$
 G_{s,t+1}=f(G_{s,t},O_t)
-}
-]
+$$
 
 The system no longer only changes answers.
 
@@ -158,18 +150,16 @@ It changes how it searches for answers.
 
 The adaptive target becomes:
 
-[
-\boxed{
+$$
 \text{search process}
-}
-]
+$$
 
 The system improves:
 
-* exploration strategy
-* heuristics
-* attention allocation
-* problem-solving methods
+- exploration strategy
+- heuristics
+- attention allocation
+- problem-solving methods
 
 ---
 
@@ -177,18 +167,18 @@ The system improves:
 
 Human:
 
-* changing study methods
-* improving experimental design
-* adopting better reasoning strategies
+- changing study methods
+- improving experimental design
+- adopting better reasoning strategies
 
 AI:
 
-* reinforcement learning policy improvement
-* search algorithm optimization
+- reinforcement learning policy improvement
+- search algorithm optimization
 
 Science:
 
-* changing research methodology
+- changing research methodology
 
 ---
 
@@ -198,14 +188,11 @@ Science:
 
 Feedback modifies the mechanisms that produce search and solutions.
 
-[
-\boxed{
+$$
 G_{m,t+1}
-=========
-
+=
 f(G_{m,t},G_{s,t},M_t,O_t)
-}
-]
+$$
 
 The system begins modifying the machinery responsible for creating improvements.
 
@@ -215,71 +202,73 @@ The system begins modifying the machinery responsible for creating improvements.
 
 The adaptive target becomes:
 
-[
-\boxed{
+$$
 \text{generation mechanism}
-}
-]
+$$
 
 The system improves:
 
-* methods
-* tools
-* architectures
-* institutions
-* discovery processes
+- methods
+- tools
+- architectures
+- institutions
+- discovery processes
 
 ---
 
 ## Examples
 
-Scientific method:
+### Scientific Method
 
 Before:
 
-[
+$$
 \text{individual observation}
 \rightarrow
 \text{knowledge}
-]
+$$
 
 After:
 
-[
+$$
 \text{experimental method}
 \rightarrow
 \text{reliable knowledge production}
-]
+$$
 
-Programming languages:
+---
+
+### Programming Languages
 
 Before:
 
-[
+$$
 \text{manual computation}
-]
+$$
 
 After:
 
-[
+$$
 \text{compiler}
 \rightarrow
 \text{automatic program generation}
-]
+$$
 
-Machine learning:
+---
+
+### Machine Learning
 
 Before:
 
-[
+$$
 \text{manual features}
-]
+$$
 
 After:
 
-[
+$$
 \text{representation learning}
-]
+$$
 
 ---
 
@@ -289,22 +278,17 @@ After:
 
 Feedback modifies the rate at which generators themselves improve.
 
-[
-\boxed{
+$$
 \Omega_{t+1}
-============
-
+=
 f(\Omega_t,G_m,G_s,M_t,O_t)
-}
-]
+$$
 
 The adaptive target becomes:
 
-[
-\boxed{
+$$
 \text{dynamics of improvement}
-}
-]
+$$
 
 ---
 
@@ -314,15 +298,13 @@ The system does not only create better mechanisms.
 
 It creates mechanisms that create better mechanisms faster.
 
-The transition:
+The defining transition:
 
-[
-G_m
-\rightarrow
-\dot G_m
-]
+$$
+G_m\rightarrow\dot G_m
+$$
 
-is the defining feature.
+This represents modification of improvement dynamics themselves.
 
 ---
 
@@ -330,9 +312,9 @@ is the defining feature.
 
 Potential cases:
 
-* automated scientific discovery systems
-* AI systems improving AI research pipelines
-* organizations that optimize their own optimization processes
+- automated scientific discovery systems
+- AI systems improving AI research pipelines
+- organizations that optimize their own optimization processes
 
 ---
 
@@ -340,16 +322,14 @@ Potential cases:
 
 A critical distinction:
 
-[
-\boxed{
+$$
 D\neq S
-}
-]
+$$
 
 where:
 
-* (D): adaptive depth
-* (S): system scale
+- $D$ = adaptive depth
+- $S$ = system scale
 
 A larger system is not necessarily deeper.
 
@@ -357,25 +337,25 @@ A larger system is not necessarily deeper.
 
 ## Examples
 
-### Large but shallow
+### Large but Shallow
 
 A bureaucracy:
 
-[
+$$
 (S,D)=(macro,D_0)
-]
+$$
 
 It maintains a fixed process.
 
 ---
 
-### Small but deep
+### Small but Deep
 
 An individual improving their own learning system:
 
-[
+$$
 (S,D)=(micro,D_2)
-]
+$$
 
 The scale is small.
 
@@ -387,29 +367,27 @@ The adaptive target is deeper.
 
 Adaptive depth affects reachable future space:
 
-[
-\mathcal P^{reach}_{evo}(t)
-]
+$$
+\mathcal{P}^{reach}_{evo}(t)
+$$
 
 A deeper system can modify more of the machinery determining future reachability.
 
 The relationship:
 
-[
-\boxed{
+$$
 D\uparrow
 \Rightarrow
 \text{greater control over future transformation dynamics}
-}
-]
+$$
 
 However:
 
-[
+$$
 D\uparrow
 \not\Rightarrow
 C\uparrow
-]
+$$
 
 Depth creates potential.
 
@@ -423,8 +401,7 @@ A system transitions to a deeper adaptive regime when feedback reaches a previou
 
 The transition sequence:
 
-[
-\boxed{
+$$
 D_0
 \rightarrow
 D_1
@@ -432,13 +409,11 @@ D_1
 D_2
 \rightarrow
 D_3
-}
-]
+$$
 
 represents:
 
-[
-\boxed{
+$$
 \text{state}
 \rightarrow
 \text{search}
@@ -446,8 +421,7 @@ represents:
 \text{generator}
 \rightarrow
 \text{generator dynamics}
-}
-]
+$$
 
 ---
 
@@ -457,41 +431,39 @@ Depth does not imply infinite layers.
 
 The framework rejects:
 
-[
+$$
 D_4,D_5,D_6,...
-]
+$$
 
 unless they represent genuinely new causal targets.
 
 The rule:
 
-[
-\boxed{
+$$
 \textbf{
 Never add a higher layer when a trajectory variable explains the phenomenon.
 }
-}
-]
+$$
 
 Higher-order behavior is represented by dynamics:
 
-[
+$$
 X
 \rightarrow
 \dot X
 \rightarrow
 \ddot X
-]
+$$
 
 not new objects:
 
-[
+$$
 X
 \rightarrow
 X'
 \rightarrow
 X''
-]
+$$
 
 ---
 
@@ -499,45 +471,34 @@ X''
 
 The Adaptive Depth Model defines:
 
-[
-\boxed{
+$$
 D=\text{what feedback modifies}
-}
-]
+$$
 
 The levels:
 
-[
-\boxed{
+$$
 D_0=\text{state}
-}
-]
+$$
 
-[
-\boxed{
+$$
 D_1=\text{search}
-}
-]
+$$
 
-[
-\boxed{
+$$
 D_2=\text{generator}
-}
-]
+$$
 
-[
-\boxed{
+$$
 D_3=\text{generator dynamics}
-}
-]
+$$
 
 The central claim:
 
-[
-\boxed{
+$$
 \textbf{
-The defining transition in advanced adaptive systems is not greater intelligence, but deeper feedback targeting.}
+The defining transition in advanced adaptive systems is not greater intelligence, but deeper feedback targeting.
 }
-]
+$$
 
 Adaptive depth measures how far a system can reach into the machinery responsible for producing its own future transformations.
