@@ -6,23 +6,23 @@ Automatic differentiation (AD) is a canonical example of a transformation that i
 
 The relevant transition is:
 
-\[
+$$
 \boxed{
 \text{manual derivative construction}
 \rightarrow
 \text{derivative generation mechanism}
 }
-\]
+$$
 
 The important change is not simply that derivatives can be calculated faster.
 
 The deeper transition is:
 
-\[
+$$
 \boxed{
 \text{the system gains a reusable mechanism for producing derivative information}
 }
-\]
+$$
 
 Automatic differentiation transforms differentiation from a manually constructed operation into an executable transformation primitive.
 
@@ -39,7 +39,7 @@ Before AD, obtaining gradients required:
 
 The pipeline:
 
-\[
+$$
 \boxed{
 \text{function}
 \rightarrow
@@ -47,24 +47,24 @@ The pipeline:
 \rightarrow
 \text{gradient}
 }
-\]
+$$
 
 The human supplied the transformation rule.
 
 The limitation:
 
-\[
+$$
 G_s
 =
 \text{search over mathematical solutions}
-\]
+$$
 
 but:
 
-\[
+$$
 G_m
 \approx 0
-\]
+$$
 
 The system could optimize objects.
 
@@ -76,37 +76,37 @@ It could not automatically optimize the mechanism that produced optimization inf
 
 A key distinction:
 
-## Symbolic differentiation
+## Symbolic Differentiation
 
 The system manipulates mathematical expressions.
 
-\[
+$$
 f(x)
 \rightarrow
 f'(x)
-\]
+$$
 
 The transformation operates on representation.
 
 ---
 
-## Automatic differentiation
+## Automatic Differentiation
 
 The system decomposes computation into elementary operations:
 
-\[
+$$
 f(x)
 =
 g_n(...g_2(g_1(x)))
-\]
+$$
 
 and applies local transformation rules:
 
-\[
+$$
 g_i
 \rightarrow
 \frac{\partial g_i}{\partial x}
-\]
+$$
 
 The derivative becomes another executable object.
 
@@ -118,37 +118,37 @@ The transformation itself becomes programmable.
 
 Automatic differentiation introduces:
 
-\[
+$$
 \boxed{
 P:
 f
 \rightarrow
 \nabla f
 }
-\]
+$$
 
 A function becomes a generator of its own gradient.
 
 The system stores:
 
-\[
+$$
 \text{transformation rules}
-\]
+$$
 
 rather than:
 
-\[
+$$
 \text{individual solutions}
-\]
+$$
 
 This matches the evolutionary primitive definition:
 
-\[
+$$
 \boxed{
 P_e:
 f\rightarrow f'
 }
-\]
+$$
 
 where the output modifies future transformation processes.
 
@@ -160,9 +160,9 @@ The depth change:
 
 ## Before
 
-\[
+$$
 D_0/D_1
-\]
+$$
 
 Feedback modifies:
 
@@ -174,16 +174,16 @@ Feedback modifies:
 
 ## After
 
-\[
+$$
 D_2
-\]
+$$
 
 The system modifies:
 
-\[
+$$
 G_m:
 \text{gradient-generation mechanism}
-\]
+$$
 
 The adaptive process reaches the mechanism that enables optimization.
 
@@ -195,33 +195,33 @@ Modern machine learning depends heavily on gradient-based optimization.
 
 Without AD:
 
-\[
+$$
 \text{new model}
 \rightarrow
 \text{manual gradient derivation}
-\]
+$$
 
 The search space is limited.
 
 With AD:
 
-\[
+$$
 \text{new model}
 \rightarrow
 \text{automatic gradient generation}
-\]
+$$
 
 The system can optimize previously unseen computational graphs.
 
 The transformation:
 
-\[
+$$
 \boxed{
 \text{architecture}
 \rightarrow
 \text{trainable architecture}
 }
-\]
+$$
 
 becomes automated.
 
@@ -231,26 +231,26 @@ becomes automated.
 
 The relevant object:
 
-\[
+$$
 \mathcal P^{reach}
-\]
+$$
 
 expands because more candidate systems become searchable.
 
 Before AD:
 
-\[
+$$
 \mathcal P^{reach}_{optimization}
-\]
+$$
 
 was limited by human derivation capacity.
 
 After AD:
 
-\[
+$$
 |\mathcal P^{reach}_{optimization}|
 \uparrow
-\]
+$$
 
 because:
 
@@ -264,20 +264,20 @@ because:
 
 AD changes:
 
-\[
+$$
 G_s
-\]
+$$
 
 by changing what can be searched.
 
 But the deeper effect is:
 
-\[
+$$
 G_m:
 G_s(t)
 \rightarrow
 G_s(t+1)
-\]
+$$
 
 because the mechanism for producing optimization procedures becomes reusable.
 
@@ -296,7 +296,7 @@ The system gains a method for generating optimization methods.
 
 The framework predicts:
 
-\[
+$$
 \boxed{
 \Delta G_m
 \rightarrow
@@ -304,33 +304,33 @@ The framework predicts:
 \rightarrow
 \Delta C
 }
-\]
+$$
 
 For AD:
 
-\[
+$$
 \text{automatic differentiation}
-\]
+$$
 
 ↓
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{rapid expansion of trainable models}
-\]
+$$
 
 ↓
 
-\[
+$$
 C\uparrow\uparrow
-\]
+$$
 
-The capability explosion of deep learning is not attributed solely to more compute.
+The capability expansion of deep learning is not attributed solely to more compute.
 
 It is attributed to improvements in the machinery converting computation into optimized computation.
 
@@ -342,44 +342,44 @@ A critical distinction:
 
 More compute:
 
-\[
+$$
 R\uparrow
-\]
+$$
 
 can produce:
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 without:
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 Automatic differentiation changes the conversion function:
 
-\[
+$$
 R
 \rightarrow
 C
-\]
+$$
 
 rather than merely increasing:
 
-\[
+$$
 R
-\]
+$$
 
 The relevant change:
 
-\[
+$$
 \boxed{
 \frac{\partial C}{\partial R}
 \uparrow
 }
-\]
+$$
 
 because the system became better at converting resources into capability.
 
@@ -389,21 +389,21 @@ because the system became better at converting resources into capability.
 
 A trained model:
 
-\[
+$$
 \Phi(I)
 =
 \frac{\partial Z_{future}}{\partial I}
-\]
+$$
 
 changes outputs.
 
 Automatic differentiation:
 
-\[
+$$
 \Phi_D(I)
 =
-\frac{\partial G_{future}}{\partial I}
-\]
+\frac{\partial \mathcal P^{reach}_{evo}}{\partial I}
+$$
 
 changes the process generating future models.
 
@@ -415,53 +415,53 @@ The causal effect propagates through future optimization.
 
 Possible measurements:
 
-## Gradient accessibility
+## Gradient Accessibility
 
 Number of computational structures that can be optimized:
 
-\[
+$$
 A_g
 =
 |\text{trainable architectures}|
-\]
+$$
 
 ---
 
-## Iteration reduction
+## Iteration Reduction
 
 Optimization cycle time:
 
-\[
+$$
 \kappa
 =
 \frac{T_{manual}}{T_{AD}}
-\]
+$$
 
 ---
 
-## Search expansion
+## Search Expansion
 
 Number of viable model configurations explored:
 
-\[
+$$
 B_s
 =
 |\mathcal P^{explored}|
-\]
+$$
 
 ---
 
-## Representation compression
+## Representation Compression
 
 Reduction in human-specified optimization rules:
 
-\[
+$$
 \Delta L
 =
 L_{manual}
 -
 L_{automatic}
-\]
+$$
 
 ---
 
@@ -469,31 +469,31 @@ L_{automatic}
 
 The transition:
 
-\[
+$$
 \text{manual gradient engineering}
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{automatic differentiation}
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{deep learning ecosystem}
-\]
+$$
 
 should show:
 
-\[
+$$
 t_{G_m}
 <
 t_{\Omega}
 <
 t_C
-\]
+$$
 
 The framework predicts:
 
@@ -509,36 +509,35 @@ The framework would be weakened if:
 
 ## Capability growth was explained entirely by resources
 
-\[
+$$
 \Delta C
 \approx
 \Delta_R
-\]
+$$
 
 ---
 
 ## AD did not increase reachable optimization space
 
-\[
+$$
 |\mathcal P^{reach}_{after}|
 \approx
-|\mathcal P^{reach}_{before}
-|
-\]
+|\mathcal P^{reach}_{before}|
+$$
 
 ---
 
 ## No acceleration followed generator improvement
 
-\[
+$$
 \Delta G_m>0
-\]
+$$
 
 but:
 
-\[
+$$
 \Delta\Omega\approx0
-\]
+$$
 
 ---
 
@@ -546,11 +545,11 @@ but:
 
 Automatic differentiation demonstrates the central framework principle:
 
-\[
+$$
 \boxed{
 \text{The largest transitions occur when systems automate the production of transformations.}
 }
-\]
+$$
 
 Manual differentiation produced solutions.
 
@@ -558,7 +557,7 @@ Automatic differentiation produced a mechanism for producing optimization inform
 
 The transition is therefore:
 
-\[
+$$
 \boxed{
 \text{computation}
 \rightarrow
@@ -566,6 +565,6 @@ The transition is therefore:
 \rightarrow
 \text{transformation-generation}
 }
-\]
+$$
 
 Automatic differentiation is an example of an evolutionary primitive because it increases not only what a system can compute, but how efficiently it can create future computational capability.
