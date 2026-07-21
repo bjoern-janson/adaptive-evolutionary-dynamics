@@ -1,16 +1,12 @@
-# 05_evolutionary_velocity.md
-
 # Evolutionary Velocity (Ω)
 
 ## Overview
 
 Evolutionary Velocity, denoted by:
 
-\[
-\boxed{
+$$
 \Omega
-}
-\]
+$$
 
 is the central dynamical quantity of the Adaptive Evolutionary Architecture.
 
@@ -18,23 +14,21 @@ It measures not the amount of capability a system possesses, but the rate at whi
 
 The central distinction:
 
-\[
-\boxed{
+$$
 C \neq \Omega
-}
-\]
+$$
 
 where:
 
-\[
+$$
 C=\text{current capability}
-\]
+$$
 
 and:
 
-\[
+$$
 \Omega=\text{capability-generation acceleration}
-\]
+$$
 
 A system may have high capability but low evolutionary velocity.
 
@@ -46,52 +40,44 @@ A system may have modest capability but rapidly increasing evolutionary velocity
 
 Traditional growth metrics measure:
 
-\[
+$$
 \frac{dC}{dt}
-\]
+$$
 
 the rate at which capability changes.
 
 However, this treats capability as the endpoint.
 
-The framework asks a deeper question:
+The framework asks:
 
 > What determines the rate at which capability itself can improve?
 
-The relevant object is not:
+The relevant object is not only:
 
-\[
+$$
 C(t)
-\]
+$$
 
 but:
 
-\[
+$$
 \frac{dC}{dt}
-\]
+$$
 
-and not merely:
+and more generally:
 
-\[
-\frac{dC}{dt}
-\]
-
-but:
-
-\[
+$$
 \frac{d}{dt}
 \left(
 \frac{dC}{dt}
 \right)
-\]
+$$
 
-or more generally:
+The target quantity is:
 
-\[
-\boxed{
+$$
 \text{the dynamics of capability production}
-}
-\]
+$$
 
 ---
 
@@ -99,16 +85,15 @@ or more generally:
 
 Define:
 
-\[
+$$
 \mathcal{P}^{reach}_{evo}(t)
-\]
+$$
 
-as the set of evolutionary transformations reachable by the system at time \(t\).
+as the set of evolutionary transformations reachable by the system at time $t$.
 
 Formally:
 
-\[
-\boxed{
+$$
 \mathcal{P}^{reach}_{evo}(t)
 =
 \{
@@ -119,14 +104,13 @@ E_t\rightarrow E_{t+k}
 \text{ reachable under }
 X_t,R_t
 \}
-}
-\]
+$$
 
 This is not the total space of imaginable futures.
 
 It is constrained by:
 
-\[
+$$
 X_t
 =
 (
@@ -139,17 +123,15 @@ G_s,
 G_m,
 R_t
 )
-\]
+$$
 
 The distinction:
 
-\[
-\boxed{
+$$
 \text{possible futures}
 \neq
 \text{reachable futures}
-}
-\]
+$$
 
 ---
 
@@ -157,8 +139,7 @@ The distinction:
 
 The total rate of reachable-space expansion is:
 
-\[
-\boxed{
+$$
 \Lambda(t)
 =
 \frac{d}{dt}
@@ -166,13 +147,11 @@ The total rate of reachable-space expansion is:
 |
 \mathcal{P}^{reach}_{evo}(t)
 |
-}
-\]
+$$
 
-Expanded:
+Equivalent form:
 
-\[
-\boxed{
+$$
 \Lambda(t)
 =
 \frac{
@@ -186,30 +165,27 @@ d
 }{
 dt
 }
-}
-\]
+$$
 
 This measures:
 
-\[
-\boxed{
-\text{How quickly the accessible future frontier expands}
-}
-\]
+$$
+\text{how quickly the accessible future frontier expands}
+$$
 
 However:
 
-\[
+$$
 \Lambda
-\]
+$$
 
 is not identical to:
 
-\[
+$$
 \Omega
-\]
+$$
 
-because expansion may occur from multiple sources.
+because expansion can occur from multiple sources.
 
 ---
 
@@ -217,8 +193,7 @@ because expansion may occur from multiple sources.
 
 The total expansion rate:
 
-\[
-\boxed{
+$$
 \Lambda
 =
 \Delta_R
@@ -226,33 +201,30 @@ The total expansion rate:
 \Delta_C
 +
 \Delta_G
-}
-\]
+$$
 
 where:
 
 ---
 
-## Resource contribution
+## Resource Contribution
 
 Additional substrate:
 
-\[
-R
-=
+$$
+R=
 \{
-compute,
-energy,
-capital,
-labor,
-data
+\text{compute},
+\text{energy},
+\text{capital},
+\text{labor},
+\text{data}
 \}
-\]
+$$
 
 Contribution:
 
-\[
-\boxed{
+$$
 \Delta_R
 =
 \frac{
@@ -262,8 +234,7 @@ Contribution:
 \partial R
 }
 \dot R
-}
-\]
+$$
 
 Examples:
 
@@ -274,12 +245,11 @@ Examples:
 
 ---
 
-## Capability contribution
+## Capability Contribution
 
 Improvement through existing mechanisms:
 
-\[
-\boxed{
+$$
 \Delta_C
 =
 \frac{
@@ -289,8 +259,7 @@ Improvement through existing mechanisms:
 \partial C
 }
 \dot C
-}
-\]
+$$
 
 Examples:
 
@@ -300,12 +269,11 @@ Examples:
 
 ---
 
-## Generator contribution
+## Generator Contribution
 
 Expansion caused by improving the mechanisms that create improvements:
 
-\[
-\boxed{
+$$
 \Delta_G
 =
 \frac{
@@ -315,8 +283,7 @@ Expansion caused by improving the mechanisms that create improvements:
 \partial G_m
 }
 \dot G_m
-}
-\]
+$$
 
 This is the quantity of interest.
 
@@ -326,18 +293,15 @@ This is the quantity of interest.
 
 The core definition:
 
-\[
-\boxed{
+$$
 \Omega
 \equiv
 \Delta_G
-}
-\]
+$$
 
 or:
 
-\[
-\boxed{
+$$
 \Omega
 =
 \frac{
@@ -347,32 +311,27 @@ or:
 \partial G_m
 }
 \dot G_m
-}
-\]
+$$
 
 Therefore:
 
-\[
-\boxed{
+$$
 \Omega
 =
 \text{reachable future expansion caused by improving future-improvement mechanisms}
-}
-\]
+$$
 
 ---
 
 # 6. Interpretation
 
-The difference:
+## Normal Growth
 
-## Normal growth
-
-\[
+$$
 R
 \rightarrow
 C
-\]
+$$
 
 Resources produce capability.
 
@@ -380,25 +339,25 @@ Resources produce capability.
 
 ## Learning
 
-\[
+$$
 C
 \rightarrow
 C'
-\]
+$$
 
 Existing mechanisms improve.
 
 ---
 
-## Evolutionary acceleration
+## Evolutionary Acceleration
 
-\[
+$$
 G_m
 \rightarrow
 \Omega
 \rightarrow
 C'
-\]
+$$
 
 The system improves the machinery responsible for producing improvements.
 
@@ -408,81 +367,75 @@ The system improves the machinery responsible for producing improvements.
 
 Capability:
 
-\[
-\boxed{
+$$
 C
 =
 |\mathcal{P}^{reach}_{current}|
-}
-\]
+$$
 
 Measures:
 
-\[
+$$
 \text{what the system can currently do}
-\]
+$$
 
 ---
 
 Evolutionary velocity:
 
-\[
-\boxed{
+$$
 \Omega
 =
 \Delta_G
-}
-\]
+$$
 
 Measures:
 
-\[
+$$
 \text{how quickly the system improves what it can eventually do}
-\]
+$$
 
 ---
 
-Examples:
-
-## High C, low Ω
+## High Capability, Low Ω
 
 A mature industrial process.
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 but:
 
-\[
+$$
 G_m\approx constant
-\]
+$$
 
-The system performs extremely well but does not improve its improvement process.
+The system performs well but does not improve its improvement process.
 
 ---
 
-## Low C, high Ω
+## Low Capability, High Ω
 
 An emerging research field.
 
 Current capability may be limited:
 
-\[
+$$
 C\approx low
-\]
+$$
 
 but:
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 and:
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 Future capability may accelerate rapidly.
 
@@ -492,48 +445,44 @@ Future capability may accelerate rapidly.
 
 Generator modification:
 
-\[
-\boxed{
+$$
 G_m:
 G_s(t)
 \rightarrow
 G_s(t+1)
-}
-\]
+$$
 
 defines the mechanism capable of modifying search.
 
 However:
 
-\[
+$$
 G_m\neq\Omega
-\]
+$$
 
 because:
 
-\[
+$$
 G_m
-\]
+$$
 
 is a mechanism.
 
-\[
+$$
 \Omega
-\]
+$$
 
 is the resulting dynamical effect.
 
 The relationship:
 
-\[
-\boxed{
+$$
 G_m
 \rightarrow
 \dot G_m
 \rightarrow
 \Omega
-}
-\]
+$$
 
 ---
 
@@ -541,27 +490,23 @@ G_m
 
 The framework predicts:
 
-\[
-\boxed{
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-}
-\]
+$$
 
 with:
 
-\[
-\boxed{
+$$
 t_{G_m}
 <
 t_{\Omega}
 <
 t_C
-}
-\]
+$$
 
 Meaning:
 
@@ -575,21 +520,21 @@ Meaning:
 
 A system with:
 
-\[
+$$
 R\uparrow
-\]
+$$
 
 may produce:
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 without:
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 Example:
 
@@ -597,33 +542,29 @@ Adding more workers increases output.
 
 But unless the organization improves how it creates better organizations:
 
-\[
+$$
 \Omega
-\]
+$$
 
 may remain unchanged.
 
 ---
 
-The defining test:
+The defining distinction:
 
-\[
-\boxed{
+$$
 \Omega
 \neq
 \dot C
-}
-\]
+$$
 
 Instead:
 
-\[
-\boxed{
+$$
 \Omega
 =
 \text{change in the capability-production function}
-}
-\]
+$$
 
 ---
 
@@ -633,8 +574,7 @@ The ideal quantity is difficult to observe.
 
 A practical estimator:
 
-\[
-\boxed{
+$$
 \hat{\Omega}
 =
 \frac{
@@ -645,41 +585,38 @@ A practical estimator:
 }{
 \Delta t
 }
-}
-\]
+$$
 
 Meaning:
 
 Measure whether the return on improvement mechanisms increases over time.
 
----
-
 A system with:
 
-\[
+$$
 \frac{\Delta C}{\Delta G_m}
 =
 constant
-\]
+$$
 
 has:
 
-\[
+$$
 \Omega\approx0
-\]
+$$
 
 A system where:
 
-\[
+$$
 \frac{\Delta C}{\Delta G_m}
 \uparrow
-\]
+$$
 
 has:
 
-\[
+$$
 \Omega>0
-\]
+$$
 
 ---
 
@@ -687,19 +624,16 @@ has:
 
 Static causal influence:
 
-\[
-\boxed{
+$$
 \Phi(I)
 =
 \frac{\partial Z_{future}}
 {\partial I}
-}
-\]
+$$
 
 Dynamic causal influence:
 
-\[
-\boxed{
+$$
 \Phi_D(I)
 =
 \frac{
@@ -708,8 +642,7 @@ Dynamic causal influence:
 }{
 \partial I
 }
-}
-\]
+$$
 
 The difference:
 
@@ -723,44 +656,35 @@ A high dynamic causal intervention changes the future production of future state
 
 The framework hierarchy:
 
-\[
-\boxed{
+$$
 C
 =
 \text{what can be produced}
-}
-\]
+$$
 
-\[
-\boxed{
+$$
 G_s
 =
 \text{how possibilities are searched}
-}
-\]
+$$
 
-\[
-\boxed{
+$$
 G_m
 =
 \text{how search mechanisms are improved}
-}
-\]
+$$
 
-\[
-\boxed{
+$$
 \Omega
 =
 \text{how quickly improvement mechanisms improve}
-}
-\]
+$$
 
 ---
 
 # Final Definition
 
-\[
-\boxed{
+$$
 \Omega
 =
 \frac{
@@ -770,28 +694,22 @@ G_m
 \partial G_m
 }
 \dot G_m
-}
-\]
+$$
 
 Evolutionary Velocity is:
 
-\[
-\boxed{
+$$
 \textbf{
-the rate at which a system improves the machinery responsible for expanding its own reachable future.}
+the rate at which a system improves the machinery responsible for expanding its own reachable future.
 }
-\]
+$$
 
 The central invariant:
 
-\[
-\boxed{
+$$
 \text{Higher-order adaptive behavior is not another object.}
-}
-\]
+$$
 
-\[
-\boxed{
+$$
 \text{It is the changing dynamics of lower-order adaptive processes.}
-}
-\]
+$$
