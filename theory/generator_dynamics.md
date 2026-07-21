@@ -6,31 +6,31 @@ Generator dynamics describes the mechanisms by which an adaptive system modifies
 
 The central distinction is:
 
-[
+$$
 \boxed{
 \text{Capability}
 \neq
 \text{Capability generation}
 }
-]
+$$
 
 A system may possess high capability while having static improvement mechanisms.
 
 Generator dynamics studies the transition from:
 
-[
+$$
 \boxed{
 \text{producing outputs}
 }
-]
+$$
 
 to:
 
-[
+$$
 \boxed{
 \text{producing better output-producing processes}
 }
-]
+$$
 
 ---
 
@@ -38,39 +38,39 @@ to:
 
 Let:
 
-[
+$$
 G_s(t)
-]
+$$
 
 denote the system's search mechanism.
 
 The search mechanism maps possible actions, hypotheses, or transformations into explored candidates:
 
-[
+$$
 \boxed{
 G_s:
 \mathcal{P}^{reach}_{current}
 \rightarrow
 \mathcal{P}^{explored}
 }
-]
+$$
 
 A generator-modification mechanism is:
 
-[
+$$
 \boxed{
 G_m:
 G_s(t)
 \rightarrow
 G_s(t+1)
 }
-]
+$$
 
 where:
 
-[
+$$
 G_m
-]
+$$
 
 is the process by which a system changes its own search and solution-generation machinery.
 
@@ -80,21 +80,21 @@ is the process by which a system changes its own search and solution-generation 
 
 A conventional adaptive system optimizes:
 
-[
+$$
 \boxed{
 X_{t+1}=F(X_t)
 }
-]
+$$
 
 The system changes its state.
 
 A generator-adaptive system changes:
 
-[
+$$
 \boxed{
 F_{t+1}=G(F_t)
 }
-]
+$$
 
 The transformation process itself becomes the object of adaptation.
 
@@ -106,17 +106,17 @@ The transformation process itself becomes the object of adaptation.
 
 The system applies a static process.
 
-[
+$$
 \boxed{
 G_m \approx 0
 }
-]
+$$
 
 Examples:
 
-* fixed algorithms
-* inherited behavioral patterns
-* rigid procedures
+- fixed algorithms
+- inherited behavioral patterns
+- rigid procedures
 
 The system may improve performance, but the improvement mechanism remains unchanged.
 
@@ -126,18 +126,18 @@ The system may improve performance, but the improvement mechanism remains unchan
 
 The system improves its solution-generation process.
 
-[
+$$
 \boxed{
 G_m>0
 }
-]
+$$
 
 Examples:
 
-* developing better algorithms
-* creating new scientific methods
-* improving engineering workflows
-* building better learning strategies
+- developing better algorithms
+- creating new scientific methods
+- improving engineering workflows
+- building better learning strategies
 
 The system no longer only searches.
 
@@ -149,11 +149,11 @@ It modifies how searching occurs.
 
 The system improves the mechanisms that improve generators.
 
-[
+$$
 \boxed{
 \frac{dG_m}{dt}>0
 }
-]
+$$
 
 The improvement process itself becomes increasingly effective.
 
@@ -169,57 +169,57 @@ It develops systems that continuously improve the discovery process.
 
 Generator dynamics corresponds primarily to:
 
-[
+$$
 \boxed{
 D_2
 }
-]
+$$
 
 and transitions toward:
 
-[
+$$
 \boxed{
 D_3
 }
-]
+$$
 
 where:
 
-[
+$$
 D=\text{target of adaptation}
-]
+$$
 
 The depth progression:
 
-[
+$$
 D_0:
 \text{state changes}
-]
+$$
 
-[
+$$
 D_1:
 \text{search changes}
-]
+$$
 
-[
+$$
 D_2:
 \text{generator changes}
-]
+$$
 
-[
+$$
 D_3:
 \text{generator dynamics change}
-]
+$$
 
 The key transition:
 
-[
+$$
 \boxed{
 G_m
 \rightarrow
 \dot{G}_m
 }
-]
+$$
 
 ---
 
@@ -227,41 +227,39 @@ G_m
 
 The framework defines evolutionary velocity as:
 
-[
+$$
 \boxed{
-\Omega
-======
-
-\Delta_G
+\Omega=\Delta_G
 }
-]
+$$
 
 where:
 
-[
+$$
 \boxed{
 \Delta_G
-========
-
-\frac{\partial
+=
+\frac{
+\partial
 \log|\mathcal{P}^{reach}|
+}{
+\partial G_m
 }
-{\partial G_m}
 \dot{G}_m
 }
-]
+$$
 
 Therefore:
 
-[
+$$
 G_m
-]
+$$
 
 is the mechanism.
 
-[
+$$
 \Omega
-]
+$$
 
 is the measured effect of that mechanism on reachable future expansion.
 
@@ -273,35 +271,37 @@ They are related but distinct.
 
 Ordinary intervention:
 
-[
+$$
 I
 \rightarrow
 Z_{future}
-]
+$$
 
 changes future states.
 
 Generator intervention:
 
-[
+$$
 I
 \rightarrow
 G_m
-]
+$$
 
 changes future transformation capacity.
 
 Dynamic causal mass:
 
-[
+$$
 \boxed{
 \Phi_D(I)
-=========
-
-\frac{\partial G_{future}}
-{\partial I}
+=
+\frac{
+\partial G_{future}
+}{
+\partial I
 }
-]
+}
+$$
 
 measures whether an intervention changes the system's ability to create future change.
 
@@ -313,21 +313,21 @@ measures whether an intervention changes the system's ability to create future c
 
 Before:
 
-[
+$$
 \text{human instructions}
 \rightarrow
 \text{machine operations}
-]
+$$
 
 After:
 
-[
+$$
 \text{problem description}
 \rightarrow
 \text{program}
 \rightarrow
 \text{execution}
-]
+$$
 
 The generator changed.
 
@@ -339,21 +339,21 @@ The system gained a new transformation mechanism.
 
 Before:
 
-[
+$$
 \text{program}
 \rightarrow
 \text{manual translation}
-]
+$$
 
 After:
 
-[
+$$
 \text{program}
 \rightarrow
 \text{compiler}
 \rightarrow
 \text{optimized program}
-]
+$$
 
 The transformation process became reusable.
 
@@ -363,15 +363,15 @@ The transformation process became reusable.
 
 Before:
 
-[
+$$
 \text{individual observation}
 \rightarrow
 \text{individual conclusion}
-]
+$$
 
 After:
 
-[
+$$
 \text{question}
 \rightarrow
 \text{experiment}
@@ -379,7 +379,7 @@ After:
 \text{measurement}
 \rightarrow
 \text{validated knowledge}
-]
+$$
 
 Science created a generator for reliable discovery.
 
@@ -389,15 +389,15 @@ Science created a generator for reliable discovery.
 
 Potential transition:
 
-[
+$$
 \text{AI solves problems}
-]
+$$
 
 toward:
 
-[
+$$
 \text{AI improves problem-solving systems}
-]
+$$
 
 The distinction is not intelligence alone.
 
@@ -413,12 +413,11 @@ Potential measurements:
 
 ## Method improvement rate
 
-[
+$$
 \Delta L
-========
-
+=
 L_{old}-L_{new}
-]
+$$
 
 Reduction in description length of solution processes.
 
@@ -426,16 +425,15 @@ Reduction in description length of solution processes.
 
 ## Iteration efficiency
 
-[
+$$
 \eta_i
-======
-
+=
 \frac{
 \Delta C
 }{
 \Delta t
 }
-]
+$$
 
 Capability gained per iteration.
 
@@ -443,23 +441,21 @@ Capability gained per iteration.
 
 ## Automation expansion
 
-[
+$$
 A_t
-===
-
+=
 |\text{automated transformation processes}|
-]
+$$
 
 ---
 
 ## Reusable infrastructure growth
 
-[
+$$
 I_t
-===
-
+=
 |\text{reusable improvement primitives}|
-]
+$$
 
 ---
 
@@ -467,7 +463,7 @@ I_t
 
 Generator dynamics predicts:
 
-[
+$$
 \boxed{
 \Delta G_m
 \rightarrow
@@ -475,7 +471,7 @@ Generator dynamics predicts:
 \rightarrow
 \Delta C
 }
-]
+$$
 
 The order matters.
 
@@ -491,21 +487,21 @@ Generator dynamics does not introduce an infinite hierarchy.
 
 The rule:
 
-[
+$$
 \boxed{
 \text{Do not add a new object when a derivative explains the phenomenon.}
 }
-]
+$$
 
 A generator of generators is not necessarily a new entity.
 
 It may simply be:
 
-[
+$$
 \boxed{
 \dot G_m
 }
-]
+$$
 
 Higher-order adaptation is represented by dynamics.
 
@@ -517,19 +513,19 @@ Not ontology.
 
 Generator dynamics studies the transition:
 
-[
+$$
 \boxed{
 \text{system adaptation}
 }
-]
+$$
 
 into:
 
-[
+$$
 \boxed{
 \text{adaptation of the mechanisms that produce adaptation}
 }
-]
+$$
 
 The fundamental object is not the output.
 
@@ -537,16 +533,16 @@ It is the transformation process.
 
 A system becomes evolutionarily powerful when it does not merely discover solutions, but increasingly improves the machinery responsible for discovering future solutions.
 
-[
+$$
 \boxed{
 G_m:
 G_s(t)\rightarrow G_s(t+1)
 }
-]
+$$
 
-[
+$$
 \boxed{
 \Omega:
 \text{rate at which this improvement capability itself expands}
 }
-]
+$$
