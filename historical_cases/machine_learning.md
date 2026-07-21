@@ -6,7 +6,7 @@ Machine learning (ML) represents a major transition in adaptive systems: the mov
 
 The central transition:
 
-\[
+$$
 \boxed{
 \text{human-designed rules}
 \rightarrow
@@ -14,7 +14,7 @@ The central transition:
 \rightarrow
 \text{self-improving optimization systems}
 }
-\]
+$$
 
 The important change is not simply that machines perform tasks.
 
@@ -26,7 +26,7 @@ The deeper change is that the mechanism generating task solutions becomes partia
 
 Traditional software systems relied primarily on explicit human construction:
 
-\[
+$$
 \boxed{
 \text{problem}
 \rightarrow
@@ -36,7 +36,7 @@ Traditional software systems relied primarily on explicit human construction:
 \rightarrow
 \text{execution}
 }
-\]
+$$
 
 The programmer specified:
 
@@ -49,17 +49,16 @@ The system's capability was bounded by human ability to construct mechanisms.
 
 Formally:
 
-\[
+$$
 G_s
 =
 \text{human-designed search}
-\]
+$$
 
-\[
+$$
 G_m
-\approx
-0
-\]
+\approx 0
+$$
 
 The system executed transformations.
 
@@ -73,17 +72,17 @@ Machine learning changes the pipeline:
 
 Before:
 
-\[
+$$
 \text{human}
 \rightarrow
 \text{representation}
 \rightarrow
 \text{algorithm}
-\]
+$$
 
 After:
 
-\[
+$$
 \boxed{
 \text{data}
 \rightarrow
@@ -91,31 +90,31 @@ After:
 \rightarrow
 \text{model}
 }
-\]
+$$
 
 The system becomes capable of modifying:
 
-\[
+$$
 M_t
-\]
+$$
 
 its own internal representation.
 
-The adaptive target shifts from manually designed features toward learned structures.
+The adaptive target shifts.
 
 ---
 
-# 3. Representation as an Adaptive Object
+# 3. Representation as a First-Class Adaptive Object
 
 A central ML transition is:
 
-\[
+$$
 \boxed{
 D_0
 \rightarrow
 D_1
 }
-\]
+$$
 
 The system no longer only updates states.
 
@@ -123,17 +122,17 @@ It updates the representation used to interpret states.
 
 The learning loop:
 
-\[
+$$
 O_t
 \rightarrow
 M_{t+1}
 \rightarrow
 \pi_{t+1}
-\]
+$$
 
 means experience modifies the internal model.
 
-The representation itself becomes part of the adaptive process.
+The representation becomes part of the adaptive process.
 
 ---
 
@@ -141,11 +140,11 @@ The representation itself becomes part of the adaptive process.
 
 Traditional machine learning:
 
-\[
+$$
 \text{human features}
 \rightarrow
 \text{model}
-\]
+$$
 
 The human supplied:
 
@@ -155,7 +154,7 @@ The human supplied:
 
 Deep learning:
 
-\[
+$$
 \boxed{
 \text{raw data}
 \rightarrow
@@ -163,23 +162,23 @@ Deep learning:
 \rightarrow
 \text{prediction}
 }
-\]
+$$
 
 The system searches over representations.
 
 The generator changes from:
 
-\[
+$$
 G_s:
 \text{search over solutions}
-\]
+$$
 
 to:
 
-\[
+$$
 G_s:
 \text{search over representations and solutions}
-\]
+$$
 
 ---
 
@@ -187,9 +186,9 @@ G_s:
 
 Modern ML depends on reusable optimization primitives:
 
-\[
+$$
 G_m
-\]
+$$
 
 Examples:
 
@@ -203,9 +202,9 @@ These mechanisms allow new models to become trainable without manually construct
 
 The system stores:
 
-\[
+$$
 \text{procedures for creating procedures}
-\]
+$$
 
 ---
 
@@ -213,9 +212,9 @@ The system stores:
 
 The framework defines:
 
-\[
+$$
 \mathcal{P}^{reach}
-\]
+$$
 
 as the set of transformations accessible to a system.
 
@@ -228,18 +227,18 @@ Machine learning expands this space by enabling:
 
 Before:
 
-\[
+$$
 |\mathcal{P}^{reach}_{ML}|
-\]
+$$
 
 was constrained by manually designed features.
 
 After:
 
-\[
+$$
 |\mathcal{P}^{reach}_{ML}|
 \uparrow
-\]
+$$
 
 because representations become searchable.
 
@@ -249,19 +248,19 @@ because representations become searchable.
 
 Automatic differentiation provides the transformation primitive:
 
-\[
+$$
 \boxed{
 f
 \rightarrow
 \nabla f
 }
-\]
+$$
 
 This converts arbitrary computational graphs into optimizable objects.
 
 The combination:
 
-\[
+$$
 \boxed{
 \text{representation learning}
 +
@@ -269,7 +268,7 @@ The combination:
 +
 \text{compute scaling}
 }
-\]
+$$
 
 creates a new optimization regime.
 
@@ -285,29 +284,29 @@ The answer depends on the level.
 
 A single trained model:
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 is capability growth.
 
 A learning algorithm:
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 is generator improvement.
 
 A system that improves the learning algorithm:
 
-\[
+$$
 \boxed{
 G_m
 \rightarrow
-\dot G_m
+\dot{G}_m
 }
-\]
+$$
 
 approaches evolutionary acceleration.
 
@@ -317,7 +316,7 @@ approaches evolutionary acceleration.
 
 The framework predicts:
 
-\[
+$$
 \boxed{
 \Delta G_m
 \rightarrow
@@ -325,31 +324,31 @@ The framework predicts:
 \rightarrow
 \Delta C
 }
-\]
+$$
 
 For machine learning:
 
-\[
+$$
 \text{better optimization machinery}
-\]
+$$
 
 ↓
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{larger trainable model space}
-\]
+$$
 
 ↓
 
-\[
+$$
 C\uparrow\uparrow
-\]
+$$
 
 The capability jump is downstream of changes in the capability-generation process.
 
@@ -359,19 +358,19 @@ The capability jump is downstream of changes in the capability-generation proces
 
 Machine learning growth contains multiple contributions:
 
-\[
+$$
 \Lambda
 =
 \Delta_R+\Delta_C+\Delta_G
-\]
+$$
 
 where:
 
 ## Resources
 
-\[
+$$
 \Delta_R
-\]
+$$
 
 Examples:
 
@@ -384,23 +383,23 @@ Examples:
 
 ## Capability refinement
 
-\[
+$$
 \Delta_C
-\]
+$$
 
 Examples:
 
-- tuning,
-- engineering improvements,
-- better implementations.
+- tuning
+- engineering improvements
+- better implementations
 
 ---
 
 ## Generator improvement
 
-\[
+$$
 \Delta_G
-\]
+$$
 
 Examples:
 
@@ -413,19 +412,17 @@ Examples:
 
 The framework predicts the important contribution is:
 
-\[
+$$
 \boxed{
-\Omega
-\approx
-\Delta_G
+\Omega\approx\Delta_G
 }
-\]
+$$
 
 not simply:
 
-\[
+$$
 \Delta_R
-\]
+$$
 
 ---
 
@@ -433,9 +430,9 @@ not simply:
 
 Current ML systems mostly operate at:
 
-\[
+$$
 D_1-D_2
-\]
+$$
 
 They improve:
 
@@ -445,14 +442,12 @@ They improve:
 
 A stronger transition would be:
 
-\[
+$$
 \boxed{
 D_3:
-G_m
-\rightarrow
-\dot G_m
+G_m\rightarrow\dot{G}_m
 }
-\]
+$$
 
 where systems improve the mechanisms that create better learning systems.
 
@@ -469,52 +464,52 @@ Examples:
 
 Possible measurements:
 
-## Representation Efficiency
+## Representation efficiency
 
-\[
+$$
 \Delta L
 =
 L_{manual}
 -
 L_{learned}
-\]
+$$
 
 Reduction in human-specified structure.
 
 ---
 
-## Search Expansion
+## Search expansion
 
-\[
+$$
 B_s
 =
 |\text{models explored}|
-\]
+$$
 
 Number of candidate systems evaluated.
 
 ---
 
-## Optimization Accessibility
+## Optimization accessibility
 
-\[
+$$
 A_o
 =
 |\text{systems trainable without manual derivation}|
-\]
+$$
 
 ---
 
-## Improvement Return
+## Improvement return
 
-\[
+$$
 \hat{\Omega}
 =
 \frac{
 \Delta(\Delta C/\Delta G_m)
 }
 {\Delta t}
-\]
+$$
 
 Does investment in improvement machinery produce increasing returns?
 
@@ -524,39 +519,37 @@ Does investment in improvement machinery produce increasing returns?
 
 Potential transition sequence:
 
-\[
+$$
 \text{hand-coded AI}
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{machine learning}
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{deep learning}
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{automated ML research}
-\]
+$$
 
 The framework predicts:
 
-\[
-\boxed{
+$$
 t_{G_m}
 <
 t_{\Omega}
 <
 t_C
-}
-\]
+$$
 
 Generator changes should precede major capability acceleration.
 
@@ -568,36 +561,36 @@ The framework would be weakened if:
 
 ## 1. ML gains are fully explained by resources
 
-\[
+$$
 \Omega
 \approx
 \Delta_R
-\]
+$$
 
 ---
 
 ## 2. Learned representations do not expand reachable space
 
-\[
+$$
 |\mathcal{P}^{reach}_{after}|
 \approx
 |\mathcal{P}^{reach}_{before}|
-\]
+$$
 
 ---
 
 ## 3. Generator improvements do not predict future capability
 
-\[
+$$
 \Delta G_m>0
-\]
+$$
 
 but:
 
-\[
+$$
 \Delta C_{future}
 \not\uparrow
-\]
+$$
 
 ---
 
@@ -605,19 +598,19 @@ but:
 
 Machine learning demonstrates the framework's central transition:
 
-\[
+$$
 \boxed{
 \text{programmed solutions}
 }
-\]
+$$
 
 become:
 
-\[
+$$
 \boxed{
 \text{systems that learn solution mechanisms}
 }
-\]
+$$
 
 The deepest change is not that machines solve more problems.
 
@@ -625,22 +618,22 @@ It is that the process of constructing problem-solving mechanisms becomes increa
 
 The long-term evolutionary question is therefore:
 
-\[
+$$
 \boxed{
 \text{Can machine learning systems improve the machinery that produces machine learning systems?}
 }
-\]
+$$
 
 That transition would represent movement from:
 
-\[
+$$
 D_2
-\]
+$$
 
 toward:
 
-\[
+$$
 D_3
-\]
+$$
 
 and would be the empirical signature of increasing evolutionary velocity.
