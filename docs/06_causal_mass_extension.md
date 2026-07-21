@@ -1,6 +1,6 @@
 # 06 — Causal Mass Extension
 
-## Overview
+# Overview
 
 The Adaptive Evolutionary Architecture describes how systems expand their reachable future transformation space.
 
@@ -14,13 +14,11 @@ This extension formalizes interventions that alter not only outcomes, but the me
 
 The distinction:
 
-\[
-\boxed{
+$$
 \text{Causal effect}
 \neq
 \text{Evolutionary causal effect}
-}
-\]
+$$
 
 An intervention may change the world.
 
@@ -32,53 +30,50 @@ A higher-order intervention changes the process by which the world continues cha
 
 Define ordinary causal influence:
 
-\[
-\boxed{
+$$
 \Phi(I)
 =
 \frac{\partial Z_{future}}{\partial I}
-}
-\]
+$$
 
 where:
 
-- \(I\) is an intervention
-- \(Z_{future}\) is the resulting future system state
+- $I$ is an intervention
+- $Z_{future}$ is the resulting future system state
 
 This measures:
 
-> How much does intervention \(I\) alter future states?
+> How much does intervention $I$ alter future states?
 
 Examples:
 
 A hammer:
 
-\[
+$$
 I \rightarrow \text{physical outcome}
-\]
+$$
 
 A policy decision:
 
-\[
+$$
 I \rightarrow \text{social outcome}
-\]
+$$
 
 A new technology:
 
-\[
+$$
 I \rightarrow \text{capability increase}
-\]
+$$
 
 ---
 
 # 2. Dynamic Causal Mass
 
-The key extension is that some interventions modify the generator of future change.
+Some interventions modify the generator of future change.
 
 Define:
 
-\[
-\boxed{
+$$
 \Phi_D(I)
 =
 \frac{
@@ -87,14 +82,13 @@ Define:
 }{
 \partial I
 }
-}
-\]
+$$
 
 where:
 
-\[
+$$
 \mathcal{P}^{reach}_{evo}
-\]
+$$
 
 is the reachable future transformation space.
 
@@ -108,45 +102,47 @@ Dynamic causal mass measures:
 
 The framework separates three intervention classes.
 
-## Level 1 — State intervention
+## Level 1 — State Intervention
 
 Changes the current state.
 
-\[
+$$
 I \rightarrow Z
-\]
+$$
 
 Example:
 
-Repairing a machine.
+- repairing a machine
 
 ---
 
-## Level 2 — Capability intervention
+## Level 2 — Capability Intervention
 
 Changes what the system can do.
 
-\[
+$$
 I \rightarrow C
-\]
+$$
 
 Example:
 
-Adding a new tool.
+- adding a new tool
 
 ---
 
-## Level 3 — Generative intervention
+## Level 3 — Generative Intervention
 
 Changes the system that produces capabilities.
 
-\[
+$$
 I \rightarrow G_m
-\]
+$$
 
-Example:
+Examples:
 
-Creating a scientific method, compiler, or automated discovery system.
+- scientific method
+- compiler
+- automated discovery system
 
 ---
 
@@ -160,17 +156,17 @@ They are those that modify the future production function.
 
 Ordinary intervention:
 
-\[
+$$
 X_{t+1}=F(X_t,I)
-\]
+$$
 
 The intervention changes the trajectory.
 
 Dynamic intervention:
 
-\[
+$$
 F_{t+1}=G(F_t,I)
-\]
+$$
 
 The intervention changes the transition function itself.
 
@@ -178,15 +174,15 @@ This is the key distinction.
 
 The object being modified moves from:
 
-\[
+$$
 X
-\]
+$$
 
 to:
 
-\[
+$$
 F
-\]
+$$
 
 ---
 
@@ -194,26 +190,23 @@ F
 
 The relationship:
 
-\[
-\boxed{
+$$
 \Phi_D
 \rightarrow
 G_m
 \rightarrow
 \Omega
-}
-\]
+$$
 
 A high dynamic causal mass intervention should:
 
-1. modify generator mechanisms
-2. increase evolutionary velocity
-3. expand reachable future transformations
+1. Modify generator mechanisms.
+2. Increase evolutionary velocity.
+3. Expand reachable future transformations.
 
 The predicted sequence:
 
-\[
-\boxed{
+$$
 I
 \rightarrow
 \Delta G_m
@@ -221,30 +214,29 @@ I
 \Delta\Omega
 \rightarrow
 \Delta C
-}
-\]
+$$
 
 ---
 
 # 6. Examples
 
-## The Printing Press
+## Printing Press
 
 Static view:
 
-\[
+$$
 \text{press}
 \rightarrow
 \text{more books}
-\]
+$$
 
 Dynamic view:
 
-\[
+$$
 \text{press}
 \rightarrow
 \text{knowledge transmission infrastructure}
-\]
+$$
 
 The intervention changes the reproduction rate of ideas.
 
@@ -254,19 +246,19 @@ The intervention changes the reproduction rate of ideas.
 
 Static view:
 
-\[
+$$
 \text{program}
 \rightarrow
 \text{computation}
-\]
+$$
 
 Dynamic view:
 
-\[
+$$
 \text{language}
 \rightarrow
 \text{new class of programs}
-\]
+$$
 
 The intervention expands the generator of future software.
 
@@ -276,19 +268,19 @@ The intervention expands the generator of future software.
 
 Static view:
 
-\[
+$$
 \text{experiment}
 \rightarrow
 \text{knowledge}
-\]
+$$
 
 Dynamic view:
 
-\[
+$$
 \text{scientific method}
 \rightarrow
 \text{better discovery process}
-\]
+$$
 
 The method becomes a generator of improved methods.
 
@@ -298,19 +290,19 @@ The method becomes a generator of improved methods.
 
 Static:
 
-\[
+$$
 AI
 \rightarrow
 \text{answers}
-\]
+$$
 
 Dynamic:
 
-\[
+$$
 AI
 \rightarrow
 \text{improved discovery pipeline}
-\]
+$$
 
 The system changes future research capacity.
 
@@ -320,18 +312,22 @@ The system changes future research capacity.
 
 The original causal mass intuition:
 
-\[
+$$
 \Phi(I)
 =
-D_{KL}(P(X|I)||P(X|\neg I))
-\]
+D_{KL}
+(
+P(X|I)
+||
+P(X|\neg I)
+)
+$$
 
 measures divergence between futures with and without an intervention.
 
 The dynamic extension:
 
-\[
-\boxed{
+$$
 \Phi_D(I)
 =
 D_{KL}
@@ -340,8 +336,7 @@ P(\mathcal{P}^{reach}_{evo}|I)
 ||
 P(\mathcal{P}^{reach}_{evo}|\neg I)
 )
-}
-\]
+$$
 
 The question becomes:
 
@@ -361,8 +356,7 @@ An intervention has high causal mass if replacing it produces large changes.
 
 Define:
 
-\[
-\boxed{
+$$
 S(I)
 =
 D_{KL}
@@ -371,24 +365,23 @@ P(Future|I)
 ||
 P(Future|I')
 )
-}
-\]
+$$
 
-where \(I'\) is a plausible replacement intervention.
+where $I'$ is a plausible replacement intervention.
 
 Low swappability:
 
-\[
+$$
 S(I)\gg0
-\]
+$$
 
 The intervention is causally unique.
 
 High swappability:
 
-\[
+$$
 S(I)\approx0
-\]
+$$
 
 The intervention is replaceable.
 
@@ -398,8 +391,7 @@ The intervention is replaceable.
 
 The complete relationship:
 
-\[
-\boxed{
+$$
 \Phi_D
 \rightarrow
 G_m
@@ -409,8 +401,7 @@ G_m
 \mathcal{P}^{reach}_{evo}
 \rightarrow
 C
-}
-\]
+$$
 
 Causal mass measures interventions.
 
@@ -428,26 +419,20 @@ Dynamic causal mass extends ordinary causal analysis by measuring interventions 
 
 The central distinction:
 
-\[
-\boxed{
+$$
 \text{A powerful intervention changes the future.}
-}
-\]
+$$
 
-\[
-\boxed{
+$$
 \text{A transformative intervention changes how futures are produced.}
-}
-\]
+$$
 
 The strongest interventions are therefore not necessarily those with the largest immediate effects.
 
 They are those that alter the mechanisms generating future change.
 
-\[
-\boxed{
+$$
 \Phi_D(I)
 =
 \text{causal influence over future transformation capacity}
-}
-\]
+$$
