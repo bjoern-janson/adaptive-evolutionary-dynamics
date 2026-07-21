@@ -6,7 +6,7 @@ The Adaptive Evolutionary Architecture proposes that major capability transition
 
 The central hypothesis is:
 
-\[
+$$
 \boxed{
 \Delta G_m
 \rightarrow
@@ -14,7 +14,7 @@ The central hypothesis is:
 \rightarrow
 \Delta C
 }
-\]
+$$
 
 where:
 
@@ -30,39 +30,39 @@ A phase transition occurs when the system changes not only its state, but the dy
 
 Most adaptive systems follow:
 
-\[
+$$
 \text{variation}
 \rightarrow
 \text{selection}
 \rightarrow
 \text{adaptation}
-\]
+$$
 
 The system improves within a fixed transformation regime.
 
 Formally:
 
-\[
+$$
 X_{t+1}=F(X_t,E_t)
-\]
+$$
 
 The transition of interest occurs when the transformation function itself becomes adaptive:
 
-\[
+$$
 F_{t+1}=G(F_t)
-\]
+$$
 
 The object undergoing change is no longer only:
 
-\[
+$$
 X
-\]
+$$
 
 but:
 
-\[
+$$
 F
-\]
+$$
 
 the generator of future states.
 
@@ -72,39 +72,35 @@ the generator of future states.
 
 A phase transition occurs when:
 
-\[
-\boxed{
+$$
 D_{t+1}>D_t
-}
-\]
+$$
 
 where:
 
-\[
-D
-=
-\text{target of adaptation}
-\]
+$$
+D=\text{target of adaptation}
+$$
 
 changes.
 
 The system moves from modifying:
 
-\[
+$$
 Z
-\]
+$$
 
 to modifying:
 
-\[
+$$
 G_s
-\]
+$$
 
 or:
 
-\[
+$$
 G_m
-\]
+$$
 
 The transition is therefore a change in adaptive depth.
 
@@ -118,15 +114,15 @@ State optimization becomes search optimization.
 
 Before:
 
-\[
+$$
 Z_{t+1}=f(Z_t,O_t)
-\]
+$$
 
 After:
 
-\[
+$$
 G_{s,t+1}=f(G_{s,t},O_t)
-\]
+$$
 
 Example:
 
@@ -140,18 +136,18 @@ Search optimization becomes generator optimization.
 
 Before:
 
-\[
+$$
 G_s
-\]
+$$
 
 is improved manually.
 
 After:
 
-\[
+$$
 G_m:
 G_s(t)\rightarrow G_s(t+1)
-\]
+$$
 
 Example:
 
@@ -167,25 +163,25 @@ Generator optimization becomes generator-dynamics optimization.
 
 Before:
 
-\[
+$$
 G_m>0
-\]
+$$
 
 The system improves its methods.
 
 After:
 
-\[
+$$
 \frac{dG_m}{dt}>0
-\]
+$$
 
 The system improves its ability to improve methods.
 
 This is the transition associated with:
 
-\[
+$$
 \Omega>0
-\]
+$$
 
 ---
 
@@ -193,7 +189,7 @@ This is the transition associated with:
 
 The framework predicts that major capability transitions should follow:
 
-\[
+$$
 \boxed{
 t_{G_m}
 <
@@ -201,7 +197,7 @@ t_{\Omega}
 <
 t_C
 }
-\]
+$$
 
 Meaning:
 
@@ -217,19 +213,19 @@ The capability increase is therefore a downstream consequence.
 
 A central requirement is separating:
 
-\[
+$$
 \text{growth}
-\]
+$$
 
 from:
 
-\[
+$$
 \text{evolutionary acceleration}
-\]
+$$
 
 Total reachable-space expansion:
 
-\[
+$$
 \Lambda
 =
 \Delta_R
@@ -237,43 +233,43 @@ Total reachable-space expansion:
 \Delta_C
 +
 \Delta_G
-\]
+$$
 
 where:
 
-\[
+$$
 \Delta_R
 =
 \text{resource contribution}
-\]
+$$
 
-\[
+$$
 \Delta_C
 =
 \text{existing capability contribution}
-\]
+$$
 
-\[
+$$
 \Delta_G
 =
 \text{generator contribution}
-\]
+$$
 
 The phase transition signal is:
 
-\[
+$$
 \boxed{
 \Delta_G
 \gg
 \Delta_R,\Delta_C
 }
-\]
+$$
 
 not simply:
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 ---
 
@@ -287,39 +283,39 @@ These examples are hypotheses for testing, not confirmed demonstrations.
 
 Initial state:
 
-\[
+$$
 \text{individual discovery}
-\]
+$$
 
 Transition:
 
-\[
+$$
 \text{repeatable discovery procedure}
-\]
+$$
 
 The generator changes from:
 
-\[
+$$
 \text{finding answers}
-\]
+$$
 
 to:
 
-\[
+$$
 \text{creating reliable answer-production mechanisms}
-\]
+$$
 
 Potential signature:
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 before:
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 ---
 
@@ -327,19 +323,19 @@ C\uparrow
 
 Before:
 
-\[
+$$
 \text{human instructions}
 \rightarrow
 \text{machine execution}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{abstraction system}
 \rightarrow
 \text{program generation}
-\]
+$$
 
 The representation layer becomes a generator of new computational processes.
 
@@ -349,15 +345,15 @@ The representation layer becomes a generator of new computational processes.
 
 Before:
 
-\[
+$$
 \text{manual translation}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{automatic transformation of descriptions into executable systems}
-\]
+$$
 
 The system gains a reusable transformation primitive.
 
@@ -367,15 +363,15 @@ The system gains a reusable transformation primitive.
 
 Before:
 
-\[
+$$
 \text{manual derivative construction}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{automatic derivative generation}
-\]
+$$
 
 The system improves the machinery required for optimization itself.
 
@@ -389,9 +385,9 @@ A candidate transition should satisfy:
 
 There exists evidence that:
 
-\[
+$$
 G_m(t_2)>G_m(t_1)
-\]
+$$
 
 ---
 
@@ -399,17 +395,17 @@ G_m(t_2)>G_m(t_1)
 
 The system converts resources into capability more efficiently:
 
-\[
+$$
 \frac{\partial C}{\partial R}
 \uparrow
-\]
+$$
 
 or:
 
-\[
+$$
 \frac{\partial C}{\partial G_m}
 \uparrow
-\]
+$$
 
 ---
 
@@ -417,9 +413,9 @@ or:
 
 The capability increase occurs after the generator transition:
 
-\[
+$$
 t_{G_m}<t_C
-\]
+$$
 
 ---
 
@@ -427,19 +423,19 @@ t_{G_m}<t_C
 
 Systems with stronger generator dynamics should outperform equally resourced systems:
 
-\[
+$$
 R_A\approx R_B
-\]
+$$
 
-\[
+$$
 G_{m,A}>G_{m,B}
-\]
+$$
 
 predicts:
 
-\[
+$$
 C_A(t+\tau)>C_B(t+\tau)
-\]
+$$
 
 ---
 
@@ -451,11 +447,11 @@ The framework rejects several apparent transitions.
 
 Example:
 
-\[
+$$
 R\uparrow
 \rightarrow
 C\uparrow
-\]
+$$
 
 This is expansion, not acceleration.
 
@@ -469,15 +465,15 @@ A team becomes faster at an existing workflow.
 
 This is:
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 without:
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 ---
 
@@ -487,9 +483,9 @@ Complexity alone does not imply adaptive depth.
 
 A system may become more complicated while remaining:
 
-\[
+$$
 D_0
-\]
+$$
 
 ---
 
@@ -501,31 +497,31 @@ A phase transition changes the geometry of reachable futures.
 
 Before:
 
-\[
+$$
 \mathcal{P}^{reach}(t)
-\]
+$$
 
 expands through existing mechanisms.
 
 After:
 
-\[
+$$
 \mathcal{P}^{reach}(t)
-\]
+$$
 
 expands because the mechanisms generating reachable futures are themselves changing.
 
 The system moves from:
 
-\[
+$$
 \text{trajectory in a space}
-\]
+$$
 
 to:
 
-\[
+$$
 \text{trajectory that modifies the space itself}
-\]
+$$
 
 ---
 
@@ -533,23 +529,23 @@ to:
 
 The framework makes one central empirical prediction:
 
-\[
+$$
 \boxed{
 \text{The earliest measurable signature of major capability transitions is not capability growth.}
 }
-\]
+$$
 
 It is:
 
-\[
+$$
 \boxed{
 \text{a change in the dynamics producing capability.}
 }
-\]
+$$
 
 Formally:
 
-\[
+$$
 \boxed{
 \Delta G_m
 \rightarrow
@@ -557,7 +553,7 @@ Formally:
 \rightarrow
 \Delta C
 }
-\]
+$$
 
 ---
 
@@ -567,22 +563,22 @@ Phase transitions in adaptive systems occur when feedback reaches a deeper targe
 
 The defining transition is not:
 
-\[
+$$
 \text{more capability}
-\]
+$$
 
 but:
 
-\[
+$$
 \text{more capability-generation capacity}
-\]
+$$
 
 The framework therefore treats intelligence, evolution, and innovation as trajectories through adaptive space.
 
 The key question becomes:
 
-\[
+$$
 \boxed{
 \text{When does a system begin modifying the process by which it transforms itself?}
 }
-\]
+$$
