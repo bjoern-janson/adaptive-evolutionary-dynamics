@@ -6,19 +6,17 @@
 
 The central empirical challenge of the Adaptive Evolutionary Architecture is measuring:
 
-\[
-\boxed{
+$$
 G_m
-}
-\]
+$$
 
 where:
 
-\[
+$$
 G_m
 =
 \text{the mechanism by which a system modifies its own improvement mechanisms}
-\]
+$$
 
 \(G_m\) is not:
 
@@ -30,21 +28,21 @@ G_m
 
 It is the causal mechanism responsible for improving:
 
-\[
+$$
 G_s
-\]
+$$
 
 the system's search and solution-generation process.
 
 The measurement problem:
 
-\[
+$$
 \boxed{
 \text{latent generator dynamics}
 \rightarrow
 \text{observable evidence}
 }
-\]
+$$
 
 ---
 
@@ -52,13 +50,11 @@ The measurement problem:
 
 A system possesses \(G_m\) when it can perform:
 
-\[
-\boxed{
+$$
 G_s(t)
 \rightarrow
 G_s(t+1)
-}
-\]
+$$
 
 Meaning:
 
@@ -72,39 +68,39 @@ It changes the method-production process.
 
 ## Ordinary Improvement
 
-\[
+$$
 \text{better execution}
-\]
+$$
 
 Example:
 
 A programmer becomes faster at writing code.
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 but:
 
-\[
+$$
 G_m\approx0
-\]
+$$
 
 ---
 
 ## Generator Improvement
 
-\[
+$$
 \text{better method creation}
-\]
+$$
 
 Example:
 
 A programmer creates a compiler.
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 The system has changed the mechanism producing future solutions.
 
@@ -118,13 +114,11 @@ A generator modification often reduces the cost of producing future improvements
 
 Observable:
 
-\[
-\boxed{
+$$
 \Delta T
 =
 T_{old}-T_{new}
-}
-\]
+$$
 
 where:
 
@@ -137,27 +131,27 @@ where:
 
 Manual calculation:
 
-\[
+$$
 \text{problem}
 \rightarrow
 \text{human computation}
-\]
+$$
 
 Compiler:
 
-\[
+$$
 \text{problem}
 \rightarrow
 \text{automatic transformation}
-\]
+$$
 
 Machine learning:
 
-\[
+$$
 \text{manual features}
 \rightarrow
 \text{automated representation discovery}
-\]
+$$
 
 ---
 
@@ -169,21 +163,19 @@ A generator can increase the number of reachable strategies.
 
 Observable:
 
-\[
-\boxed{
+$$
 \Delta A
 =
 A_{new}-A_{old}
-}
-\]
+$$
 
 where:
 
-\[
+$$
 A
 =
 |\text{accessible approaches}|
-\]
+$$
 
 ---
 
@@ -206,17 +198,12 @@ A system gains:
 
 Observable:
 
-\[
-\boxed{
+$$
 I_r
 =
-\frac{
-\text{future improvements enabled}
-}{
-\text{initial construction cost}
-}
-}
-\]
+\frac{\text{future improvements enabled}}
+{\text{initial construction cost}}
+$$
 
 ---
 
@@ -224,27 +211,27 @@ Examples:
 
 Scientific method:
 
-\[
+$$
 \text{individual discovery}
 \rightarrow
 \text{repeatable discovery process}
-\]
+$$
 
 Programming languages:
 
-\[
+$$
 \text{individual instructions}
 \rightarrow
 \text{general computation framework}
-\]
+$$
 
 Libraries:
 
-\[
+$$
 \text{one solution}
 \rightarrow
 \text{many future solutions}
-\]
+$$
 
 ---
 
@@ -256,17 +243,12 @@ The strongest \(G_m\) signals occur when parts of improvement become automated.
 
 Observable:
 
-\[
-\boxed{
+$$
 A_m
 =
-\frac{
-\text{improvement steps automated}
-}{
-\text{total improvement steps}
-}
-}
-\]
+\frac{\text{improvement steps automated}}
+{\text{total improvement steps}}
+$$
 
 ---
 
@@ -274,31 +256,31 @@ Examples:
 
 Low \(G_m\):
 
-\[
-\text{human}
+$$
+human
 \rightarrow
-\text{solution}
-\]
+solution
+$$
 
 Higher \(G_m\):
 
-\[
-\text{human}
+$$
+human
 \rightarrow
-\text{tool}
+tool
 \rightarrow
-\text{solutions}
-\]
+solutions
+$$
 
 Very high \(G_m\):
 
-\[
-\text{system}
+$$
+system
 \rightarrow
-\text{better tool}
+better tool
 \rightarrow
-\text{better system}
-\]
+better system
+$$
 
 ---
 
@@ -312,21 +294,19 @@ A generator may improve by discovering better representations.
 
 Observable:
 
-\[
-\boxed{
+$$
 \Delta L
 =
 L_{old}-L_{new}
-}
-\]
+$$
 
 where:
 
-\[
+$$
 L
 =
 \text{description length}
-\]
+$$
 
 ---
 
@@ -338,27 +318,27 @@ Examples:
 
 Physics:
 
-\[
+$$
 \text{many observations}
 \rightarrow
 \text{compact laws}
-\]
+$$
 
 Machine learning:
 
-\[
+$$
 \text{raw data}
 \rightarrow
 \text{latent representation}
-\]
+$$
 
 Mathematics:
 
-\[
+$$
 \text{specific cases}
 \rightarrow
 \text{general theorem}
-\]
+$$
 
 ---
 
@@ -370,25 +350,20 @@ A generator improves when it increases useful discoveries per unit search cost.
 
 Observable:
 
-\[
-\boxed{
+$$
 \eta_s
 =
-\frac{
-\Delta\text{useful discoveries}
-}{
-\Delta\text{search resources}
-}
-}
-\]
+\frac{\Delta \text{useful discoveries}}
+{\Delta \text{search resources}}
+$$
 
 ---
 
 A \(G_m\) transition should produce:
 
-\[
+$$
 \frac{d\eta_s}{dt}>0
-\]
+$$
 
 ---
 
@@ -402,61 +377,59 @@ The system can intentionally modify its own improvement process.
 
 Observable:
 
-\[
-\boxed{
+$$
 SM
 =
 \text{degree of autonomous modification of }G_s
-}
-\]
+$$
 
 ---
 
 Levels:
 
-### Level 0
+## Level 0
 
 No modification.
 
-\[
+$$
 G_m=0
-\]
+$$
 
 ---
 
-### Level 1
+## Level 1
 
 External modification.
 
 Humans redesign the process.
 
-\[
+$$
 G_m>0
-\]
+$$
 
 ---
 
-### Level 2
+## Level 2
 
 Assisted modification.
 
 System proposes improvements.
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 ---
 
-### Level 3
+## Level 3
 
 Autonomous modification.
 
 System changes its own improvement machinery.
 
-\[
+$$
 G_m\rightarrow\dot G_m
-\]
+$$
 
 ---
 
@@ -464,8 +437,7 @@ G_m\rightarrow\dot G_m
 
 A practical estimator:
 
-\[
-\boxed{
+$$
 \hat G_m
 =
 (
@@ -477,8 +449,7 @@ A_m,
 \eta_s,
 SM
 )
-}
-\]
+$$
 
 No single proxy is sufficient.
 
@@ -494,24 +465,22 @@ More resources can create apparent improvement.
 
 Therefore:
 
-\[
-\boxed{
+$$
 G_m\neq R
-}
-\]
+$$
 
 Control variables:
 
-\[
+$$
 R=
 (
-\text{compute},
-\text{energy},
-\text{capital},
-\text{labor},
-\text{data}
+compute,
+energy,
+capital,
+labor,
+data
 )
-\]
+$$
 
 The goal:
 
@@ -523,23 +492,21 @@ Measure improvement beyond resource scaling.
 
 The framework predicts:
 
-\[
-\boxed{
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-}
-\]
+$$
 
 Therefore:
 
 A valid \(G_m\) proxy should appear before:
 
-\[
+$$
 C\uparrow\uparrow
-\]
+$$
 
 ---
 
@@ -549,29 +516,29 @@ C\uparrow\uparrow
 
 Before:
 
-\[
+$$
 \text{individual insight}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{repeatable discovery procedure}
-\]
+$$
 
 Signals:
 
-\[
+$$
 \Delta T>0
-\]
+$$
 
-\[
+$$
 I_r>0
-\]
+$$
 
-\[
+$$
 \eta_s>0
-\]
+$$
 
 ---
 
@@ -579,29 +546,29 @@ I_r>0
 
 Before:
 
-\[
+$$
 \text{manual instructions}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{abstract computational systems}
-\]
+$$
 
 Signals:
 
-\[
+$$
 \Delta A>0
-\]
+$$
 
-\[
+$$
 \Delta L>0
-\]
+$$
 
-\[
+$$
 G_s\rightarrow G_s'
-\]
+$$
 
 ---
 
@@ -609,29 +576,29 @@ G_s\rightarrow G_s'
 
 Before:
 
-\[
+$$
 \text{manual derivative calculation}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{automatic gradient generation}
-\]
+$$
 
 Signals:
 
-\[
+$$
 \Delta T>0
-\]
+$$
 
-\[
+$$
 A_m>0
-\]
+$$
 
-\[
+$$
 \eta_s>0
-\]
+$$
 
 ---
 
@@ -639,54 +606,51 @@ A_m>0
 
 The \(G_m\) concept fails if:
 
-## 1. Capability increases without measurable generator changes
+1. Capability increases without measurable generator changes.
 
-\[
+$$
 \Delta C>0
-\]
+$$
 
 while:
 
-\[
+$$
 \Delta G_m\approx0
-\]
+$$
 
 ---
 
-## 2. Resource increases fully explain observed transitions
+2. Resource increases fully explain observed transitions.
 
-\[
+$$
 \Delta_R
 \approx
 \Lambda
-\]
+$$
 
 ---
 
-## 3. Proposed \(G_m\) proxies do not predict future capability growth
+3. Proposed \(G_m\) proxies do not predict future capability growth.
 
-\[
+$$
 \hat G_m
 \nrightarrow
 \Omega
-\]
+$$
 
 ---
 
 # Final Definition
 
-\[
-\boxed{
+$$
 G_m
 =
 \text{the measurable capacity of a system to modify the mechanisms responsible for generating future improvements}
-}
-\]
+$$
 
 Operationally:
 
-\[
-\boxed{
+$$
 \hat G_m
 =
 \{
@@ -697,8 +661,7 @@ Operationally:
 \text{better representations},
 \text{higher search efficiency}
 \}
-}
-\]
+$$
 
 The empirical goal is not to observe \(G_m\) directly.
 
