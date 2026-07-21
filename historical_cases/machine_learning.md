@@ -57,7 +57,8 @@ G_s
 
 \[
 G_m
-\approx 0
+\approx
+0
 \]
 
 The system executed transformations.
@@ -100,11 +101,11 @@ M_t
 
 its own internal representation.
 
-The adaptive target shifts.
+The adaptive target shifts from manually designed features toward learned structures.
 
 ---
 
-# 3. Representation as a First-Class Adaptive Object
+# 3. Representation as an Adaptive Object
 
 A central ML transition is:
 
@@ -132,7 +133,7 @@ M_{t+1}
 
 means experience modifies the internal model.
 
-The representation becomes part of the adaptive process.
+The representation itself becomes part of the adaptive process.
 
 ---
 
@@ -213,7 +214,7 @@ The system stores:
 The framework defines:
 
 \[
-\mathcal P^{reach}
+\mathcal{P}^{reach}
 \]
 
 as the set of transformations accessible to a system.
@@ -228,7 +229,7 @@ Machine learning expands this space by enabling:
 Before:
 
 \[
-|\mathcal P^{reach}_{ML}|
+|\mathcal{P}^{reach}_{ML}|
 \]
 
 was constrained by manually designed features.
@@ -236,7 +237,7 @@ was constrained by manually designed features.
 After:
 
 \[
-|\mathcal P^{reach}_{ML}|
+|\mathcal{P}^{reach}_{ML}|
 \uparrow
 \]
 
@@ -389,9 +390,9 @@ Examples:
 
 Examples:
 
-- tuning
-- engineering improvements
-- better implementations
+- tuning,
+- engineering improvements,
+- better implementations.
 
 ---
 
@@ -414,7 +415,9 @@ The framework predicts the important contribution is:
 
 \[
 \boxed{
-\Omega\approx\Delta_G
+\Omega
+\approx
+\Delta_G
 }
 \]
 
@@ -445,7 +448,9 @@ A stronger transition would be:
 \[
 \boxed{
 D_3:
-G_m\rightarrow\dot G_m
+G_m
+\rightarrow
+\dot G_m
 }
 \]
 
@@ -464,7 +469,7 @@ Examples:
 
 Possible measurements:
 
-## Representation efficiency
+## Representation Efficiency
 
 \[
 \Delta L
@@ -478,7 +483,7 @@ Reduction in human-specified structure.
 
 ---
 
-## Search expansion
+## Search Expansion
 
 \[
 B_s
@@ -490,7 +495,7 @@ Number of candidate systems evaluated.
 
 ---
 
-## Optimization accessibility
+## Optimization Accessibility
 
 \[
 A_o
@@ -500,7 +505,7 @@ A_o
 
 ---
 
-## Improvement return
+## Improvement Return
 
 \[
 \hat{\Omega}
@@ -544,11 +549,13 @@ Potential transition sequence:
 The framework predicts:
 
 \[
+\boxed{
 t_{G_m}
 <
-t_\Omega
+t_{\Omega}
 <
 t_C
+}
 \]
 
 Generator changes should precede major capability acceleration.
@@ -572,10 +579,9 @@ The framework would be weakened if:
 ## 2. Learned representations do not expand reachable space
 
 \[
-|\mathcal P^{reach}_{after}|
+|\mathcal{P}^{reach}_{after}|
 \approx
-|\mathcal P^{reach}_{before}
-|
+|\mathcal{P}^{reach}_{before}|
 \]
 
 ---
