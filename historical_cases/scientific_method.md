@@ -2,27 +2,40 @@
 
 ## Overview
 
-The scientific method is a canonical example of an **evolutionary primitive**: a transformation mechanism whose output is not merely knowledge, but an improved mechanism for producing future knowledge.
+The scientific method is a canonical example of an **evolutionary primitive**: a structure whose function is not only to produce knowledge, but to modify and improve the mechanisms by which future knowledge is produced.
 
-The framework distinguishes between:
+The framework distinguishes:
 
 \[
 \text{knowledge production}
 \]
 
-and:
+from:
 
 \[
-\text{improvement of knowledge production}
+\text{improvement of knowledge production mechanisms}
 \]
 
-The scientific method represents a transition from systems that accumulate solutions to systems that systematically improve their own solution-generating process.
+The scientific method represents a transition from systems that accumulate solutions to systems that systematically improve their own solution-generation processes.
+
+The central transformation:
+
+\[
+\boxed{
+G_s \rightarrow G_s'
+}
+\]
+
+where:
+
+- \(G_s\) = search mechanism
+- \(G_s'\) = improved search mechanism produced through feedback
 
 ---
 
-# 1. Pre-scientific knowledge production
+# 1. Pre-Scientific Knowledge Production
 
-Before formal scientific methodology, discovery was primarily dependent on:
+Before formal scientific methodology, discovery relied primarily on existing search mechanisms:
 
 \[
 \boxed{
@@ -34,42 +47,44 @@ where:
 
 \[
 G_s=
-\text{search mechanism}
+\text{process used to discover and evaluate solutions}
 \]
 
 Examples:
 
-- individual intuition
-- trial and error
-- accumulated tradition
-- authority-based reasoning
-- informal experimentation
+- individual intuition,
+- trial and error,
+- accumulated tradition,
+- authority-based reasoning,
+- informal experimentation.
 
 The system could produce knowledge:
 
 \[
-Q_t \rightarrow K_{t+1}
+Q_t\rightarrow K_{t+1}
 \]
 
-but the method itself was relatively stable.
+but the method itself was not systematically optimized.
 
-The process:
+The dominant loop was:
 
 \[
-\text{question}
+\boxed{
+\text{observation}
 \rightarrow
-\text{attempt}
+\text{interpretation}
 \rightarrow
 \text{belief}
+}
 \]
 
-was not systematically optimized.
+The feedback primarily modified conclusions, not the mechanism producing conclusions.
 
 ---
 
-# 2. Scientific method as generator modification
+# 2. Scientific Method as Generator Modification
 
-The scientific method introduces explicit mechanisms for improving discovery:
+The scientific method introduces explicit mechanisms for improving discovery processes:
 
 \[
 \boxed{
@@ -77,9 +92,15 @@ G_m:G_s\rightarrow G_s'
 }
 \]
 
-The process now contains feedback about the process itself.
+where:
 
-The loop becomes:
+\[
+G_m
+=
+\text{mechanism that modifies search and discovery processes}
+\]
+
+The process gains feedback about its own operation:
 
 \[
 \boxed{
@@ -91,53 +112,61 @@ The loop becomes:
 \rightarrow
 \text{evaluation}
 \rightarrow
-\text{improved methodology}
+\text{method improvement}
 }
 \]
 
-Knowledge production becomes self-correcting.
+The system no longer only produces answers.
+
+It improves the process by which answers are generated and evaluated.
 
 ---
 
-# 3. Transformation of the adaptive target
+# 3. Transformation of the Adaptive Target
 
-Before:
+Before scientific methodology:
 
 \[
-D_0:
+D_0
 \]
 
-Feedback modifies beliefs.
+Feedback primarily modifies internal state:
 
 \[
 \boxed{
-B_{t+1}=f(B_t,O_t)
+Z_{t+1}=f(Z_t,O_t)
 }
 \]
 
-After:
+Example:
+
+A person updates beliefs after observing evidence.
+
+---
+
+After scientific methodology:
 
 \[
-D_2:
+D_2
 \]
 
-Feedback modifies the mechanism producing beliefs.
+Feedback modifies the mechanism producing knowledge:
 
 \[
 \boxed{
 G_{m,t+1}
 =
-f(G_{m,t},M_t,O_t)
+f(G_{m,t},G_s,M_t,O_t)
 }
 \]
 
 The system does not only learn facts.
 
-It learns how to learn facts.
+It modifies the procedures used to discover facts.
 
 ---
 
-# 4. Reachable-space expansion
+# 4. Reachable-Space Expansion
 
 The scientific method expands:
 
@@ -145,99 +174,117 @@ The scientific method expands:
 \mathcal{P}^{reach}_{evo}
 \]
 
-by increasing the number of accessible transformations.
+by increasing the number of future transformations that become accessible.
 
 Without systematic methodology:
 
 \[
-|\mathcal P^{reach}_{evo}|
+|\mathcal{P}^{reach}_{evo}|
 \]
 
-is limited by:
+is constrained by:
 
-- individual cognition
-- local experience
-- cultural transmission speed
+- individual cognition,
+- local experience,
+- unreliable transmission,
+- limited verification.
 
 With scientific methodology:
 
 \[
-|\mathcal P^{reach}_{evo}|
+|\mathcal{P}^{reach}_{evo}|
 \uparrow
 \]
 
 because:
 
-- discoveries become reproducible
-- errors become detectable
-- knowledge becomes composable
-- experiments become cumulative
+- discoveries become reproducible,
+- errors become detectable,
+- methods become transferable,
+- knowledge becomes composable,
+- experiments become cumulative.
+
+The expansion is not only more knowledge.
+
+It is a larger space of reachable future discovery processes.
 
 ---
 
-# 5. Representation improvement
+# 5. Representation Improvement
 
-A major contribution of science is improved representations:
+A major contribution of science is improvement of representations:
 
 \[
 M_{t+1}=U(M_t,O_t)
 \]
 
-Scientific instruments, mathematical models, and measurement systems improve the representation layer.
+Scientific instruments, mathematical models, and measurement systems expand what the system can represent.
 
-Examples:
+---
 
 ## Astronomy
 
-Naked observation:
+Before:
 
 \[
-M_0=\text{visual patterns}
+M_0=
+\text{direct visual observations}
 \]
 
-Telescope:
+After instrumentation:
 
 \[
-M_1=\text{extended observational space}
+M_1=
+\text{expanded observational representation}
 \]
+
+The telescope increases the accessible observation space.
 
 ---
 
 ## Biology
 
-Descriptive biology:
+Before:
 
 \[
-M_0=\text{visible organisms}
+M_0=
+\text{visible organism-level descriptions}
 \]
 
-Microscopy/genomics:
+After:
 
 \[
-M_1=\text{molecular representations}
+M_1=
+\text{cellular and molecular representations}
 \]
+
+Microscopy and molecular methods expose previously inaccessible structure.
 
 ---
 
 ## Physics
 
-Intuitive mechanics:
+Before:
 
 \[
-M_0=\text{qualitative motion}
+M_0=
+\text{qualitative motion concepts}
 \]
 
-Mathematical physics:
+After:
 
 \[
-M_1=\text{predictive dynamical models}
+M_1=
+\text{mathematical dynamical models}
 \]
+
+Formal representations make new transformations computable.
 
 ---
 
-# 6. Scientific institutions as generator systems
+# 6. Scientific Institutions as Generator Infrastructure
 
-Individual scientists are limited.
+Individual scientists are limited by memory, time, and communication.
 
 Scientific institutions create persistent generator infrastructure:
 
@@ -249,29 +296,29 @@ G_m^{institution}
 
 Examples:
 
-- peer review
-- replication
-- journals
-- laboratories
-- shared datasets
-- standardized measurement
-- formal education
+- peer review,
+- replication standards,
+- journals,
+- laboratories,
+- shared datasets,
+- standardized measurement,
+- formal education.
 
-These structures modify future discovery rates.
+These structures modify future discovery capacity.
 
-The system stores not only results:
+The system stores not only outputs:
 
 \[
 \text{papers}
 \]
 
-but procedures:
+but transformations:
 
 \[
 \text{methods}
 \]
 
-and procedures for improving procedures:
+and mechanisms for improving methods:
 
 \[
 \text{scientific progress}
@@ -279,16 +326,18 @@ and procedures for improving procedures:
 
 ---
 
-# 7. Evolutionary velocity interpretation
+# 7. Evolutionary Velocity Interpretation
 
 The framework predicts:
 
 \[
+\boxed{
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
+}
 \]
 
 For science:
@@ -299,36 +348,36 @@ For science:
 \rightarrow
 \Omega\uparrow
 \rightarrow
-\text{accelerating discovery}
+C\uparrow
 }
 \]
 
 The claim is not:
 
-"science creates knowledge."
+\[
+\text{science creates knowledge}
+\]
 
-That is obvious.
+That is already established.
 
-The stronger claim:
+The stronger claim is:
 
 \[
 \boxed{
-\text{science increases the rate at which future knowledge-generating mechanisms improve}
+\text{science increases the rate at which knowledge-generating mechanisms improve}
 }
 \]
 
 ---
 
-# 8. Historical hypothesis
+# 8. Historical Hypothesis
 
-A measurable transition should occur:
+A measurable transition should approximately follow:
 
 \[
-t_{G_m}
-<
-t_{\Omega}
-<
-t_C
+\boxed{
+t_{G_m}<t_\Omega<t_C
+}
 \]
 
 Expected sequence:
@@ -344,7 +393,7 @@ Expected sequence:
 ## Transition
 
 \[
-\text{formalized methodology}
+\text{formalized discovery methodology}
 \]
 
 ↓
@@ -364,20 +413,20 @@ Expected sequence:
 ↓
 
 \[
-\text{accelerating technological capability}
+\text{accelerated technological capability}
 \]
 
 ---
 
-# 9. Observable proxies
+# 9. Observable Proxies
 
-Possible measurements:
+The transition can be estimated through measurable signals.
 
-## Generator capacity
+## Generator Modification
 
 \[
-G_m
-\rightarrow
+\hat G_m
+=
 \{
 \Delta L,
 \Delta A,
@@ -388,79 +437,85 @@ G_m
 
 where:
 
-- \(\Delta L\): reduced description length of discovery procedures
-- \(\Delta A\): increased accessible approaches
-- \(\Delta I\): reusable infrastructure
-- \(\Delta T\): reduced iteration cost
+- \(\Delta L\): reduction in description length of procedures,
+- \(\Delta A\): increase in accessible approaches,
+- \(\Delta I\): reusable improvement infrastructure,
+- \(\Delta T\): reduction in iteration cost.
 
 ---
 
-## Reachable space
+## Reachable Space
 
 Estimate:
 
 \[
-\hat{\mathcal P}^{reach}
+\hat{\mathcal{P}}^{reach}
 =
-f(
-M,
-G_s,
-G_m,
-R
-)
+f(M,G_s,G_m,R)
 \]
 
 Possible proxies:
 
-- number of testable hypotheses
-- experimental throughput
-- replication rate
-- knowledge graph expansion
-- tool creation rate
+- number of testable hypotheses,
+- experimental throughput,
+- replication capacity,
+- knowledge graph growth,
+- tool creation rate.
 
 ---
 
-## Evolutionary velocity
+## Evolutionary Velocity
 
-Estimate:
+Approximation:
 
 \[
 \hat{\Omega}
 =
 \frac{
 \Delta(\Delta C/\Delta G_m)
-}{
-\Delta t
 }
+{\Delta t}
 \]
 
-The key question:
+The empirical question:
 
-> Does investment in discovery machinery produce increasing returns over time?
+\[
+\boxed{
+\text{Does investment in discovery machinery produce increasing future improvement rates?}
+}
+\]
 
 ---
 
 # 10. Falsification
 
-The framework would be weakened if:
+The framework is weakened if:
 
-1. Scientific revolutions occur without prior generator modification.
+## 1. Capability transitions occur without generator modification
 
 \[
-\Delta C
-\not\rightarrow
-\Delta G_m
+\Delta C>0
 \]
 
-2. Generator improvements do not predict later capability acceleration.
+while:
+
+\[
+\Delta G_m\approx0
+\]
+
+---
+
+## 2. Generator changes do not predict future acceleration
 
 \[
 \Delta G_m
-\not\rightarrow
+\nrightarrow
 \Delta\Omega
 \]
 
-3. Apparent acceleration is fully explained by resources.
+---
+
+## 3. Resource expansion explains the transition
 
 \[
 \Omega
@@ -480,7 +535,7 @@ rather than:
 
 # 11. Generalization
 
-The scientific method is one example of a broader class:
+The scientific method is one member of a broader class:
 
 \[
 \boxed{
@@ -490,18 +545,18 @@ The scientific method is one example of a broader class:
 
 Other examples:
 
-- programming languages
-- compilers
-- automated differentiation
-- machine learning architectures
-- formal mathematics
-- AI research automation
+- programming languages,
+- compilers,
+- automatic differentiation,
+- machine learning architectures,
+- formal mathematics,
+- AI research automation.
 
-The shared property:
+Their shared property:
 
 \[
 \boxed{
-\text{They store transformations that improve future transformations.}
+\text{They preserve and transmit transformations that improve future transformations.}
 }
 \]
 
@@ -509,9 +564,9 @@ The shared property:
 
 # Conclusion
 
-The scientific method is not merely a tool for discovering facts.
+The scientific method is not merely a mechanism for discovering facts.
 
-Within this framework, it is a historical example of a system crossing an adaptive boundary:
+Within this framework, it represents a transition from:
 
 \[
 \boxed{
@@ -519,15 +574,15 @@ Within this framework, it is a historical example of a system crossing an adapti
 }
 \]
 
-becomes:
+to:
 
 \[
 \boxed{
-\text{learning how to improve the process of learning about the world}
+\text{improving the process by which systems learn about the world}
 }
 \]
 
-The central prediction:
+The central empirical hypothesis:
 
 \[
 \boxed{
@@ -539,8 +594,6 @@ C
 }
 \]
 
-provides a measurable hypothesis:
+is that systems which develop mechanisms for improving their own discovery processes should exhibit accelerated expansion of reachable future transformations.
 
-Systems that develop mechanisms for improving their own discovery processes should exhibit accelerated expansion of reachable future transformations.
-
-The scientific method represents one of the clearest known examples of this transition.
+The scientific method is one of the clearest historical examples of such a transition.
