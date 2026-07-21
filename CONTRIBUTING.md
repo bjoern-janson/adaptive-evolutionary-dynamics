@@ -21,9 +21,9 @@ The goal is not only to extend the framework, but to improve its ability to make
 
 # Core Contribution Principle
 
-The framework follows a strict anti-recursion constraint:
+The framework follows a strict anti-recursion constraint.
 
-> Prefer trajectory variables over new ontological categories.
+> **Prefer trajectory variables over new ontological categories.**
 
 Before introducing a new entity, ask:
 
@@ -37,25 +37,21 @@ Avoid adding unnecessary abstraction layers.
 
 # Research Philosophy
 
-The framework is built around several core distinctions:
+The framework is built around several core distinctions.
 
-## State vs Dynamics
+## State vs. Dynamics
 
-State:
+A **state** describes what currently exists.
 
-\[
+$$
 X_t
-\]
+$$
 
-describes what exists.
+A **dynamic** describes how the system changes.
 
-Dynamics:
-
-\[
+$$
 X_{t+1}=F(X_t,E_t,u_t)
-\]
-
-describe how it changes.
+$$
 
 Contributions should clearly distinguish between:
 
@@ -65,45 +61,34 @@ Contributions should clearly distinguish between:
 
 ---
 
-## Capability vs Evolutionary Velocity
+## Capability vs. Evolutionary Velocity
 
-Capability:
+| Quantity | Meaning |
+|----------|---------|
+| $C$ | What a system can currently do |
+| $\Omega$ | How quickly the system improves its capability-generation process |
 
-\[
-C
-\]
-
-describes what a system can currently do.
-
-Evolutionary velocity:
-
-\[
-\Omega
-\]
-
-describes how quickly the system improves its capability-generation process.
-
-Do not use capability growth alone as evidence of evolutionary acceleration.
+Do **not** use capability growth alone as evidence of evolutionary acceleration.
 
 ---
 
-## Possibility vs Reachability
+## Possibility vs. Reachability
 
-The framework studies:
+The framework studies reachable future spaces,
 
-\[
+$$
 \mathcal{P}^{reach}
-\]
+$$
 
-not abstract possibility spaces.
+rather than abstract possibility spaces.
 
-A contribution should consider:
+When proposing new work, consider:
 
 - available resources
 - representations
 - search mechanisms
 - generator mechanisms
-- constraints
+- environmental constraints
 
 A possibility that cannot be reached by the system is not part of its operational future space.
 
@@ -113,7 +98,7 @@ A possibility that cannot be reached by the system is not part of its operationa
 
 ## Mathematical Formalization
 
-Examples:
+Examples include:
 
 - improving definitions
 - proving relationships
@@ -121,7 +106,7 @@ Examples:
 - reducing ambiguity
 - developing formal models
 
-Good mathematical contributions should clarify:
+Strong mathematical contributions should clarify:
 
 - variables
 - operators
@@ -132,38 +117,36 @@ Good mathematical contributions should clarify:
 
 ## Empirical Studies
 
-The framework requires measurable evidence.
+The framework ultimately requires measurable evidence.
 
 Useful studies include:
 
-- historical analysis
+- historical analyses
 - comparative case studies
 - simulation experiments
 - quantitative proxies for adaptive depth
-- tests of predicted ordering:
+- tests of the predicted ordering
 
-\[
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-\]
+$$
 
 ---
 
 ## Measurement Research
 
-The largest open problem is operationalization.
+One of the largest open problems is operationalization.
 
-Contributions exploring measurements of:
+Especially valuable contributions include measurements or proxies for:
 
 - generator modification capacity
 - reachable future spaces
 - evolutionary velocity
 - adaptive depth
-
-are especially valuable.
 
 ---
 
@@ -171,12 +154,12 @@ are especially valuable.
 
 Strong criticism is encouraged.
 
-Useful critiques:
+Useful critiques include:
 
-- identify hidden assumptions
-- propose falsification tests
-- show where existing theories explain the phenomenon better
-- identify cases where predictions fail
+- identifying hidden assumptions
+- proposing falsification tests
+- demonstrating where existing theories explain the phenomenon better
+- identifying cases where predictions fail
 
 A framework becomes stronger by surviving attempts to break it.
 
@@ -186,6 +169,7 @@ A framework becomes stronger by surviving attempts to break it.
 
 Suggested organization:
 
+```text
 /
 ├── README.md
 ├── CITATION.cff
@@ -193,20 +177,18 @@ Suggested organization:
 ├── LICENSE
 │
 ├── theory/
-│ ├── definitions.md
-│ ├── equations.md
-│ └── assumptions.md
+│   ├── definitions.md
+│   ├── equations.md
+│   └── assumptions.md
 │
 ├── empirical/
-│ ├── case-studies/
-│ └── datasets/
+│   ├── case-studies/
+│   └── datasets/
 │
 ├── simulations/
-│
 ├── docs/
-│
 └── discussions/
-
+```
 
 ---
 
@@ -223,9 +205,9 @@ Before submitting a pull request:
    - empirical evidence
 4. Include reasoning and references where appropriate.
 
-A good pull request answers:
+A good pull request answers the question:
 
-> What does this change allow us to measure, predict, or explain that we could not before?
+> **What does this change allow us to measure, predict, or explain that we could not before?**
 
 ---
 
@@ -233,36 +215,32 @@ A good pull request answers:
 
 Please avoid introducing terms that duplicate existing concepts.
 
-Before adding a new term:
-
-Ask:
+Before adding a new concept, ask:
 
 - Is this a new object?
 - Is this a new process?
 - Is this a new measurement?
 - Is this simply a derivative of an existing variable?
 
-Prefer:
+Prefer describing changes in dynamics, for example,
 
-\[
+$$
 \dot{X}
-\]
+$$
 
-over:
+rather than introducing additional ontological layers such as
 
-\[
+$$
 X_{meta}
-\]
+$$
 
-when the phenomenon is a change in dynamics.
+unless a genuinely new causal entity is required.
 
 ---
 
 # Discussion Guidelines
 
-When proposing changes:
-
-Be explicit about:
+When proposing changes, make the following explicit.
 
 ## Claim
 
@@ -284,9 +262,7 @@ What evidence would show it is wrong?
 
 # Code Contributions
 
-For simulations or computational experiments:
-
-Please include:
+For simulations or computational experiments, please include:
 
 - clear assumptions
 - reproducible parameters
@@ -300,16 +276,17 @@ Code should support the theory, not replace explanation.
 
 # Versioning
 
-The project uses semantic versioning:
+The project uses Semantic Versioning:
 
+```text
 MAJOR.MINOR.PATCH
-
+```
 
 Examples:
 
-- `0.1.0` — initial public research framework
-- `0.2.0` — new theoretical or empirical capabilities
-- `1.0.0` — stable validated framework
+- `0.1.0` — Initial public research framework
+- `0.2.0` — New theoretical or empirical capabilities
+- `1.0.0` — Stable validated framework
 
 ---
 
@@ -319,12 +296,12 @@ The purpose of this project is not to create another hierarchy of concepts.
 
 It is to understand the dynamics by which systems change the mechanisms that produce future change.
 
-The guiding question:
+The guiding question is
 
-\[
+$$
 \boxed{
 \text{What determines the evolution of the function that generates evolution?}
 }
-\]
+$$
 
 Contributions should help answer that question with increasing precision.
