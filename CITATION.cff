@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "Adaptive Evolutionary Dynamics"
+message: "If you use this framework in research, please cite this work."
+type: software
+
+authors:
+  - family-names: "Janson"
+    given-names: "Björn"
+
+repository-code: "https://github.com/YOUR_USERNAME/adaptive-evolutionary-dynamics"
+
+abstract: >
+  Adaptive Evolutionary Dynamics is a framework for modeling when adaptive
+  systems transition from improving within a fixed space of possibilities to
+  modifying the mechanisms that determine which possibilities are reachable.
+  The framework introduces adaptive depth, reachable future transformation
+  spaces, generator modification capacity, and evolutionary velocity as a
+  proposed approach for studying self-improving capability-generation systems.
+
+keywords:
+  - adaptive systems
+  - evolutionary dynamics
+  - complex systems
+  - cybernetics
+  - information theory
+  - artificial intelligence
+  - dynamical systems
+  - innovation theory
+  - search theory
+  - self-improvement
+
+license: "Apache License 2.0"
+
+version: "0.1.0"
+
+date-released: "2026-07-21"
