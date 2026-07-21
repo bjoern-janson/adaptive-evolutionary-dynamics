@@ -6,36 +6,36 @@ The scientific method is a canonical example of an **evolutionary primitive**: a
 
 The framework distinguishes between:
 
-\[
+$$
 \text{knowledge production}
-\]
+$$
 
 and:
 
-\[
+$$
 \text{improvement of knowledge production}
-\]
+$$
 
 The scientific method represents a transition from systems that accumulate solutions to systems that systematically improve their own solution-generating process.
 
 ---
 
-# 1. Pre-scientific Knowledge Production
+# 1. Pre-scientific knowledge production
 
 Before formal scientific methodology, discovery was primarily dependent on:
 
-\[
+$$
 \boxed{
 G_s
 }
-\]
+$$
 
 where:
 
-\[
+$$
 G_s=
 \text{search mechanism}
-\]
+$$
 
 Examples:
 
@@ -47,41 +47,41 @@ Examples:
 
 The system could produce knowledge:
 
-\[
+$$
 Q_t \rightarrow K_{t+1}
-\]
+$$
 
 but the method itself was relatively stable.
 
 The process:
 
-\[
+$$
 \text{question}
 \rightarrow
 \text{attempt}
 \rightarrow
 \text{belief}
-\]
+$$
 
 was not systematically optimized.
 
 ---
 
-# 2. Scientific Method as Generator Modification
+# 2. Scientific method as generator modification
 
 The scientific method introduces explicit mechanisms for improving discovery:
 
-\[
+$$
 \boxed{
 G_m:G_s\rightarrow G_s'
 }
-\]
+$$
 
 The process now contains feedback about the process itself.
 
 The loop becomes:
 
-\[
+$$
 \boxed{
 \text{hypothesis}
 \rightarrow
@@ -93,43 +93,43 @@ The loop becomes:
 \rightarrow
 \text{improved methodology}
 }
-\]
+$$
 
 Knowledge production becomes self-correcting.
 
 ---
 
-# 3. Transformation of the Adaptive Target
+# 3. Transformation of the adaptive target
 
 Before:
 
-\[
+$$
 D_0:
-\]
+$$
 
 Feedback modifies beliefs.
 
-\[
+$$
 \boxed{
 B_{t+1}=f(B_t,O_t)
 }
-\]
+$$
 
 After:
 
-\[
+$$
 D_2:
-\]
+$$
 
 Feedback modifies the mechanism producing beliefs.
 
-\[
+$$
 \boxed{
 G_{m,t+1}
 =
 f(G_{m,t},M_t,O_t)
 }
-\]
+$$
 
 The system does not only learn facts.
 
@@ -137,21 +137,21 @@ It learns how to learn facts.
 
 ---
 
-# 4. Reachable-Space Expansion
+# 4. Reachable-space expansion
 
 The scientific method expands:
 
-\[
+$$
 \mathcal{P}^{reach}_{evo}
-\]
+$$
 
 by increasing the number of accessible transformations.
 
 Without systematic methodology:
 
-\[
+$$
 |\mathcal P^{reach}_{evo}|
-\]
+$$
 
 is limited by:
 
@@ -161,10 +161,10 @@ is limited by:
 
 With scientific methodology:
 
-\[
+$$
 |\mathcal P^{reach}_{evo}|
 \uparrow
-\]
+$$
 
 because:
 
@@ -175,13 +175,13 @@ because:
 
 ---
 
-# 5. Representation Improvement
+# 5. Representation improvement
 
 A major contribution of science is improved representations:
 
-\[
+$$
 M_{t+1}=U(M_t,O_t)
-\]
+$$
 
 Scientific instruments, mathematical models, and measurement systems improve the representation layer.
 
@@ -191,15 +191,15 @@ Examples:
 
 Naked observation:
 
-\[
+$$
 M_0=\text{visual patterns}
-\]
+$$
 
 Telescope:
 
-\[
+$$
 M_1=\text{extended observational space}
-\]
+$$
 
 ---
 
@@ -207,15 +207,15 @@ M_1=\text{extended observational space}
 
 Descriptive biology:
 
-\[
+$$
 M_0=\text{visible organisms}
-\]
+$$
 
 Microscopy/genomics:
 
-\[
+$$
 M_1=\text{molecular representations}
-\]
+$$
 
 ---
 
@@ -223,29 +223,29 @@ M_1=\text{molecular representations}
 
 Intuitive mechanics:
 
-\[
+$$
 M_0=\text{qualitative motion}
-\]
+$$
 
 Mathematical physics:
 
-\[
+$$
 M_1=\text{predictive dynamical models}
-\]
+$$
 
 ---
 
-# 6. Scientific Institutions as Generator Systems
+# 6. Scientific institutions as generator systems
 
 Individual scientists are limited.
 
 Scientific institutions create persistent generator infrastructure:
 
-\[
+$$
 \boxed{
 G_m^{institution}
 }
-\]
+$$
 
 Examples:
 
@@ -261,39 +261,39 @@ These structures modify future discovery rates.
 
 The system stores not only results:
 
-\[
+$$
 \text{papers}
-\]
+$$
 
 but procedures:
 
-\[
+$$
 \text{methods}
-\]
+$$
 
 and procedures for improving procedures:
 
-\[
+$$
 \text{scientific progress}
-\]
+$$
 
 ---
 
-# 7. Evolutionary Velocity Interpretation
+# 7. Evolutionary velocity interpretation
 
 The framework predicts:
 
-\[
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-\]
+$$
 
 For science:
 
-\[
+$$
 \boxed{
 \text{scientific method}
 \rightarrow
@@ -301,7 +301,7 @@ For science:
 \rightarrow
 \text{accelerating discovery}
 }
-\]
+$$
 
 The claim is not:
 
@@ -311,71 +311,71 @@ That is obvious.
 
 The stronger claim:
 
-\[
+$$
 \boxed{
 \text{science increases the rate at which future knowledge-generating mechanisms improve}
 }
-\]
+$$
 
 ---
 
-# 8. Historical Hypothesis
+# 8. Historical hypothesis
 
 A measurable transition should occur:
 
-\[
+$$
 t_{G_m}
 <
 t_{\Omega}
 <
 t_C
-\]
+$$
 
 Expected sequence:
 
 ## Before
 
-\[
+$$
 \text{individual discovery}
-\]
+$$
 
 ↓
 
 ## Transition
 
-\[
+$$
 \text{formalized methodology}
-\]
+$$
 
 ↓
 
 ## After
 
-\[
+$$
 \text{self-improving discovery ecosystem}
-\]
+$$
 
 ↓
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 ↓
 
-\[
+$$
 \text{accelerating technological capability}
-\]
+$$
 
 ---
 
-# 9. Observable Proxies
+# 9. Observable proxies
 
 Possible measurements:
 
-## Generator Capacity
+## Generator capacity
 
-\[
+$$
 G_m
 \rightarrow
 \{
@@ -384,7 +384,7 @@ G_m
 \Delta I,
 \Delta T
 \}
-\]
+$$
 
 where:
 
@@ -395,11 +395,11 @@ where:
 
 ---
 
-## Reachable Space
+## Reachable space
 
 Estimate:
 
-\[
+$$
 \hat{\mathcal P}^{reach}
 =
 f(
@@ -408,7 +408,7 @@ G_s,
 G_m,
 R
 )
-\]
+$$
 
 Possible proxies:
 
@@ -420,11 +420,11 @@ Possible proxies:
 
 ---
 
-## Evolutionary Velocity
+## Evolutionary velocity
 
 Estimate:
 
-\[
+$$
 \hat{\Omega}
 =
 \frac{
@@ -432,7 +432,7 @@ Estimate:
 }{
 \Delta t
 }
-\]
+$$
 
 The key question:
 
@@ -446,35 +446,35 @@ The framework would be weakened if:
 
 1. Scientific revolutions occur without prior generator modification.
 
-\[
+$$
 \Delta C
 \not\rightarrow
 \Delta G_m
-\]
+$$
 
 2. Generator improvements do not predict later capability acceleration.
 
-\[
+$$
 \Delta G_m
 \not\rightarrow
 \Delta\Omega
-\]
+$$
 
 3. Apparent acceleration is fully explained by resources.
 
-\[
+$$
 \Omega
 \approx
 \Delta_R
-\]
+$$
 
 rather than:
 
-\[
+$$
 \Omega
 \approx
 \Delta_G
-\]
+$$
 
 ---
 
@@ -482,11 +482,11 @@ rather than:
 
 The scientific method is one example of a broader class:
 
-\[
+$$
 \boxed{
 \text{Evolutionary primitives}
 }
-\]
+$$
 
 Other examples:
 
@@ -499,11 +499,11 @@ Other examples:
 
 The shared property:
 
-\[
+$$
 \boxed{
 \text{They store transformations that improve future transformations.}
 }
-\]
+$$
 
 ---
 
@@ -513,23 +513,23 @@ The scientific method is not merely a tool for discovering facts.
 
 Within this framework, it is a historical example of a system crossing an adaptive boundary:
 
-\[
+$$
 \boxed{
 \text{learning about the world}
 }
-\]
+$$
 
 becomes:
 
-\[
+$$
 \boxed{
 \text{learning how to improve the process of learning about the world}
 }
-\]
+$$
 
 The central prediction:
 
-\[
+$$
 \boxed{
 G_m
 \rightarrow
@@ -537,7 +537,7 @@ G_m
 \rightarrow
 C
 }
-\]
+$$
 
 provides a measurable hypothesis:
 
