@@ -6,16 +6,13 @@
 
 The central geometric object of the Adaptive Evolutionary Architecture is:
 
-\[
-\boxed{
+$$
 \mathcal{P}^{reach}(t)
-}
-\]
+$$
 
 defined as:
 
-\[
-\boxed{
+$$
 \mathcal{P}^{reach}(t)
 =
 \{
@@ -25,32 +22,29 @@ E_t\rightarrow E_{t+k}
 \tau
 \text{ reachable under }X_t,R_t
 \}
-}
-\]
+$$
 
 It represents the set of future transformations a system can actually access.
 
 The measurement problem:
 
-\[
+$$
 \boxed{
 \text{reachable transformation space}
 \rightarrow
 \text{observable proxies}
 }
-\]
+$$
 
 The complete space is generally impossible to enumerate.
 
 Therefore:
 
-\[
-\boxed{
+$$
 \hat{\mathcal{P}}^{reach}
 \approx
 \text{empirical estimators of accessible future transformations}
-}
-\]
+$$
 
 ---
 
@@ -58,15 +52,15 @@ Therefore:
 
 A transformation belongs to:
 
-\[
+$$
 \mathcal{P}^{reach}
-\]
+$$
 
 if the system can produce it given:
 
-\[
+$$
 (X_t,R_t)
-\]
+$$
 
 including:
 
@@ -82,29 +76,27 @@ including:
 
 The framework requires:
 
-\[
-\boxed{
+$$
 \mathcal{P}^{reach}
 \subseteq
 \mathcal{P}
-}
-\]
+$$
 
 where:
 
-\[
+$$
 \mathcal{P}
 =
 \text{all physically or logically possible futures}
-\]
+$$
 
 and:
 
-\[
+$$
 \mathcal{P}^{reach}
 =
 \text{accessible futures}
-\]
+$$
 
 ---
 
@@ -112,17 +104,17 @@ Example:
 
 A civilization may have:
 
-\[
+$$
 \mathcal{P}
 =
 \text{all possible technologies}
-\]
+$$
 
 but:
 
-\[
+$$
 \mathcal{P}^{reach}
-\]
+$$
 
 is constrained by:
 
@@ -167,13 +159,11 @@ How easily can the space itself be enlarged?
 
 The number of candidate transformations explored.
 
-\[
-\boxed{
+$$
 B_s
 =
 |\text{candidate trajectories evaluated}|
-}
-\]
+$$
 
 ---
 
@@ -201,13 +191,11 @@ A system may explore many impossible or low-value paths.
 
 Number of distinct solution classes reachable.
 
-\[
-\boxed{
+$$
 D_s
 =
 |\text{independent solution families}|
-}
-\]
+$$
 
 ---
 
@@ -215,15 +203,15 @@ Examples:
 
 Low diversity:
 
-\[
+$$
 \text{one optimization strategy}
-\]
+$$
 
 Higher diversity:
 
-\[
+$$
 \text{multiple independent strategies}
-\]
+$$
 
 ---
 
@@ -233,19 +221,17 @@ Higher diversity:
 
 Measure how far current capability is from the reachable boundary.
 
-\[
-\boxed{
+$$
 F_d
 =
 d(C_t,\partial\mathcal{P}^{reach})
-}
-\]
+$$
 
 where:
 
-\[
+$$
 \partial\mathcal{P}^{reach}
-\]
+$$
 
 is the frontier of reachable transformations.
 
@@ -265,8 +251,7 @@ A system with large frontier distance has room for exploration.
 
 Useful reachable transformations per unit resource.
 
-\[
-\boxed{
+$$
 \eta_s
 =
 \frac{
@@ -275,8 +260,7 @@ Useful reachable transformations per unit resource.
 {
 \Delta R
 }
-}
-\]
+$$
 
 ---
 
@@ -296,21 +280,19 @@ Improved representations increase accessible transformation space by making stru
 
 Observable:
 
-\[
-\boxed{
+$$
 \Delta L
 =
 L_{old}-L_{new}
-}
-\]
+$$
 
 where:
 
-\[
+$$
 L
 =
 \text{description length}
-\]
+$$
 
 ---
 
@@ -324,19 +306,19 @@ Examples:
 
 Newtonian mechanics:
 
-\[
+$$
 \text{many observations}
 \rightarrow
 \text{few equations}
-\]
+$$
 
 Machine learning:
 
-\[
+$$
 \text{raw input}
 \rightarrow
 \text{latent features}
-\]
+$$
 
 ---
 
@@ -348,8 +330,7 @@ A transformation is more valuable when it expands reachability across domains.
 
 Observable:
 
-\[
-\boxed{
+$$
 T_r
 =
 \frac{
@@ -358,8 +339,7 @@ T_r
 {
 \text{original domain}
 }
-}
-\]
+$$
 
 ---
 
@@ -367,15 +347,15 @@ Examples:
 
 Low transfer:
 
-\[
+$$
 \text{single-purpose tool}
-\]
+$$
 
 High transfer:
 
-\[
+$$
 \text{mathematical abstraction}
-\]
+$$
 
 ---
 
@@ -385,19 +365,17 @@ High transfer:
 
 The number of new transformations enabled by recombination.
 
-\[
-\boxed{
+$$
 K_c
 =
 |\mathcal{C}_{new}|
-}
-\]
+$$
 
 where:
 
-\[
+$$
 \mathcal{C}_{new}
-\]
+$$
 
 represents newly accessible combinations.
 
@@ -407,13 +385,13 @@ Examples:
 
 Programming:
 
-\[
+$$
 \text{libraries}
 +
 \text{languages}
 +
 \text{hardware}
-\]
+$$
 
 create new reachable spaces.
 
@@ -425,19 +403,17 @@ create new reachable spaces.
 
 The temporal range of reachable planning.
 
-\[
-\boxed{
+$$
 H_t
 =
 \max(k)
-}
-\]
+$$
 
 such that:
 
-\[
+$$
 E_t\rightarrow E_{t+k}
-\]
+$$
 
 is reliably controllable.
 
@@ -447,15 +423,15 @@ Examples:
 
 Short horizon:
 
-\[
+$$
 \text{reactive behavior}
-\]
+$$
 
 Long horizon:
 
-\[
+$$
 \text{strategic planning}
-\]
+$$
 
 ---
 
@@ -467,21 +443,19 @@ Reduction of barriers preventing transformations.
 
 Observable:
 
-\[
-\boxed{
+$$
 \Delta K
 =
 K_{old}-K_{new}
-}
-\]
+$$
 
 where:
 
-\[
+$$
 K
 =
 \text{effective constraints}
-\]
+$$
 
 ---
 
@@ -489,19 +463,19 @@ Examples:
 
 Compilers:
 
-\[
+$$
 \text{machine constraints}
 \rightarrow
 \text{abstract programming}
-\]
+$$
 
 Automation:
 
-\[
+$$
 \text{manual labor constraints}
 \rightarrow
 \text{scalable processes}
-\]
+$$
 
 ---
 
@@ -509,8 +483,7 @@ Automation:
 
 A practical estimator:
 
-\[
-\boxed{
+$$
 \hat{\mathcal{P}}^{reach}
 =
 (
@@ -524,8 +497,7 @@ K_c,
 H_t,
 \Delta K
 )
-}
-\]
+$$
 
 No single measurement captures reachable space.
 
@@ -537,22 +509,21 @@ The framework predicts convergence across multiple proxies.
 
 Using the proxy:
 
-\[
+$$
 \hat{\mathcal{P}}^{reach}
-\]
+$$
 
 estimate:
 
-\[
-\boxed{
+$$
 \hat{\Lambda}
 =
 \frac{d}{dt}
 \log
 |
-\hat{\mathcal{P}}^{reach}(t)|
-}
-\]
+\hat{\mathcal{P}}^{reach}(t)
+|
+$$
 
 ---
 
@@ -560,31 +531,27 @@ estimate:
 
 Total expansion:
 
-\[
+$$
 \Lambda
 =
 \Delta_R+\Delta_C+\Delta_G
-\]
+$$
 
 The framework isolates:
 
-\[
-\boxed{
+$$
 \Omega=\Delta_G
-}
-\]
+$$
 
 Therefore:
 
-\[
-\boxed{
+$$
 \Omega
 \rightarrow
 \frac{d}{dt}
 \log
 |\mathcal{P}^{reach}_{evo}|
-}
-\]
+$$
 
 ---
 
@@ -596,9 +563,9 @@ Given a historical transition:
 
 Identify baseline:
 
-\[
+$$
 \mathcal{P}^{reach}_{old}
-\]
+$$
 
 ---
 
@@ -606,9 +573,9 @@ Identify baseline:
 
 Identify intervention:
 
-\[
+$$
 I
-\]
+$$
 
 ---
 
@@ -616,9 +583,9 @@ I
 
 Measure change:
 
-\[
+$$
 \Delta\hat{\mathcal{P}}^{reach}
-\]
+$$
 
 ---
 
@@ -626,11 +593,11 @@ Measure change:
 
 Separate causes:
 
-\[
+$$
 \Lambda
 =
 \Delta_R+\Delta_C+\Delta_G
-\]
+$$
 
 ---
 
@@ -638,11 +605,11 @@ Separate causes:
 
 Estimate:
 
-\[
+$$
 \Omega
 \approx
 \Delta_G
-\]
+$$
 
 ---
 
@@ -650,37 +617,37 @@ Estimate:
 
 Before:
 
-\[
+$$
 \mathcal{P}^{reach}_{old}
 =
 \text{manual machine instructions}
-\]
+$$
 
 After:
 
-\[
+$$
 \mathcal{P}^{reach}_{new}
 =
 \text{abstract computational transformations}
-\]
+$$
 
 Signals:
 
-\[
+$$
 \Delta L>0
-\]
+$$
 
-\[
+$$
 D_s\uparrow
-\]
+$$
 
-\[
+$$
 T_r\uparrow
-\]
+$$
 
-\[
+$$
 H_t\uparrow
-\]
+$$
 
 ---
 
@@ -688,29 +655,29 @@ H_t\uparrow
 
 Before:
 
-\[
+$$
 \text{individual discovery}
-\]
+$$
 
 After:
 
-\[
+$$
 \text{repeatable knowledge production}
-\]
+$$
 
 Signals:
 
-\[
+$$
 B_s\uparrow
-\]
+$$
 
-\[
+$$
 \eta_s\uparrow
-\]
+$$
 
-\[
+$$
 T_r\uparrow
-\]
+$$
 
 ---
 
@@ -720,55 +687,51 @@ The reachable-space framework fails if:
 
 1. Observable proxies do not correlate with future capability.
 
-\[
+$$
 \hat{\mathcal{P}}^{reach}
 \nrightarrow
 C_{future}
-\]
+$$
 
 ---
 
 2. Capability growth occurs without reachable-space expansion.
 
-\[
+$$
 \Delta C>0
-\]
+$$
 
 while:
 
-\[
+$$
 \Delta\hat{\mathcal{P}}^{reach}\approx0
-\]
+$$
 
 ---
 
 3. Resource scaling fully explains expansion.
 
-\[
+$$
 \Delta_R\approx\Lambda
-\]
+$$
 
 ---
 
 # Final Definition
 
-\[
-\boxed{
+$$
 \mathcal{P}^{reach}
 =
 \text{the set of future transformations a system can actually access}
-}
-\]
+$$
 
 Operationally:
 
-\[
-\boxed{
+$$
 \hat{\mathcal{P}}^{reach}
 =
 \text{measurable frontier of accessible future change}
-}
-\]
+$$
 
 The objective is not to enumerate all possible futures.
 
