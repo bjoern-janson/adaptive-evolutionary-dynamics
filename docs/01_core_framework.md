@@ -6,7 +6,7 @@
 
 The Adaptive Evolutionary Architecture (AEA) is a mathematical framework for modeling systems that do not merely adapt within a fixed possibility space, but modify the mechanisms that determine which futures are reachable.
 
-The central question is:
+The central question:
 
 > How does a system become better at becoming better?
 
@@ -36,21 +36,12 @@ $$
 
 where:
 
-$$
-S_t=\text{scale of adaptation}
-$$
-
-$$
-D_t=\text{depth of adaptation}
-$$
-
-$$
-X_t=\text{internal system configuration}
-$$
-
-$$
-\Theta_t=\text{trajectory dynamics}
-$$
+| Variable | Meaning |
+|---|---|
+| $S_t$ | Scale of adaptation |
+| $D_t$ | Depth of adaptation |
+| $X_t$ | Internal system configuration |
+| $\Theta_t$ | Trajectory dynamics |
 
 ---
 
@@ -171,7 +162,7 @@ where:
 
 - $E_t$ is the current environment.
 - $\tau$ is a possible transformation.
-- Reachability is constrained by current representations, resources, search mechanisms, and generator mechanisms.
+- Reachability is constrained by representations, resources, search mechanisms, and generator mechanisms.
 
 The distinction:
 
@@ -344,7 +335,7 @@ $$
 
 This measures how quickly the reachable frontier expands.
 
-However, expansion has multiple causes:
+Expansion has multiple causes:
 
 $$
 \Lambda
@@ -359,8 +350,7 @@ $$
 $$
 \Delta_R
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}
-{\partial R}
+\frac{\partial\log|\mathcal{P}^{reach}|}{\partial R}
 \dot R
 $$
 
@@ -381,8 +371,7 @@ Examples:
 $$
 \Delta_C
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}
-{\partial C}
+\frac{\partial\log|\mathcal{P}^{reach}|}{\partial C}
 \dot C
 $$
 
@@ -395,8 +384,7 @@ Expansion from existing capability improvement.
 $$
 \Delta_G
 =
-\frac{\partial\log|\mathcal{P}^{reach}|}
-{\partial G_m}
+\frac{\partial\log|\mathcal{P}^{reach}|}{\partial G_m}
 \dot G_m
 $$
 
@@ -409,7 +397,7 @@ Expansion caused by improving the machinery that generates future improvements.
 The central variable:
 
 $$
-\Omega=\Delta_G
+\Omega\equiv\Delta_G
 $$
 
 Expanded:
@@ -433,7 +421,6 @@ Omega is not:
 
 - capability
 - growth
-- complexity
 - intelligence
 - resource quantity
 
@@ -489,7 +476,7 @@ $$
 {\partial I}
 $$
 
-measures how interventions alter future capability-generation.
+measures how interventions alter future capability generation.
 
 The distinction:
 
@@ -506,8 +493,6 @@ An evolutionary primitive changes how future generators are produced.
 ---
 
 # 12. Evolutionary Primitives
-
-AEA distinguishes between stored results and stored transformations.
 
 ## Artifact
 
@@ -561,7 +546,7 @@ $$
 X,\dot X,\ddot X
 $$
 
-Higher-order behavior is represented through dynamics.
+Higher-order behavior is represented through dynamics:
 
 $$
 \text{Meta}
@@ -576,6 +561,10 @@ $$
 \text{Meta}\in X
 $$
 
+---
+
+# 14. Core Invariant
+
 The governing principle:
 
 $$
@@ -586,19 +575,7 @@ This acts as a model-selection constraint.
 
 ---
 
-# 14. Core Invariant
-
-The governing principle:
-
-> Higher-order adaptive behavior is not a higher object. It is the dynamics of lower-order adaptive processes.
-
-The framework avoids unnecessary ontological layers by representing higher-order behavior through transformations of existing variables.
-
----
-
 # 15. Final Compression
-
-The adaptive system:
 
 $$
 \mathcal{A}_t
@@ -613,15 +590,15 @@ $$
 
 where:
 
-- $S_t$ represents where adaptation occurs.
-- $D_t$ represents what changes.
-- $Z_t$ represents the current state.
-- $\Theta_t$ represents the trajectory.
+- $S_t$ = where adaptation occurs
+- $D_t$ = what changes
+- $Z_t$ = current state
+- $\Theta_t$ = trajectory
 
 The framework studies:
 
 $$
-\text{systems whose transformations can themselves become targets of transformation}
+\text{Systems whose transformations can themselves become targets of transformation.}
 $$
 
 The central measurable quantity:
