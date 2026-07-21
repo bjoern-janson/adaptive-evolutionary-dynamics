@@ -6,19 +6,15 @@ This document defines the mathematical structure of the Adaptive Evolutionary Ar
 
 The framework models systems that do not merely adapt within a fixed possibility space, but can modify the mechanisms that determine which future transformations are reachable.
 
-The central distinction is:
+The central distinction:
 
-\[
-\boxed{
+$$
 \text{Adaptation changes states.}
-}
-\]
+$$
 
-\[
-\boxed{
+$$
 \text{Evolutionary acceleration changes the machinery that changes states.}
-}
-\]
+$$
 
 ---
 
@@ -26,20 +22,18 @@ The central distinction is:
 
 An adaptive system is represented as:
 
-\[
-\boxed{
+$$
 \mathcal{A}_t=(S_t,D_t,X_t,\Theta_t)
-}
-\]
+$$
 
 where:
 
 | Variable | Meaning |
 |---|---|
-| \(S_t\) | Scale of adaptation |
-| \(D_t\) | Depth / target of adaptation |
-| \(X_t\) | Internal system configuration |
-| \(\Theta_t\) | Trajectory dynamics |
+| $S_t$ | Scale of adaptation |
+| $D_t$ | Depth / target of adaptation |
+| $X_t$ | Internal system configuration |
+| $\Theta_t$ | Trajectory dynamics |
 
 ---
 
@@ -47,30 +41,23 @@ where:
 
 Scale describes where adaptation occurs:
 
-\[
-\boxed{
-S_t \in
-\{
-micro,
-meso,
-macro
-\}
-}
-\]
+$$
+S_t \in \{micro, meso, macro\}
+$$
 
 Examples:
 
-\[
+$$
 micro=\text{individual}
-\]
+$$
 
-\[
+$$
 meso=\text{organization}
-\]
+$$
 
-\[
+$$
 macro=\text{civilization}
-\]
+$$
 
 Scale is not a measure of adaptive depth.
 
@@ -84,8 +71,7 @@ A small system may operate at deep adaptation depth.
 
 The internal configuration is:
 
-\[
-\boxed{
+$$
 X_t=
 (
 Z_t,
@@ -97,16 +83,28 @@ G_{s,t},
 G_{m,t},
 R_t
 )
-}
-\]
+$$
 
 where:
 
+| Variable | Meaning |
+|---|---|
+| $Z_t$ | Current operational state |
+| $M_t$ | Internal representation/model |
+| $\pi_t$ | Policy/controller |
+| $V_t$ | Objective/value structure |
+| $C_t$ | Current capability |
+| $G_s$ | Search mechanism |
+| $G_m$ | Generator-modification mechanism |
+| $R_t$ | Available resources |
+
+---
+
 ## State
 
-\[
+$$
 Z_t
-\]
+$$
 
 The current configuration of the system.
 
@@ -114,9 +112,9 @@ The current configuration of the system.
 
 ## Representation
 
-\[
+$$
 M_t
-\]
+$$
 
 The internal model through which the system compresses and predicts reality.
 
@@ -124,9 +122,9 @@ The internal model through which the system compresses and predicts reality.
 
 ## Policy / Controller
 
-\[
+$$
 \pi_t
-\]
+$$
 
 The mechanism selecting actions.
 
@@ -134,9 +132,9 @@ The mechanism selecting actions.
 
 ## Objective Function
 
-\[
+$$
 V_t
-\]
+$$
 
 The optimization target or evaluation function.
 
@@ -144,9 +142,9 @@ The optimization target or evaluation function.
 
 ## Capability
 
-\[
+$$
 C_t
-\]
+$$
 
 The current reachable action space of the system.
 
@@ -154,9 +152,9 @@ The current reachable action space of the system.
 
 ## Search Mechanism
 
-\[
+$$
 G_{s,t}
-\]
+$$
 
 The process through which the system explores possible transformations.
 
@@ -164,9 +162,9 @@ The process through which the system explores possible transformations.
 
 ## Generator Modification Mechanism
 
-\[
+$$
 G_{m,t}
-\]
+$$
 
 The mechanism through which the system modifies its own search and production processes.
 
@@ -174,13 +172,7 @@ The mechanism through which the system modifies its own search and production pr
 
 ## Resources
 
-\[
-R_t
-\]
-
-External substrate:
-
-\[
+$$
 R_t=
 (
 \text{compute},
@@ -189,7 +181,9 @@ R_t=
 \text{data},
 \text{labor}
 )
-\]
+$$
+
+External substrate available to the system.
 
 ---
 
@@ -197,11 +191,9 @@ R_t=
 
 The fast adaptive loop:
 
-\[
-\boxed{
+$$
 O_t=H(E_t)
-}
-\]
+$$
 
 Observation is generated from the environment.
 
@@ -209,58 +201,48 @@ Observation is generated from the environment.
 
 Representation update:
 
-\[
-\boxed{
+$$
 M_{t+1}=U(M_t,O_t)
-}
-\]
+$$
 
 ---
 
 Action selection:
 
-\[
-\boxed{
+$$
 u_t=\pi_t(M_t,V_t)
-}
-\]
+$$
 
 ---
 
 Environment transition:
 
-\[
-\boxed{
+$$
 E_{t+1}=F(E_t,u_t)
-}
-\]
+$$
 
 ---
 
 Internal state evolution:
 
-\[
-\boxed{
+$$
 Z_{t+1}
 =
 \Phi
 (
 Z_t,M_t,\pi_t,V_t,E_t
 )
-}
-\]
+$$
 
 ---
 
 The complete adaptive system:
 
-\[
-\boxed{
+$$
 X_{t+1}
 =
 F_X(X_t,E_t,u_t)
-}
-\]
+$$
 
 ---
 
@@ -268,12 +250,10 @@ F_X(X_t,E_t,u_t)
 
 Adaptive depth is defined by:
 
-\[
-\boxed{
+$$
 D=
 \operatorname{Target}(Feedback)
-}
-\]
+$$
 
 The question:
 
@@ -281,15 +261,13 @@ The question:
 
 ---
 
-# 4.1 Depth 0: State Adaptation
+## 4.1 Depth 0: State Adaptation
 
 Feedback changes the current configuration.
 
-\[
-\boxed{
+$$
 Z_{t+1}=f(Z_t,O_t)
-}
-\]
+$$
 
 Examples:
 
@@ -299,17 +277,13 @@ Examples:
 
 ---
 
-# 4.2 Depth 1: Search Adaptation
+## 4.2 Depth 1: Search Adaptation
 
 Feedback modifies exploration strategy.
 
-\[
-\boxed{
-G_{s,t+1}
-=
-f(G_{s,t},O_t)
-}
-\]
+$$
+G_{s,t+1}=f(G_{s,t},O_t)
+$$
 
 Examples:
 
@@ -319,17 +293,15 @@ Examples:
 
 ---
 
-# 4.3 Depth 2: Generator Adaptation
+## 4.3 Depth 2: Generator Adaptation
 
 Feedback modifies the mechanisms producing solutions.
 
-\[
-\boxed{
+$$
 G_{m,t+1}
 =
 f(G_{m,t},G_{s,t},M_t,O_t)
-}
-\]
+$$
 
 Examples:
 
@@ -339,12 +311,11 @@ Examples:
 
 ---
 
-# 4.4 Depth 3: Generator Dynamics Adaptation
+## 4.4 Depth 3: Generator Dynamics Adaptation
 
 Feedback modifies the rate at which generators improve.
 
-\[
-\boxed{
+$$
 \Omega_{t+1}
 =
 f(
@@ -354,16 +325,13 @@ G_{s,t},
 M_t,
 O_t
 )
-}
-\]
+$$
 
-The system is modifying:
+The system modifies:
 
-\[
-\boxed{
+$$
 G_m\rightarrow\dot G_m
-}
-\]
+$$
 
 This is the transition associated with evolutionary acceleration.
 
@@ -377,44 +345,32 @@ It models reachable futures.
 
 Define:
 
-\[
-\boxed{
+$$
 \mathcal{P}^{reach}_{evo}(t)
 =
 \{
 \tau:
 E_t\rightarrow E_{t+k}
-|
+\mid
 \tau
 \text{ reachable under }
 X_t,R_t
 \}
-}
-\]
+$$
 
-where:
-
-\[
-\tau
-\]
-
-is a possible transformation trajectory.
-
----
+where $\tau$ is a possible transformation trajectory.
 
 The distinction:
 
-\[
-\boxed{
+$$
 \text{Possible}
 \neq
 \text{Reachable}
-}
-\]
+$$
 
-A transformation exists only if the system can access it through:
+A transformation exists operationally only if the system can access it through:
 
-\[
+$$
 (
 M_t,
 \pi_t,
@@ -424,23 +380,21 @@ G_s,
 G_m,
 R_t
 )
-\]
+$$
 
 ---
 
 # 6. Capability
 
-Current capability is:
+Current capability:
 
-\[
-\boxed{
+$$
 C_t
 =
 |
 \mathcal{P}^{reach}_{current}(t)
 |
-}
-\]
+$$
 
 Capability measures the current reachable frontier.
 
@@ -452,14 +406,12 @@ It does not measure the rate of frontier expansion.
 
 Search maps reachable possibilities into explored possibilities:
 
-\[
-\boxed{
+$$
 G_s:
 \mathcal{P}^{reach}_{current}
 \rightarrow
 \mathcal{P}^{explored}
-}
-\]
+$$
 
 Search determines how efficiently the system navigates its reachable space.
 
@@ -469,14 +421,10 @@ Search determines how efficiently the system navigates its reachable space.
 
 Generator modification transforms search itself:
 
-\[
-\boxed{
+$$
 G_m:
-G_s(t)
-\rightarrow
-G_s(t+1)
-}
-\]
+G_s(t)\rightarrow G_s(t+1)
+$$
 
 The system becomes capable of changing how it searches.
 
@@ -486,8 +434,7 @@ The system becomes capable of changing how it searches.
 
 The raw expansion rate:
 
-\[
-\boxed{
+$$
 \Lambda(t)
 =
 \frac{d}{dt}
@@ -495,18 +442,9 @@ The raw expansion rate:
 |
 \mathcal{P}^{reach}(t)
 |
-}
-\]
+$$
 
 This measures total frontier expansion.
-
-However:
-
-\[
-\Lambda
-\]
-
-contains multiple causes.
 
 ---
 
@@ -514,24 +452,15 @@ contains multiple causes.
 
 Total expansion:
 
-\[
-\boxed{
+$$
 \Lambda
 =
-\Delta_R
-+
-\Delta_C
-+
-\Delta_G
-}
-\]
-
----
+\Delta_R+\Delta_C+\Delta_G
+$$
 
 ## Resource Contribution
 
-\[
-\boxed{
+$$
 \Delta_R
 =
 \frac{
@@ -541,17 +470,23 @@ Total expansion:
 \partial R
 }
 \dot R
-}
-\]
+$$
 
 Expansion caused by additional substrate.
+
+Examples:
+
+- compute
+- energy
+- capital
+- labor
+- data
 
 ---
 
 ## Capability Contribution
 
-\[
-\boxed{
+$$
 \Delta_C
 =
 \frac{
@@ -561,8 +496,7 @@ Expansion caused by additional substrate.
 \partial C
 }
 \dot C
-}
-\]
+$$
 
 Expansion caused by existing capability improvements.
 
@@ -570,8 +504,7 @@ Expansion caused by existing capability improvements.
 
 ## Generator Contribution
 
-\[
-\boxed{
+$$
 \Delta_G
 =
 \frac{
@@ -581,8 +514,7 @@ Expansion caused by existing capability improvements.
 \partial G_m
 }
 \dot G_m
-}
-\]
+$$
 
 Expansion caused by improving the improvement machinery.
 
@@ -592,18 +524,13 @@ Expansion caused by improving the improvement machinery.
 
 The central quantity:
 
-\[
-\boxed{
-\Omega
-=
-\Delta_G
-}
-\]
+$$
+\Omega=\Delta_G
+$$
 
 or:
 
-\[
-\boxed{
+$$
 \Omega
 =
 \frac{
@@ -613,18 +540,14 @@ or:
 \partial G_m
 }
 \dot G_m
-}
-\]
+$$
 
 Interpretation:
 
-\[
-\boxed{
-\Omega
-=
+$$
+\Omega=
 \text{rate at which a system improves its own capability-generation dynamics}
-}
-\]
+$$
 
 ---
 
@@ -632,8 +555,7 @@ Interpretation:
 
 The dependency chain:
 
-\[
-\boxed{
+$$
 R
 \rightarrow
 C
@@ -643,8 +565,7 @@ G_s
 G_m
 \rightarrow
 \Omega
-}
-\]
+$$
 
 This is not a hierarchy.
 
@@ -656,27 +577,19 @@ It is a causal dependency structure.
 
 The framework predicts:
 
-\[
-\boxed{
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-}
-\]
+$$
 
 with temporal ordering:
 
-\[
-\boxed{
-t_{G_m}
-<
-t_{\Omega}
-<
-t_C
-}
-\]
+$$
+t_{G_m}<t_{\Omega}<t_C
+$$
 
 Meaning:
 
@@ -690,8 +603,7 @@ Meaning:
 
 Traditional causal influence:
 
-\[
-\boxed{
+$$
 \Phi(I)
 =
 \frac{
@@ -699,17 +611,13 @@ Traditional causal influence:
 }{
 \partial I
 }
-}
-\]
+$$
 
 Measures direct downstream effects.
 
----
-
 Dynamic causal influence:
 
-\[
-\boxed{
+$$
 \Phi_D(I)
 =
 \frac{
@@ -718,20 +626,15 @@ Dynamic causal influence:
 }{
 \partial I
 }
-}
-\]
+$$
 
 Measures influence over future transformation capacity.
 
----
-
 The distinction:
 
-\[
-\boxed{
+$$
 \Phi_D(I)\neq\Phi(I)
-}
-\]
+$$
 
 A tool changes outcomes.
 
@@ -743,39 +646,31 @@ An improvement system changes the production of future production.
 
 # 15. Primitive Hierarchy
 
-Artifact:
+## Artifact
 
-\[
-\boxed{
+$$
 A=x
-}
-\]
+$$
 
 Stores a result.
 
 ---
 
-Primitive:
+## Primitive
 
-\[
-\boxed{
-P:
-f:x\rightarrow y
-}
-\]
+$$
+P:f:x\rightarrow y
+$$
 
 Stores a transformation.
 
 ---
 
-Evolutionary Primitive:
+## Evolutionary Primitive
 
-\[
-\boxed{
-P_e:
-f\rightarrow f'
-}
-\]
+$$
+P_e:f\rightarrow f'
+$$
 
 Stores a transformation that modifies future transformations.
 
@@ -787,69 +682,49 @@ The framework rejects infinite meta-layers.
 
 Instead of:
 
-\[
+$$
 X
 \rightarrow
 X_{meta}
 \rightarrow
 X_{meta^2}
-\]
+$$
 
 use trajectory dynamics:
 
-\[
+$$
 X
 \rightarrow
 \dot X
 \rightarrow
 \ddot X
-\]
-
----
+$$
 
 System dynamics:
 
-\[
-\boxed{
+$$
 X_{t+1}=F(X_t,u_t,E_t)
-}
-\]
+$$
 
 Velocity:
 
-\[
-\boxed{
-\dot X_t
-=
-\frac{dX_t}{dt}
-}
-\]
+$$
+\dot X_t=\frac{dX_t}{dt}
+$$
 
 Acceleration:
 
-\[
-\boxed{
-\ddot X_t
-=
-\frac{d^2X_t}{dt^2}
-}
-\]
+$$
+\ddot X_t=\frac{d^2X_t}{dt^2}
+$$
 
 ---
 
-Final invariant:
+# Final Invariant
 
-\[
-\boxed{
-\text{Higher-order adaptive behavior is not a higher object.}
-}
-\]
+Higher-order adaptive behavior is not a higher object.
 
-\[
-\boxed{
-\text{It is the dynamics of lower-order adaptive processes.}
-}
-\]
+It is the dynamics of lower-order adaptive processes.
 
 ---
 
@@ -857,45 +732,39 @@ Final invariant:
 
 The framework predicts:
 
-\[
-\boxed{
+$$
 \text{Changes in capability-generation mechanisms precede capability explosions.}
-}
-\]
+$$
 
 Operationally:
 
-\[
-\boxed{
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-}
-\]
+$$
 
 The empirical challenge:
 
 Measure whether:
 
-\[
-\boxed{
+$$
 \Omega
-}
-\]
+$$
 
 predicts future capability growth after controlling for:
 
-\[
+$$
 R
-\]
+$$
 
 and:
 
-\[
+$$
 C
-\]
+$$
 
 ---
 
@@ -903,8 +772,7 @@ C
 
 The complete framework:
 
-\[
-\boxed{
+$$
 \mathcal{A}_t
 =
 (
@@ -913,21 +781,17 @@ D_t,
 X_t,
 \Theta_t
 )
-}
-\]
+$$
 
 with:
 
-\[
-\boxed{
+$$
 X_{t+1}=F_X(X_t,E_t,u_t)
-}
-\]
+$$
 
 and:
 
-\[
-\boxed{
+$$
 \Omega
 =
 \frac{
@@ -937,16 +801,10 @@ and:
 \partial G_m
 }
 \dot G_m
-}
-\]
+$$
 
 The central principle:
 
-\[
-\boxed{
-\textbf{
-Meta is not a layer.
-Meta is the dynamics of adaptation itself.
-}
-}
-\]
+$$
+\text{Meta is not a layer. Meta is the dynamics of adaptation itself.}
+$$
