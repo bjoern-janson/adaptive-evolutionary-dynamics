@@ -6,29 +6,29 @@ The central empirical challenge of the Adaptive Evolutionary Framework is estima
 
 The framework distinguishes:
 
-\[
+$$
 \Lambda(t)
 =
 \frac{d}{dt}
 \log
 |\mathcal{P}^{reach}(t)|
-\]
+$$
 
 from:
 
-\[
+$$
 \Omega(t)
 =
 \Delta_G
-\]
+$$
 
 where:
 
-\[
+$$
 \Lambda
 =
 \Delta_R+\Delta_C+\Delta_G
-\]
+$$
 
 and:
 
@@ -38,11 +38,11 @@ and:
 
 The goal of Ω estimation is therefore not to measure growth, but to isolate:
 
-\[
+$$
 \boxed{
 \text{growth caused by improving the machinery that produces growth}
 }
-\]
+$$
 
 ---
 
@@ -50,8 +50,7 @@ The goal of Ω estimation is therefore not to measure growth, but to isolate:
 
 The ideal quantity:
 
-\[
-\boxed{
+$$
 \Omega(t)
 =
 \frac{\partial
@@ -59,8 +58,7 @@ The ideal quantity:
 }
 {\partial G_m}
 \dot{G}_m
-}
-\]
+$$
 
 where:
 
@@ -70,7 +68,7 @@ where:
 
 Intuitively:
 
-\[
+$$
 \Omega
 =
 \frac{
@@ -78,7 +76,7 @@ Intuitively:
 }{
 \text{improvement of improvement machinery}
 }
-\]
+$$
 
 ---
 
@@ -88,21 +86,21 @@ Intuitively:
 
 The system does not expose:
 
-\[
+$$
 \mathcal{P}^{reach}
-\]
+$$
 
 directly.
 
 The observable problem is therefore:
 
-\[
+$$
 \boxed{
 (G_m,\mathcal{P}^{reach},\Omega)
 \rightarrow
 (Y_1,Y_2,...,Y_n)
 }
-\]
+$$
 
 where \(Y\) are measurable proxies.
 
@@ -114,20 +112,18 @@ where \(Y\) are measurable proxies.
 
 Measure how much additional capability is produced per unit improvement effort.
 
-\[
-\boxed{
+$$
 \eta_G
 =
 \frac{\Delta C}
 {\Delta G_m}
-}
-\]
+$$
 
 A system with increasing Ω should show:
 
-\[
+$$
 \frac{d\eta_G}{dt}>0
-\]
+$$
 
 ---
 
@@ -137,37 +133,37 @@ System A:
 
 Year 1:
 
-\[
+$$
 \Delta G_m=10
-\]
+$$
 
-\[
+$$
 \Delta C=100
-\]
+$$
 
 Efficiency:
 
-\[
+$$
 \eta_G=10
-\]
+$$
 
 Year 2:
 
-\[
+$$
 \Delta G_m=20
-\]
+$$
 
-\[
+$$
 \Delta C=200
-\]
+$$
 
 Efficiency unchanged.
 
 Therefore:
 
-\[
+$$
 \Omega\approx0
-\]
+$$
 
 The system grew but did not accelerate its improvement process.
 
@@ -177,23 +173,23 @@ System B:
 
 Year 1:
 
-\[
+$$
 \eta_G=10
-\]
+$$
 
 Year 2:
 
-\[
+$$
 \eta_G=25
-\]
+$$
 
 The same improvement investment produces increasingly larger capability gains.
 
 Therefore:
 
-\[
+$$
 \Omega>0
-\]
+$$
 
 ---
 
@@ -203,7 +199,7 @@ A generator improvement should create reusable transformation capacity.
 
 Define:
 
-\[
+$$
 R_G
 =
 \frac{
@@ -211,7 +207,7 @@ R_G
 }{
 \text{initial improvement cost}
 }
-\]
+$$
 
 Examples:
 
@@ -236,8 +232,7 @@ Evolutionary systems often reduce the cost of future iteration.
 
 Define:
 
-\[
-\boxed{
+$$
 \kappa
 =
 \frac{
@@ -245,8 +240,7 @@ T_{old}
 }{
 T_{new}
 }
-}
-\]
+$$
 
 where:
 
@@ -255,9 +249,9 @@ where:
 
 A rising:
 
-\[
+$$
 \frac{d\kappa}{dt}>0
-\]
+$$
 
 suggests increasing Ω.
 
@@ -267,29 +261,29 @@ Examples:
 
 Manual programming:
 
-\[
+$$
 \text{idea}
 \rightarrow
 \text{implementation}
-\]
+$$
 
 Compiler:
 
-\[
+$$
 \text{idea}
 \rightarrow
 \text{program}
-\]
+$$
 
 AI-assisted programming:
 
-\[
+$$
 \text{idea}
 \rightarrow
 \text{generated candidate}
 \rightarrow
 \text{evaluation}
-\]
+$$
 
 Each transition reduces iteration cost.
 
@@ -301,26 +295,26 @@ Generator improvements should increase accessible search.
 
 Define:
 
-\[
+$$
 B_s
 =
 |\mathcal{P}^{explored}|
-\]
+$$
 
 where:
 
-\[
+$$
 G_s:
 \mathcal{P}^{reach}
 \rightarrow
 \mathcal{P}^{explored}
-\]
+$$
 
 A system with increasing Ω should show:
 
-\[
+$$
 \frac{dB_s}{dt}>0
-\]
+$$
 
 after controlling for resources.
 
@@ -332,13 +326,11 @@ Better generators often improve representations.
 
 Define:
 
-\[
-\boxed{
+$$
 \Delta L
 =
 L_{old}-L_{new}
-}
-\]
+$$
 
 where \(L\) is description length.
 
@@ -346,41 +338,33 @@ Examples:
 
 Manual arithmetic:
 
-\[
+$$
 1+1+1+1+1
-\]
+$$
 
 compressed into:
 
-\[
+$$
 5
-\]
+$$
 
 Programming:
 
-Machine instructions:
-
-\[
+$$
+\text{Machine instructions}
 \rightarrow
-\]
-
-higher-level languages:
-
-\[
+\text{higher-level languages}
 \rightarrow
-\]
-
-abstract frameworks.
+\text{abstract frameworks}
+$$
 
 Scientific theories:
 
-Many observations:
-
-\[
+$$
+\text{Many observations}
 \rightarrow
-\]
-
-compact explanatory model.
+\text{compact explanatory model}
+$$
 
 ---
 
@@ -388,8 +372,7 @@ compact explanatory model.
 
 A practical estimator may combine multiple signals:
 
-\[
-\boxed{
+$$
 \hat{\Omega}
 =
 w_1\eta_G
@@ -401,14 +384,13 @@ w_3\kappa
 w_4B_s
 +
 w_5\Delta L
-}
-\]
+$$
 
 where:
 
-\[
+$$
 \sum_i w_i=1
-\]
+$$
 
 Weights should be determined empirically.
 
@@ -420,15 +402,15 @@ A valid Ω estimate must separate:
 
 ## Resource growth
 
-\[
+$$
 R\uparrow
-\]
+$$
 
 from:
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 Example:
 
@@ -438,15 +420,15 @@ More compute can increase AI capability without improving the AI research proces
 
 ## Capability accumulation
 
-\[
+$$
 C\uparrow
-\]
+$$
 
 does not imply:
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 A skilled worker becoming better at a fixed task is not necessarily improving the learning process itself.
 
@@ -458,9 +440,9 @@ Large systems may have more output simply because they are larger.
 
 Therefore:
 
-\[
+$$
 \Omega
-\]
+$$
 
 must be normalized by available resources.
 
@@ -470,37 +452,35 @@ must be normalized by available resources.
 
 Given two systems:
 
-\[
+$$
 R_A\approx R_B
-\]
+$$
 
-\[
+$$
 C_A\approx C_B
-\]
+$$
 
 measure:
 
-\[
+$$
 G_{m,A}
-\]
+$$
 
 and:
 
-\[
+$$
 G_{m,B}
-\]
+$$
 
 Prediction:
 
-\[
-\boxed{
+$$
 G_{m,A}>G_{m,B}
 \Rightarrow
 \Omega_A>\Omega_B
 \Rightarrow
 C_A(t+\tau)>C_B(t+\tau)
-}
-\]
+$$
 
 ---
 
@@ -512,23 +492,23 @@ Potential case studies:
 
 Transition:
 
-\[
+$$
 \text{individual discovery}
 \rightarrow
 \text{repeatable discovery procedure}
-\]
+$$
 
 Expected:
 
-\[
+$$
 G_m\uparrow
-\]
+$$
 
 followed by:
 
-\[
+$$
 \Omega\uparrow
-\]
+$$
 
 ---
 
@@ -536,11 +516,11 @@ followed by:
 
 Transition:
 
-\[
+$$
 \text{manual computation}
 \rightarrow
 \text{abstract programming systems}
-\]
+$$
 
 Measures:
 
@@ -554,11 +534,11 @@ Measures:
 
 Transition:
 
-\[
+$$
 \text{human translation}
 \rightarrow
 \text{automated optimization}
-\]
+$$
 
 Measures:
 
@@ -572,11 +552,11 @@ Measures:
 
 Transition:
 
-\[
+$$
 \text{manual features}
 \rightarrow
 \text{learned representations}
-\]
+$$
 
 Measures:
 
@@ -592,23 +572,21 @@ The Ω hypothesis is weakened if:
 
 1. Capability increases without prior generator change:
 
-\[
-\Delta C
->
-0
-\]
+$$
+\Delta C>0
+$$
 
 while:
 
-\[
+$$
 \Delta G_m\approx0
-\]
+$$
 
 2. Resource increases fully explain capability growth:
 
-\[
+$$
 \Delta_R\approx\Lambda
-\]
+$$
 
 3. Estimated Ω does not predict future capability acceleration.
 
@@ -618,11 +596,11 @@ while:
 
 The central prediction:
 
-\[
+$$
 \boxed{
 t_{G_m}<t_\Omega<t_C
 }
-\]
+$$
 
 A genuine evolutionary transition should exhibit:
 
@@ -634,13 +612,11 @@ A genuine evolutionary transition should exhibit:
 
 # Final Definition
 
-\[
-\boxed{
+$$
 \Omega
 =
 \text{the rate at which a system improves the machinery responsible for producing future improvements}
-}
-\]
+$$
 
 The empirical challenge is not proving that systems improve.
 
