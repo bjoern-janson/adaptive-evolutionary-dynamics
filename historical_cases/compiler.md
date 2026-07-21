@@ -2,11 +2,11 @@
 
 ## Overview
 
-The compiler transition is a canonical example of a change in adaptive depth: a system moves from direct execution of transformations to the creation of reusable transformation mechanisms.
+The compiler transition is a canonical example of a change in adaptive depth: a system moves from directly executing transformations to creating reusable mechanisms that generate transformations.
 
 The relevant transition is:
 
-\[
+$$
 \text{human procedure}
 \rightarrow
 \text{formal representation}
@@ -14,11 +14,11 @@ The relevant transition is:
 \text{compiler}
 \rightarrow
 \text{compiler improvement}
-\]
+$$
 
 The important change is not simply that computation becomes faster.
 
-The important change is that the mechanism producing computational procedures becomes modifiable.
+The important change is that the mechanism producing computational procedures becomes itself modifiable.
 
 ---
 
@@ -28,13 +28,13 @@ Before compilers, programming required direct translation between human intentio
 
 The transformation pipeline was:
 
-\[
+$$
 \text{problem}
 \rightarrow
 \text{human reasoning}
 \rightarrow
 \text{machine instructions}
-\]
+$$
 
 The human remained inside the execution loop.
 
@@ -47,13 +47,13 @@ The capability frontier was limited by:
 
 Formally:
 
-\[
+$$
 G_s \approx \text{human search over instructions}
-\]
+$$
 
-\[
+$$
 G_m \approx 0
-\]
+$$
 
 The system could solve problems, but could not efficiently improve the mechanism producing solutions.
 
@@ -63,12 +63,12 @@ The system could solve problems, but could not efficiently improve the mechanism
 
 A compiler introduces a transformation primitive:
 
-\[
+$$
 P:
 L_{high}
 \rightarrow
 L_{machine}
-\]
+$$
 
 where:
 
@@ -79,7 +79,7 @@ The human no longer directly constructs the final transformation.
 
 Instead:
 
-\[
+$$
 \text{problem}
 \rightarrow
 \text{program}
@@ -87,7 +87,7 @@ Instead:
 \text{compiler}
 \rightarrow
 \text{execution}
-\]
+$$
 
 The compiler becomes a reusable generator.
 
@@ -99,9 +99,9 @@ The depth transition:
 
 ## Before
 
-\[
+$$
 D_0/D_1
-\]
+$$
 
 Feedback modifies:
 
@@ -113,16 +113,16 @@ Feedback modifies:
 
 ## After
 
-\[
+$$
 D_2
-\]
+$$
 
 Feedback modifies:
 
-\[
+$$
 G_m:
 \text{program generation mechanism}
-\]
+$$
 
 The system now contains a mechanism that improves the translation process itself.
 
@@ -132,41 +132,41 @@ The system now contains a mechanism that improves the translation process itself
 
 Without compilers:
 
-\[
+$$
 \mathcal P^{reach}_{human}
-\]
+$$
 
 is constrained by direct manual implementation.
 
 With compilers:
 
-\[
+$$
 \mathcal P^{reach}_{compiler}
 >
 \mathcal P^{reach}_{manual}
-\]
+$$
 
 because a larger class of transformations becomes accessible.
 
 The expansion comes from:
 
-\[
+$$
 \Delta M
-\]
+$$
 
 better representations,
 
-\[
+$$
 \Delta G_s
-\]
+$$
 
 better search over programs,
 
 and eventually:
 
-\[
+$$
 \Delta G_m
-\]
+$$
 
 improved compilation mechanisms.
 
@@ -186,21 +186,21 @@ Examples:
 
 The system evolves from:
 
-\[
+$$
 \text{programs}
-\]
+$$
 
 to:
 
-\[
+$$
 \text{program generators}
-\]
+$$
 
 to:
 
-\[
+$$
 \text{improved program-generator mechanisms}
-\]
+$$
 
 ---
 
@@ -208,21 +208,21 @@ to:
 
 The relevant quantity is not:
 
-\[
+$$
 \Delta C
-\]
+$$
 
 alone.
 
 Computer capability increased because:
 
-\[
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-\]
+$$
 
 The compiler increased the rate at which computational systems could be created and improved.
 
@@ -232,21 +232,21 @@ The compiler increased the rate at which computational systems could be created 
 
 Static causal influence:
 
-\[
+$$
 \Phi(I)
 =
 \frac{\partial Z_{future}}{\partial I}
-\]
+$$
 
 A program changes an output.
 
 Dynamic causal influence:
 
-\[
+$$
 \Phi_D(I)
 =
-\frac{\partial G_{future}}{\partial I}
-\]
+\frac{\partial \mathcal{P}^{reach}_{evo}}{\partial I}
+$$
 
 A compiler changes the process that creates programs.
 
@@ -270,13 +270,13 @@ Improvements to compiler-generation mechanisms should precede major computationa
 
 Expected ordering:
 
-\[
+$$
 \Delta G_m
 \rightarrow
 \Delta\Omega
 \rightarrow
 \Delta C
-\]
+$$
 
 ---
 
@@ -290,11 +290,11 @@ The largest gains should come not from individual optimization improvements, but
 
 The compiler transition demonstrates the central framework claim:
 
-\[
+$$
 \boxed{
 \text{The deepest transitions occur when systems begin modifying the generators of future transformations.}
 }
-\]
+$$
 
 The compiler is not merely a faster translator.
 
@@ -302,14 +302,14 @@ It is a stored transformation mechanism.
 
 The evolution of compilers represents a transition from:
 
-\[
+$$
 \text{executing solutions}
-\]
+$$
 
 to:
 
-\[
+$$
 \text{creating systems that create solutions}
-\]
+$$
 
 which is the defining feature of increasing evolutionary velocity.
